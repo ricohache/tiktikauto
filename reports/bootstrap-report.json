@@ -1,0 +1,41 @@
+﻿{
+    "overall":  "SUCCESS",
+    "timestamp":  "2026-10-16T21:51:22.4110390+02:00",
+    "steps":  [
+                  {
+                      "name":  "Windows",
+                      "status":  "PASS",
+                      "details":  "Build 26300"
+                  },
+                  {
+                      "name":  "FFmpeg",
+                      "status":  "PASS",
+                      "details":  "Trouve"
+                  },
+                  {
+                      "name":  "ComfyUI binaire",
+                      "status":  "PASS",
+                      "details":  "Trouve"
+                  },
+                  {
+                      "name":  "ComfyUI checkpoints",
+                      "status":  "WARN",
+                      "details":  "Aucun. Telecharger sur civitai.com"
+                  },
+                  {
+                      "name":  "ComfyUI serveur",
+                      "status":  "PASS",
+                      "details":  "Demarre"
+                  },
+                  {
+                      "name":  "Piper",
+                      "status":  "WARN",
+                      "details":  "Non trouve. Voir tools/install_piper.ps1"
+                  },
+                  {
+                      "name":  "Ollama CLI",
+                      "status":  "PASS",
+                      "details":  "Present"
+                  }
+              ]
+}

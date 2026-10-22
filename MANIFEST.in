@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include .env.example
+recursive-include tiktok_history_factory *.py
+recursive-include scripts *.ps1
+recursive-include docs *.md

@@ -1,0 +1,138 @@
+{
+  "$defs": {
+    "Component": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "OK",
+            "PARTIEL",
+            "BLOQUÉ",
+            "NON_TESTÉ"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "proof": {
+          "title": "Proof",
+          "type": "string"
+        },
+        "limitation": {
+          "default": "",
+          "title": "Limitation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "status",
+        "proof"
+      ],
+      "title": "Component",
+      "type": "object"
+    },
+    "Section": {
+      "properties": {
+        "number": {
+          "title": "Number",
+          "type": "integer"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "number",
+        "title",
+        "text"
+      ],
+      "title": "Section",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "OPÉRATIONNEL",
+        "PARTIEL",
+        "BLOQUÉ"
+      ],
+      "title": "Verdict",
+      "type": "string"
+    },
+    "sections": {
+      "items": {
+        "$ref": "#/$defs/Section"
+      },
+      "title": "Sections",
+      "type": "array"
+    },
+    "subsystems": {
+      "items": {
+        "$ref": "#/$defs/Component"
+      },
+      "title": "Subsystems",
+      "type": "array"
+    },
+    "changes": {
+      "items": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "type": "object"
+      },
+      "title": "Changes",
+      "type": "array"
+    },
+    "tests": {
+      "additionalProperties": true,
+      "title": "Tests",
+      "type": "object"
+    },
+    "pilot": {
+      "additionalProperties": true,
+      "title": "Pilot",
+      "type": "object"
+    },
+    "wan": {
+      "additionalProperties": true,
+      "title": "Wan",
+      "type": "object"
+    },
+    "next_action": {
+      "title": "Next Action",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "created_at",
+    "verdict",
+    "sections",
+    "subsystems",
+    "changes",
+    "tests",
+    "pilot",
+    "wan",
+    "next_action"
+  ],
+  "title": "FinalReport",
+  "type": "object"
+}

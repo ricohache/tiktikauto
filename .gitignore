@@ -1,0 +1,98 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtualenv
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment / Secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+*.pem
+*.key
+
+# Logs
+logs/*.log
+logs/*.json
+!logs/.gitkeep
+
+# Database
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Media outputs (générés)
+work/
+backups/
+ComfyUI/
+ffmpeg/
+tools/piper/
+output/
+renders/
+*.mp4
+*.wav
+*.mp3
+*.png
+*.jpg
+*.jpeg
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Tests / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.codex/
+logs/
+*_err.txt
+*.bak
+*.zip
+tmp_*
+
+# ComfyUI portable - composants installes
+/tools/ComfyUI_windows_portable/
+
+# Conserver uniquement les catalogues historiques JSON
+!/data/
+/data/*
+!/data/catalogue/
+/data/catalogue/*
+!/data/catalogue/subjects.json
+!/data/catalogue/subject_*.json
+

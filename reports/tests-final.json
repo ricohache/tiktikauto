@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "log": "reports/tests-final.log",
+  "command": "$env:THF_INTEGRATION='1'; .\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "scope": "Unit tests including explicit mocks, plus integration checks of real pilot files",
+  "timestamp": "2026-10-19T11:35:06.9365642+02:00"
+}

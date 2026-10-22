@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-10-19T09:07:38.5555139+02:00",
+  "overall": "WARN",
+  "mode": "Check",
+  "steps": [
+    {
+      "Step": "Windows",
+      "Status": "PASS",
+      "Details": "Build 26300",
+      "Timestamp": "2026-10-19T09:07:34.6420300+02:00"
+    },
+    {
+      "Step": "FFmpeg",
+      "Status": "PASS",
+      "Details": "2026-10-15-git-afead44165-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+      "Timestamp": "2026-10-19T09:07:34.6760154+02:00"
+    },
+    {
+      "Step": "ComfyUI binaire",
+      "Status": "PASS",
+      "Details": "Present",
+      "Timestamp": "2026-10-19T09:07:34.6776762+02:00"
+    },
+    {
+      "Step": "GPU CUDA",
+      "Status": "PASS",
+      "Details": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "Timestamp": "2026-10-19T09:07:36.2564820+02:00"
+    },
+    {
+      "Step": "Checkpoints",
+      "Status": "WARN",
+      "Details": "Aucun modele trouve",
+      "Timestamp": "2026-10-19T09:07:36.2612020+02:00"
+    },
+    {
+      "Step": "ComfyUI serveur",
+      "Status": "WARN",
+      "Details": "Inactif",
+      "Timestamp": "2026-10-19T09:07:38.3415415+02:00"
+    },
+    {
+      "Step": "Ollama CLI",
+      "Status": "PASS",
+      "Details": "ollama version is 0.34.0",
+      "Timestamp": "2026-10-19T09:07:38.4614425+02:00"
+    },
+    {
+      "Step": "Espace disque",
+      "Status": "PASS",
+      "Details": "151 Go disponibles",
+      "Timestamp": "2026-10-19T09:07:38.5088439+02:00"
+    }
+  ],
+  "exit_code": 0
+}

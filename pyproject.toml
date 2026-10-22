@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiktok-history-factory"
+version = "0.1.0"
+description = "Usine locale d'automatisation de videos historiques manga pour TikTok"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "TikTokHistoryFactory"}]
+keywords = ["tiktok", "automation", "manga", "history", "video"]
+
+# Local project dependencies; ComfyUI keeps its own embedded runtime.
+dependencies = ["piper-tts==1.8.0", "Pillow==12.0.0", "pydantic==2.13.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-asyncio>=0.21", "black>=23.0", "ruff>=0.1.0"]
+
+[project.scripts]
+tiktok-factory = "tiktok_history_factory.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tiktok_history_factory*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

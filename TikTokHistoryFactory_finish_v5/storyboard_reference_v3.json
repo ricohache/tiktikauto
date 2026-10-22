@@ -1,0 +1,305 @@
+{
+  "episode": "thiaroye-1944-90s",
+  "checkpoint": "emi-2.safetensors",
+  "style": "japanese manga seinen, monochrome, black and white, ink drawing, screentone, expressive shadows",
+  "resolution": {
+    "width": 768,
+    "height": 1344
+  },
+  "sampler": "euler_ancestral",
+  "steps": 20,
+  "cfg": 7.5,
+  "scenes": [
+    {
+      "id": "SC01",
+      "role": "introduction",
+      "narration_en": "On December first, nineteen forty-four, French soldiers opened fire on African troops at a military camp near Dakar, Senegal.",
+      "narration_fr": "Le premier décembre mille neuf cent quarante-quatre, des soldats français ont ouvert le feu sur des troupes africaines dans un camp militaire près de Dakar, au Sénégal.",
+      "time_start": 0,
+      "time_end": 8,
+      "duration_sec": 8,
+      "location": "Thiaroye military camp, dawn",
+      "characters": "None visible — establishing shot",
+      "action": "Empty transit camp at dawn, establishing wide shot",
+      "framing": "Wide establishing shot, vertical",
+      "positive_prompt": "wide establishing manga panel, empty French colonial military transit camp in Senegal West Africa 1944, pale dawn sky with soft clouds, dusty sandy courtyard, simple single-story whitewashed plaster barracks with corrugated iron roofs, wooden beams, scattered crates and sacks, distant baobab tree silhouette, warm african morning light, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic shadows, strong perspective lines, cinematic composition, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo, straw hat, conical hat, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika",
+      "seed": 19441601,
+      "required_elements": [
+        "whitewashed plaster barracks",
+        "corrugated iron roofs",
+        "dusty courtyard",
+        "dawn light"
+      ],
+      "exclude": [
+        "kimono",
+        "japanese architecture",
+        "modern buildings",
+        "weapons"
+      ]
+    },
+    {
+      "id": "SC02",
+      "role": "context_opening",
+      "narration_en": "These were tirailleurs — West African soldiers who had fought for France during the Second World War.",
+      "narration_fr": "C'étaient des tirailleurs — des soldats d'Afrique de l'Ouest qui avaient combattu pour la France pendant la Seconde Guerre mondiale.",
+      "time_start": 8,
+      "time_end": 18,
+      "duration_sec": 10,
+      "location": "Abstract / symbolic",
+      "characters": "Silhouettes of marching soldiers",
+      "action": "Symbolic marching column of African soldiers, silhouette against sky",
+      "framing": "Medium wide, silhouettes",
+      "positive_prompt": "manga panel, column of west african soldiers marching in 1940s, dark skin silhouettes against pale sky, plain khaki cotton shirts and trousers, simple caps, dust rising from footsteps, distant horizon, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic backlighting, strong silhouettes, cinematic composition, vertical format, historical scene",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo, tactical vest, modern helmet",
+      "seed": 19441602,
+      "required_elements": [
+        "african soldiers",
+        "marching",
+        "1940s clothing",
+        "dust"
+      ],
+      "exclude": [
+        "modern weapons",
+        "modern uniforms",
+        "japanese elements"
+      ]
+    },
+    {
+      "id": "SC03",
+      "role": "context_pows",
+      "narration_en": "Many had spent years in German prisoner-of-war camps.",
+      "narration_fr": "Beaucoup avaient passé des années dans des camps de prisonniers allemands.",
+      "time_start": 18,
+      "time_end": 26,
+      "duration_sec": 8,
+      "location": "POW camp (symbolic)",
+      "characters": "Hands behind barbed wire (symbolic)",
+      "action": "Close-up of weathered dark hands gripping rusted barbed wire fence",
+      "framing": "Close-up, hands only",
+      "positive_prompt": "manga panel, extreme close-up of two weathered dark-skinned hands gripping rusted barbed wire fence, plain worn cotton sleeves, rough wooden post, stark black shadows, dramatic lighting, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, crosshatching, dramatic shadows, cinematic close-up, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo",
+      "seed": 19441603,
+      "required_elements": [
+        "dark hands",
+        "barbed wire",
+        "worn clothing"
+      ],
+      "exclude": [
+        "modern elements",
+        "japanese elements"
+      ]
+    },
+    {
+      "id": "SC04",
+      "role": "context_homecoming",
+      "narration_en": "Now returned home, they were demanding their unpaid wages and promised compensation.",
+      "narration_fr": "De retour chez eux, ils réclamaient leurs soldes impayées et l'indemnisation promise.",
+      "time_start": 26,
+      "time_end": 36,
+      "duration_sec": 10,
+      "location": "Inside barracks / camp",
+      "characters": "Soldier sitting with document",
+      "action": "Soldier sitting on wooden crate, looking at folded paper document",
+      "framing": "Medium shot, sitting figure",
+      "positive_prompt": "manga panel, adult west african man sitting on wooden crate inside simple plaster barracks, dark skin, short curly black hair, plain cotton shirt and trousers, holding folded paper document, looking down at papers, dusty wooden floor, soft light from small window, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic shadows, mature anatomy, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo, straw hat",
+      "seed": 19441604,
+      "required_elements": [
+        "african man",
+        "sitting",
+        "document",
+        "barracks interior"
+      ],
+      "exclude": [
+        "modern clothing",
+        "japanese elements"
+      ]
+    },
+    {
+      "id": "SC05",
+      "role": "tension_rising",
+      "narration_en": "At the Thiaroye transit camp, tensions rose between the soldiers and French officers.",
+      "narration_fr": "Au camp de transit de Thiaroye, les tensions montaient entre les soldats et les officiers français.",
+      "time_start": 36,
+      "time_end": 46,
+      "duration_sec": 10,
+      "location": "Camp courtyard",
+      "characters": "Group of soldiers, French officer in background",
+      "action": "Group of soldiers in tense discussion, French officer visible in background",
+      "framing": "Medium wide, group composition",
+      "positive_prompt": "manga panel, group of adult west african soldiers standing in dusty courtyard of military camp, dark skin, short curly hair, plain cotton shirts and trousers, tense body language, arms crossed, gesturing, european officer figure in background with kepi hat, whitewashed plaster barracks, corrugated iron roofs, scattered papers on ground, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic shadows, strong perspective, cinematic composition, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo, tactical vest, modern helmet",
+      "seed": 19441605,
+      "required_elements": [
+        "african soldiers",
+        "courtyard",
+        "barracks",
+        "officer in background"
+      ],
+      "exclude": [
+        "modern weapons",
+        "japanese architecture"
+      ]
+    },
+    {
+      "id": "SC06",
+      "role": "tension_refusal",
+      "narration_en": "The men refused to accept partial payment.",
+      "narration_fr": "Les hommes refusaient un paiement partiel.",
+      "time_start": 46,
+      "time_end": 52,
+      "duration_sec": 6,
+      "location": "Close-up symbolic",
+      "characters": "Hands rejecting coins/papers",
+      "action": "Close-up of dark hands pushing away coins or papers in refusal",
+      "framing": "Extreme close-up, hands",
+      "positive_prompt": "manga panel, extreme close-up of dark-skinned hands pushing away scattered coins and paper bills on rough wooden table, rejection gesture, plain cotton sleeves, dramatic lighting, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, crosshatching, dramatic shadows, cinematic close-up, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo",
+      "seed": 19441606,
+      "required_elements": [
+        "hands",
+        "coins",
+        "rejection gesture"
+      ],
+      "exclude": [
+        "modern elements"
+      ]
+    },
+    {
+      "id": "SC07",
+      "role": "tension_betrayal",
+      "narration_en": "They felt betrayed. France had promised them dignity and fair treatment. Instead, they faced empty pockets and broken promises.",
+      "narration_fr": "Ils se sentaient trahis. La France leur avait promis dignité et traitement équitable. À la place, ils n'avaient que des poches vides et des promesses brisées.",
+      "time_start": 52,
+      "time_end": 64,
+      "duration_sec": 12,
+      "location": "Inside barracks",
+      "characters": "Solitary soldier, contemplative",
+      "action": "Soldier sitting alone, head bowed, contemplative / dejected posture",
+      "framing": "Medium shot, solitary figure",
+      "positive_prompt": "manga panel, adult west african man sitting alone on simple wooden bench inside dim barracks, dark skin, short curly black hair, head bowed down, plain cotton shirt, hands clasped between knees, single small window with light beam, dust particles in light, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic chiaroscuro lighting, melancholic mood, cinematic composition, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo",
+      "seed": 19441607,
+      "required_elements": [
+        "solitary soldier",
+        "barracks interior",
+        "light beam",
+        "melancholic"
+      ],
+      "exclude": [
+        "modern elements",
+        "japanese elements"
+      ]
+    },
+    {
+      "id": "SC08",
+      "role": "event_morning",
+      "narration_en": "On the morning of December first, the French military responded with force.",
+      "narration_fr": "Dans la matinée du premier décembre, l'armée française a répondu par la force.",
+      "time_start": 64,
+      "time_end": 72,
+      "duration_sec": 8,
+      "location": "Camp courtyard, morning",
+      "characters": "Crowd of soldiers, French soldiers in formation",
+      "action": "Tense standoff between African soldiers and French military line",
+      "framing": "Wide shot, confrontation composition",
+      "positive_prompt": "manga panel, wide shot of military camp courtyard, group of adult west african soldiers facing line of french soldiers in kepis, dark skin, plain cotton clothing, tense standoff, dust rising, whitewashed plaster barracks in background, corrugated iron roofs, scattered papers and belongings on ground, dramatic morning light, long shadows, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic shadows, strong perspective, cinematic composition, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, graphic violence, blood, kimono, samurai, katana, pagoda, japanese architecture, bamboo, tactical vest, modern helmet",
+      "seed": 19441608,
+      "required_elements": [
+        "confrontation",
+        "soldiers",
+        "courtyard",
+        "barracks"
+      ],
+      "exclude": [
+        "gore",
+        "blood",
+        "modern weapons"
+      ]
+    },
+    {
+      "id": "SC09",
+      "role": "event_aftermath",
+      "narration_en": "Dozens of these soldiers were killed. The exact number remains disputed by historians.",
+      "narration_fr": "Des dizaines de ces soldats ont été tués. Le bilan exact reste disputé par les historiens.",
+      "time_start": 72,
+      "time_end": 80,
+      "duration_sec": 8,
+      "location": "Symbolic still life",
+      "characters": "None — symbolic object",
+      "action": "Solitary battered enamel cup on wooden bench in empty room",
+      "framing": "Close-up still life",
+      "positive_prompt": "manga panel, close-up still life of solitary battered plain enamel drinking cup on rough wooden bench, empty simple plaster room, long dark shadow stretching across floor, solemn silent absence, dust motes in dim light, 1940s everyday object, no people, no faces, no figures, symbolic remembrance, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic shadows, cinematic composition, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo, people, faces, figures",
+      "seed": 19441609,
+      "required_elements": [
+        "enamel cup",
+        "wooden bench",
+        "empty room",
+        "shadow"
+      ],
+      "exclude": [
+        "people",
+        "gore",
+        "blood"
+      ]
+    },
+    {
+      "id": "SC10",
+      "role": "conclusion_memory",
+      "narration_en": "Thiaroye is a wound in France's colonial history — long silenced, finally acknowledged.",
+      "narration_fr": "Thiaroye est une blessure dans l'histoire coloniale de la France — longtemps tus, enfin reconnue.",
+      "time_start": 80,
+      "time_end": 86,
+      "duration_sec": 6,
+      "location": "Camp, dusk",
+      "characters": "Silhouette of single soldier",
+      "action": "Dignified silhouette looking toward distant barracks wall",
+      "framing": "Wide shot, silhouette against sky",
+      "positive_prompt": "manga panel, back view of anonymous adult west african soldier standing in dusty courtyard, dark skin, short cropped black hair, plain unadorned cotton shirt and simple trousers, looking toward distant whitewashed barracks wall, face hidden, no insignia, no medals, dignified quiet silhouette, warm sunset light, long shadow, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic backlighting, cinematic composition, vertical format",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo, medals, epaulettes, officer uniform, insignia",
+      "seed": 19441610,
+      "required_elements": [
+        "silhouette",
+        "barracks wall",
+        "sunset",
+        "dignified posture"
+      ],
+      "exclude": [
+        "medals",
+        "insignia",
+        "japanese elements"
+      ]
+    },
+    {
+      "id": "SC11",
+      "role": "conclusion_final",
+      "narration_en": "These soldiers deserved honour, not death. Their memory reminds us that history must face its darkest chapters, so they are never repeated.",
+      "narration_fr": "Ces soldats méritaient l'honneur, pas la mort. Leur mémoire nous rappelle que l'histoire doit affronter ses pages les plus sombres, pour qu'elles ne se répètent jamais.",
+      "time_start": 86,
+      "time_end": 92,
+      "duration_sec": 6,
+      "location": "Abstract / symbolic",
+      "characters": "Multiple silhouettes merging into horizon",
+      "action": "Row of soldier silhouettes fading into distant horizon, symbolic",
+      "framing": "Wide, symbolic",
+      "positive_prompt": "manga panel, row of anonymous soldier silhouettes standing on dusty horizon line, dark skin, plain cotton clothing, backs to viewer, fading into pale sky, vast african landscape, distant sparse trees, solemn dignified atmosphere, memory and remembrance, japanese manga, seinen, monochrome, black and white, ink drawing, screentone, dramatic backlighting, cinematic composition, vertical format, symbolic",
+      "negative_prompt": "photograph, photorealistic, 3d render, chibi, cute, modern anime, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, kimono, samurai, katana, pagoda, japanese architecture, bamboo, medals, epaulettes",
+      "seed": 19441611,
+      "required_elements": [
+        "silhouettes",
+        "horizon",
+        "landscape",
+        "remembrance"
+      ],
+      "exclude": [
+        "modern elements",
+        "japanese elements"
+      ]
+    }
+  ],
+  "total_scenes": 11,
+  "total_estimated_duration_sec": 92
+}

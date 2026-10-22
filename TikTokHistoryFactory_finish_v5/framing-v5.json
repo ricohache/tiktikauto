@@ -1,0 +1,22 @@
+{
+  "editorial_note": "Conservative per-shot cinematic crops. x/y normalized (0 = left/top, 1 = right/bottom). Different viewpoints, reproducible and editable for future episodes.",
+  "defaults": {
+    "A": {"focus_x": 0.50, "focus_y": 0.55, "zoom_start": 1.08, "zoom_end": 1.12},
+    "B": {"focus_x": 0.50, "focus_y": 0.53, "zoom_start": 1.06, "zoom_end": 1.10}
+  },
+  "shots": {
+    "SC01_A": {"focus_x": 0.50, "focus_y": 0.59, "zoom_start": 1.02, "zoom_end": 1.05},
+    "SC01_B": {"focus_x": 0.50, "focus_y": 0.54, "zoom_start": 1.03, "zoom_end": 1.07},
+    "SC02_A": {"focus_x": 0.48, "focus_y": 0.62, "zoom_start": 1.09, "zoom_end": 1.14},
+    "SC03_A": {"focus_x": 0.50, "focus_y": 0.54, "zoom_start": 1.06, "zoom_end": 1.12},
+    "SC04_A": {"focus_x": 0.50, "focus_y": 0.59, "zoom_start": 1.10, "zoom_end": 1.15},
+    "SC05_A": {"focus_x": 0.52, "focus_y": 0.56, "zoom_start": 1.10, "zoom_end": 1.15},
+    "SC06_A": {"focus_x": 0.50, "focus_y": 0.59, "zoom_start": 1.10, "zoom_end": 1.15},
+    "SC07_A": {"focus_x": 0.50, "focus_y": 0.52, "zoom_start": 1.11, "zoom_end": 1.16},
+    "SC08_A": {"focus_x": 0.50, "focus_y": 0.57, "zoom_start": 1.09, "zoom_end": 1.13},
+    "SC09_A": {"focus_x": 0.50, "focus_y": 0.58, "zoom_start": 1.11, "zoom_end": 1.15},
+    "SC10_A": {"focus_x": 0.50, "focus_y": 0.55, "zoom_start": 1.04, "zoom_end": 1.09},
+    "SC11_A": {"focus_x": 0.50, "focus_y": 0.58, "zoom_start": 1.02, "zoom_end": 1.06},
+    "SC11_B": {"focus_x": 0.50, "focus_y": 0.55, "zoom_start": 1.03, "zoom_end": 1.07}
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "subjects": [
+    {
+      "slug": "patrice-lumumba-assassinat",
+      "title_en": "The Assassination of Patrice Lumumba",
+      "title_fr": "L'assassinat de Patrice Lumumba",
+      "category": "histoire-africaine",
+      "event_date": "1961-01-17",
+      "summary_en": "In January 1961, Patrice Lumumba, the first democratically elected prime minister of the Congo, was kidnapped, tortured and executed with the complicity of Belgian officers and the CIA. His body was dissolved in acid. For decades, Belgium denied its role.",
+      "summary_fr": "En janvier 1961, Patrice Lumumba, premier ministre démocratiquement élu du Congo, fut enlevé, torturé et exécuté avec la complicité d'officiers belges et de la CIA. Son corps fut dissous dans l'acide. Pendant des décennies, la Belgique a nié son rôle.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Assassinat_de_Patrice_Lumumba"
+        },
+        {
+          "name": "Ludo De Witte — L'Assassinat de Lumumba",
+          "url": "https://www.editions-jacob-duvernet.com/livre/l-assassinat-de-lumumba"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1960s Africa, no text, vertical composition"
+    },
+    {
+      "slug": "thomas-sankara-1987",
+      "title_en": "Thomas Sankara, the Revolutionary Cut Down",
+      "title_fr": "Thomas Sankara, la révolution abattue",
+      "category": "histoire-africaine",
+      "event_date": "1987-10-15",
+      "summary_en": "On October 15, 1987, Captain Thomas Sankara, president of Burkina Faso and an iconic anti-imperialist figure, was assassinated in a coup led by Blaise Compaoré. His revolutionary reforms in education, health and women's rights were brutally halted.",
+      "summary_fr": "Le 15 octobre 1987, le capitaine Thomas Sankara, président du Burkina Faso et figure anticoloniale emblématique, fut assassiné lors d'un coup d'État mené par Blaise Compaoré. Ses réformes révolutionnaires dans l'éducation, la santé et les droits des femmes furent brutalement interrompues.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Thomas_Sankara"
+        },
+        {
+          "name": "Ernest Harsch — Thomas Sankara: An African Revolutionary",
+          "url": "https://ohiostatepress.org/books/titles/9780821422463.html"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1980s West Africa, no text, vertical composition"
+    },
+    {
+      "slug": "guerre-algerie-violences",
+      "title_en": "The Forgotten Violence of the Algerian War",
+      "title_fr": "Les violences oubliées de la guerre d'Algérie",
+      "category": "histoire-coloniale",
+      "event_date": "1954-1962",
+      "summary_en": "Between 1954 and 1962, the Algerian War cost hundreds of thousands of lives. Torture, summary executions, and mass displacement were committed by both French forces and the FLN. France only officially recognized these crimes in the 2000s.",
+      "summary_fr": "Entre 1954 et 1962, la guerre d'Algérie a fait des centaines de milliers de morts. Tortures, exécutions sommaires et déplacements de masse ont été commis par les forces françaises et le FLN. La France n'a reconnu officiellement ces crimes que dans les années 2000.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Guerre_d'Alg%C3%A9rie"
+        },
+        {
+          "name": "Benjamin Stora — La Guerre d'Algérie",
+          "url": "https://www.gallimard.fr/catalogue/la-guerre-dalgerie/9782070349608"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1950s North Africa, no text, vertical composition"
+    },
+    {
+      "slug": "ruben-um-nyobe",
+      "title_en": "Ruben Um Nyobe and the Forgotten UPC Struggle",
+      "title_fr": "Ruben Um Nyobè et la lutte oubliée de l'UPC",
+      "category": "histoire-africaine",
+      "event_date": "1948-1958",
+      "summary_en": "In 1948, Ruben Um Nyobe co-founded the UPC, demanding Cameroon's independence from French colonial rule. Forced into hiding, he led resistance from the bush. In 1958, he was ambushed and killed by French forces. His body was never returned.",
+      "summary_fr": "En 1948, Ruben Um Nyobè cofonde l'UPC qui réclame l'indépendance du Cameroun face à la colonisation française. Contraint à la clandestinité, il dirige la résistance depuis la brousse. En 1958, il est tué en embuscade par les forces françaises. Son corps ne fut jamais rendu.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Ruben_Um_Nyob%C3%A8"
+        },
+        {
+          "name": "Achille Mbembe — La Naissance du maquis dans le Sud-Cameroun",
+          "url": "https://www.karthala.com/histoire/1295-la-naissance-du-maquis-dans-le-sud-cameroun-9782865371461.html"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1940s-1950s Central Africa, no text, vertical composition"
+    },
+    {
+      "slug": "tirailleurs-senegalais",
+      "title_en": "The Forgotten Tirailleurs Sénégalais",
+      "title_fr": "Les tirailleurs sénégalais oubliés",
+      "category": "histoire-militaire",
+      "event_date": "1857-1960",
+      "summary_en": "For over a century, West African tirailleurs fought in France's colonial wars, from Verdun to Indochina. They were promised equality but faced discrimination, unpaid pensions, and denial of their sacrifices for decades.",
+      "summary_fr": "Pendant plus d'un siècle, les tirailleurs d'Afrique de l'Ouest ont combattu dans les guerres coloniales de la France, de Verdun à l'Indochine. On leur avait promis l'égalité, mais ils ont fait face à la discrimination, aux pensions impayées et au déni de leurs sacrifices pendant des décennies.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Tirailleurs_s%C3%A9n%C3%A9galais"
+        },
+        {
+          "name": "Julien Fargettas — Les Tirailleurs sénégalais",
+          "url": "https://www.ohm-editions.com/les-tirailleurs-senegalais/"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 20th century colonial Africa, no text, vertical composition"
+    },
+    {
+      "category": "histoire-coloniale",
+      "event_date": "1931-05-01",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Pende_revolt",
+          "name": "Wikipedia - Pende revolt"
+        },
+        {
+          "url": "https://www.versobooks.com/books/2394-lord-leverhulme-s-ghosts",
+          "name": "Jules Marchal - Lord Leverhulme's Ghosts"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1930s Central Africa, Belgian Congo, no text, vertical composition",
+      "slug": "pende-revolt-1931",
+      "title_en": "The Pende Revolt of 1931",
+      "summary_en": "In May 1931, the Pende people of the Belgian Congo revolted against colonial exploitation. Forced labor, head taxes, and abuse by concession companies had pushed them to the brink. The killing of territorial agent Maximilien Balot on June 8 triggered brutal reprisals. Machine guns were used. Hundreds were killed.",
+      "title_fr": "La revolte Pende de 1931",
+      "summary_fr": "En mai 1931, le peuple Pende du Congo belge se souleva contre l'exploitation coloniale. Le travail force, les impots de capitation et les abus des societes de concession les avaient pousses au bord du gouffre. Le meurtre de l'agent territorial Maximilien Balot le 8 juin declencha des represailles brutales. Des mitrailleuses furent utilisees. Des centaines de personnes furent tuees."
+    },
+    {
+      "title_fr": "La grande revolte de Madagascar de 1947",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1940s Madagascar, colonial uprising, no text, vertical composition",
+      "title_en": "The Madagascar Uprising of 1947",
+      "event_date": "1947-03-29",
+      "slug": "madagascar-revolt-1947",
+      "sources": [
+        {
+          "name": "Wikipedia - Malagasy Uprising",
+          "url": "https://en.wikipedia.org/wiki/Malagasy_uprising"
+        },
+        {
+          "name": "L'Histoire n°318 - La verite sur la grande revolte de Madagascar",
+          "url": "https://www.lhistoire.fr"
+        }
+      ],
+      "summary_fr": "Le 29 mars 1947, le peuple malgache se souleva contre la domination coloniale francaise. Le soulevement fut brutalement reprime. Des milliers de personnes furent tuees. La France nia l ampleur du massacre pendant des decennies.",
+      "summary_en": "On March twenty-ninth, nineteen forty-seven, the Malagasy people rose against French colonial rule. The uprising was brutally suppressed. Thousands were killed. France denied the scale of the massacre for decades.",
+      "category": "histoire-coloniale"
+    }
+  ]
+}

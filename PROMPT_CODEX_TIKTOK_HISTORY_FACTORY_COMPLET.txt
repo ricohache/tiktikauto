@@ -1,0 +1,590 @@
+================================================================================
+PROMPT MAÎTRE POUR CODEX — TIKTOK HISTORY FACTORY
+Version du cahier des charges : 1.0 — 16 octobre 2026
+Langue : français
+Destination : Codex disposant d'un accès autorisé au PC Windows 11 du propriétaire
+Dossier du projet existant : C:\TikTokHistoryFactory
+================================================================================
+
+TU ES CODEX, RESPONSABLE DE BOUT EN BOUT DE L'AUDIT, DE LA CONCEPTION, DE L'INSTALLATION, DU DÉVELOPPEMENT, DES TESTS, DE L'AUTO-CORRECTION ET DE LA DOCUMENTATION DE CE PROJET.
+
+INSTRUCTION CENTRALE
+--------------------
+Réalise TOUTES les phases applicables de ce cahier des charges en un passage continu, sans demander une validation après chaque phase. Observe des points de sécurité obligatoires : ne fais aucune dépense supplémentaire, aucune publication publique, aucune opération destructrice, aucune modification globale de l'environnement existant, aucune élévation de privilèges et aucun partage de secret sans autorisation explicite. Une étape bloquée par des identifiants, une licence, le disque, une restriction TikTok ou un accord utilisateur ne doit PAS empêcher de développer et de tester les autres parties : utilise des simulations correctement identifiées, documente le blocage, puis continue. N'invente jamais une réussite ni un test. À la fin, produis un rapport d'audit détaillé, des preuves et une liste courte des actions humaines restantes. Ne confonds jamais « code écrit », « test simulé réussi » et « intégration réelle validée ».
+
+===============================================================================
+A. OBJECTIF, PORTÉE ET CRITÈRES NON NÉGOCIABLES
+===============================================================================
+
+A1. FINALITÉ DU PRODUIT
+Construire un système local d'automatisation de production de vidéos TikTok, destiné à raconter en français des pages sombres de l'Histoire dans un style de DESSINS MANGA 2D DÉTAILLÉS, MATURES, SOMBRES ET CINÉMATOGRAPHIQUES (esthétique seinen historique), avec des personnages cohérents entre plans et des reconstitutions respectueuses.
+
+Exemples de thèmes : tirailleurs sénégalais, massacre de Thiaroye, guerre d'Algérie et violences subies par les civils, répression coloniale, assassinats de figures anticoloniales et de révolutionnaires africains, Patrice Lumumba, Thomas Sankara, Ruben Um Nyobè, etc. Il ne s'agit JAMAIS de l'histoire du manga, des mangakas ou de leurs œuvres. Le manga est uniquement le STYLE D'ILLUSTRATION. Inclure une diversité de sujets historiques documentés sans imposer de narration idéologique ou de conclusion non démontrée.
+
+A2. PARCOURS CIBLE
+Un unique lanceur PowerShell démarre un moteur Python, qui :
+  (1) choisit un sujet inédit ou reçoit un sujet imposé ;
+  (2) rassemble des documents identifiables et traçables ;
+  (3) vérifie les faits, distingue les divergences d'interprétation ;
+  (4) rédige en français le texte et le storyboard ;
+  (5) crée en local des illustrations manga détaillées via ComfyUI ;
+  (6) tente des clips animés par Wan 2.2 TI2V-5B sur quelques plans ;
+  (7) repasse sur un traitement FFmpeg des images en cas de lenteur/échec ;
+  (8) synthétise la voix française ;
+  (9) prépare les sous-titres synchronisés ;
+ (10) assemble la vidéo finale verticalement via FFmpeg ;
+ (11) réalise des contrôles historiques, éditoriaux et techniques ;
+ (12) exporte le MP4, le dossier de preuves et les métadonnées ;
+ (13) prépare une éventuelle publication TikTok légale et autorisée ;
+ (14) mémorise chaque exécution, permet la reprise et rédige les rapports.
+
+A3. DEUX HORIZONS DISTINCTS
+MODE PILOTE / TEST (par défaut) : 1 vidéo d'environ 20 à 30 secondes, 3 à 6 plans, aucune publication automatique, sans frais additionnels ; au moins un vrai essai d'image si modèle installé, et un clip Wan court seulement si les ressources le permettent.
+MODE PRODUCTION (après validation humaine ultérieure) : objectif 3 vidéos par jour, en principe 60 à 90 secondes chacune, sous réserve de capacité réelle du PC et des règles TikTok. Cette capacité n'est PAS acquise tant qu'un benchmark chronométré et un test de charge n'ont pas prouvé le débit suffisant.
+
+A4. INFRASTRUCTURE DÉJÀ CONNUE
+- Windows 11, PC local ; pas de n8n, Docker non requis.
+- NVIDIA GeForce RTX 4060, VRAM annoncée ~8 188 MiB ; pilote NVIDIA 596.08 ; `nvidia-smi` annonce CUDA 13.2 (cela n'implique pas que le Toolkit CUDA soit installé ni que cette version soit celle de PyTorch).
+- RAM système 32 Go.
+- Ollama est déjà installé, configuré, connecté à un compte Ollama Cloud payant (~20 €/mois) ; l'utilisateur emploie déjà Kimi Cloud, exemple `kimi-k3:cloud`. NE PAS toucher à cette installation ni aux réglages Codex/Ollama existants.
+- L'espace disque, les performances CPU, les chemins vers Python, PowerShell, FFmpeg, ComfyUI et les quotas cloud n'ont pas été vérifiés sur la machine dans ce cahier des charges. Les détecter réellement.
+- Reprendre les fichiers existants dans C:\TikTokHistoryFactory et ne pas recréer aveuglément le projet.
+
+A5. BUDGET ET RÉGLES D'ACHAT
+- OBJECTIF : zéro euro de frais EXTERNES supplémentaires pendant le pilote ; logiciels/modèles libres exécutés localement ; seule dépense récurrente acceptée actuellement : abonnement Ollama Cloud déjà existant, dans ses quotas et conditions.
+- Ne souscris à aucune offre, ne fournis pas de carte, ne lance pas d'API facturée à l'usage, ne télécharge pas un modèle sous licence incompatible avec la publication envisagée sans signalement et accord.
+- Protéger le quota Ollama : limiter requêtes, tokens, tentatives et fréquence ; journaliser l'estimation, sans inventer le solde du compte.
+- Calcul et production sur GPU local : autorisés pour les illustrations et de courtes animations. Le LLM principal reste Cloud, pas de gros LLM local.
+- Électricité : coût variable mesuré/estimé, jamais prétendu nul. Ajouter une estimation configurable du prix du kWh, séparée des dépenses réellement facturées.
+
+A6. PRÉFÉRENCES DE DÉVELOPPEMENT
+Code maintenable, modulaire, testable et documenté, compatible Windows 11. PowerShell orchestre lancement, configuration, maintenance et planification ; Python exécute les modules métier ; SQLite assure l'état ; ComfyUI héberge le moteur image/vidéo ; Piper ou alternative locale légale assure la voix ; FFmpeg réalise le montage et les animations de secours.
+
+===============================================================================
+B. RÈGLES D'EXÉCUTION ET DE SÉCURITÉ POUR CODEX
+===============================================================================
+
+B1. PROCÉDURE GÉNÉRALE
+1. Lire l'intégralité du projet existant et consigner son état avant toute modification.
+2. Inventorier et documenter les divergences par rapport au cahier des charges.
+3. Établir plan et checklist ; lancer le chantier complet ; auditer après chaque sous-système ; corriger puis retester.
+4. Créer un backup daté hors des fichiers modifiés ET une branche Git de travail si le dossier est déjà versionné. Ne pas écraser des modifications existantes sans sauvegarde et comparaison. Ne pas initialiser un Git distant.
+5. Ne pas modifier les paramètres globaux Windows, l'ExecutionPolicy Machine/CurrentUser, les pilotes NVIDIA, la version Python globale, la configuration système de Codex ou les fichiers Ollama existants.
+6. Ne pas installer en administrateur sauf nécessité explicitement vérifiée, expliquée et approuvée. Privilégier environnement virtuel Python et applications dans le périmètre du projet ou son dossier outils configurable.
+7. Téléchargements : depuis les dépôts officiels uniquement, URLs réelles, licences vérifiées, versions/commit consignés, empreintes SHA256 lorsque publiées, contrôle d'intégrité et espace libre AVANT les modèles volumineux. Ne pas désactiver SmartScreen, Defender, UAC ou pare-feu.
+8. Au moindre doute sur une action destructive, financière, publication réelle ou changements systémiques : NE PAS exécuter ; documenter une action manuelle et continuer le reste.
+9. Ne pas annoncer qu'un téléchargement, un test GPU ou une publication a eu lieu si aucun journal/artefact ne le démontre.
+10. Ne pas se contenter d'interfaces abstraites, TODO, commentaires, démonstrations fictives ni de données mock quand une implémentation gratuite réelle est possible. Les mocks restent réservés aux tests explicitement nommés comme tels.
+
+B2. SÉCURITÉ D'EXPLOITATION
+- Secrets dans .env local ou stockage Windows adapté ; .env.example sans valeurs sensibles ; jamais dans Git, README, sortie console, captures, rapports ou manifestes partagés.
+- ComfyUI local lié uniquement à 127.0.0.1 (port configurable, souvent 8188) ; pas d'exposition 0.0.0.0, routage Internet ni tunnel par défaut.
+- URLs sources : validation, délais, redirects limités, taille maximale et types MIME permis ; éviter SSRF, exécution de ressources non fiables, extraction d'archives non sécurisée.
+- Exécuter les programmes externes avec tableaux d'arguments, pas avec interpolation non contrôlée dans un shell ; protéger les chemins Windows avec espaces/caractères accentués.
+- Limiter CPU/GPU/RAM et empêcher deux productions GPU simultanées sur 8 Go de VRAM.
+- Réserver un espace libre minimal avant l'inférence et les exports ; jamais remplir le disque système par des fichiers temporaires non nettoyés.
+- Aucun navigateur automatisé, cookie volé, mot de passe enregistré ou simulation de clics pour contourner les restrictions TikTok.
+
+B3. POINTS BLOQUANTS ET INDÉPENDANCE
+Si une API, un modèle, une licence, un accès TikTok ou un dépôt manque : fournir le connecteur, un mode désactivé ou simulé, les tests mock, et marquer « NON VALIDÉ RÉELLEMENT ». Ne prétends pas au succès global d'un bout-en-bout si les composants réels manquent. Continue les autres phases de façon autonome sans inventer de résultats.
+
+===============================================================================
+C. PRÉREQUIS — AUDIT AUTOMATIQUE AVANT INSTALLATION
+===============================================================================
+
+Créer `scripts/doctor.ps1` et `python -m tiktok_history_factory doctor` pour examiner :
+- OS/architecture/version Windows ; versions et chemins de `powershell`, `pwsh`, Python, pip, Git, FFmpeg/ffprobe, NVIDIA driver, `nvidia-smi` ; présence/état d'Ollama, ComfyUI, runtime Piper.
+- GPU, VRAM libre, charge GPU ; RAM physique libre et totale ; CPU, quotas de processus ; disque libre sur volumes de projet et modèles, estimation de téléchargement et empreinte finale ; possibilité de garder suffisamment d'espace après installation.
+- Disponibilité d'un runtime Python 64 bits compatible avec les versions réelles de ComfyUI/PyTorch ; préférer la version recommandée officiellement au moment de l'installation ; pas de version inventée ou de mise à jour globale forcée.
+- Compatibilité PyTorch/CUDA selon les wheels officielles ; ne pas confondre « CUDA Version » affichée par nvidia-smi avec un Toolkit CUDA installé.
+- Tests réseau HTTPS vers dépôts officiels lorsque nécessaire (sans envoyer de secrets) ; accès Ollama existant facultatif avec requête courte et bornée ; ne jamais recréer le compte.
+- Installation ComfyUI déjà existante : réutilisation prudente ou instance isolée ; config de modèles partagés si elle existe ; ne pas dupliquer plusieurs dizaines de Go sans raison.
+- Privilèges de l'utilisateur, permissions sur C:\TikTokHistoryFactory, accessibilité des répertoires.
+- Statut de la base et de son schéma ; existence de sauvegardes ; détection de sessions déjà en cours.
+- Pour chaque prérequis : PASS / WARN / FAIL / SKIPPED, preuve, commande de diagnostic, cause et remédiation.
+- Générer `reports/PREFLIGHT_<timestamp>.md` et `.json`.
+
+IMPORTANT : les 32 Go RAM + RTX 4060 8 Go rendent plausible le workflow Wan 2.2 5B AVEC OFFLOADING de ComfyUI ; ce n'est ni un test de fonctionnement réel ni une garantie de 3 vidéos/jour. La procédure Wan CLI native a des prérequis de VRAM plus élevés. Ne pas tenter le modèle 14B comme configuration de base.
+
+PRIORITÉ DISQUE : le checkpoint officiel Wan 2.2 TI2V-5B fp16 à lui seul pèse environ 10 Go, avec encodeur de texte, VAE, checkpoint manga, environnement Python, sorties et caches en plus. Mesurer les tailles réelles des versions choisies ; estimer la place nécessaire et ne pas télécharger à l'aveugle. Si l'espace ne suffit pas : conserver le pipeline image seul et documenter le prérequis manquant.
+
+Références officielles à consulter lors de l'audit et à citer dans les docs :
+- ComfyUI installation Windows : https://docs.comfy.org/installation/desktop/windows
+- ComfyUI Wan2.2 5B officiel : https://docs.comfy.org/tutorials/video/wan/wan2_2
+- ComfyUI repo / API : https://github.com/Comfy-Org/ComfyUI
+- Wan officiel : https://github.com/Wan-Video/Wan2.2
+- Ollama Cloud : https://docs.ollama.com/cloud
+- Ollama structured outputs : https://docs.ollama.com/capabilities/structured-outputs
+- TikTok Direct Post : https://developers.tiktok.com/docs/en/content-posting-api-reference-direct-post
+- TikTok content guidelines : https://developers.tiktok.com/docs/en/content-sharing-guidelines
+Ces liens sont des références à relire avant mise en œuvre, et non des garanties d'accès ni de compatibilité éternelles.
+
+===============================================================================
+D. AUDIT / RÉPARATION DE L'ÉBAUCHE EXISTANTE
+===============================================================================
+
+Le propriétaire a reçu un compte rendu d'un premier Codex annonçant une arborescence sous C:\TikTokHistoryFactory. Le rapport mentionne notamment `pyproject.toml`, `.env.example`, `tiktok_history_factory/config/settings.py`, `database/models.py`, `pipeline/orchestrator.py`, `agents/interfaces.py`, `media/interfaces.py`, `publishing/interfaces.py`, `scripts/init.ps1`, `scripts/orchestrator.ps1`, `docs/ARCHITECTURE.md`, `tests/test_placeholder.py`.
+Ne considère PAS ce rapport comme preuve suffisante : inspecte physiquement les fichiers et les commandes dans le PC et note ce qui est vraiment présent.
+
+Erreurs signalées à confirmer puis corriger :
+- README parle à tort d'« histoire du manga » plutôt que d'histoire illustrée en manga.
+- `.env.example` définit `OLLAMA_MODEL=gemma3:4b` ; remplacer par un modèle Cloud configuré, par défaut `kimi-k3:cloud` si disponible ; ne pas exiger un LLM local.
+- `pipeline/orchestrator.py` utilise `Settings.LOG_LEVEL`, absent de `settings.py` dans le rapport ; vérifier et corriger.
+- Chemins DB_PATH/LOG_DIR basés sur resolve() depuis le cwd au lieu de la racine du projet ; fiabiliser.
+- `run_cycle()` marque une tâche FAILED parce que la phase n'est pas implémentée ; ne pas détruire la file pour ce motif.
+- README appelle possiblement `tiktok_history_factory.database.init` qui n'existe pas ; synchroniser commandes et code.
+- `scripts/orchestrator.ps1` installe potentiellement les dépendances à chaque run ; réserver cela à bootstrap/install/update et éviter de masquer les erreurs de code de sortie.
+- Tests `py_compile` ne suffisent pas ; obtenir vrais pytest/tests d'intégration. Vérifier qu'ils s'achèvent, sans processus de test abandonné en arrière-plan.
+- Incohérences possibles dans `.gitignore`, `.venv_test`, état de la licence, contraintes CI, et sécurité des champs de publication.
+- Hash anti-doublon par slug brut insuffisant si variantes orthographiques ; conserver en complément identifiants d'événement, langue et normalisation.
+- Exposition des ORM objets après fermeture de Session : tests et simplification/requêtes DTO.
+- Endpoints TikTok restés abstraits ; expliciter états et prérequis de publication.
+- Des appels PowerShell de la première version peuvent être incorrects ; valider avec un parseur et des tests d'exécution, pas par lecture superficielle.
+
+Produis `docs/AUDIT_LEGACY.md` avec colonnes : problème, fichier/ligne, sévérité, preuve, correction, test de régression. Préserve données utilisateur, bases, images et journal d'origine.
+
+===============================================================================
+E. ARCHITECTURE LOGICIELLE CIBLE ET ARBORESCENCE
+===============================================================================
+
+Conserver une structure Python installable, avec par exemple :
+C:\TikTokHistoryFactory\
+  README.md, pyproject.toml, .gitignore, .env.example, LICENSE
+  docs\ ARCHITECTURE.md, INSTALLATION.md, CONFIGURATION.md, RUNBOOK.md,
+        FACT_CHECKING.md, COMFYUI.md, TIKTOK.md, QUALITY.md,
+        SECURITY.md, AUDIT_LEGACY.md, LICENCES.md
+  scripts\ main.ps1, install.ps1, doctor.ps1, test.ps1, update.ps1,
+           orchestrator.ps1, schedule.ps1, backup.ps1
+  tiktok_history_factory\
+      __main__.py, cli.py
+      config\ settings.py, validation.py
+      database\ models.py, repository.py, migrations.py
+      pipeline\ coordinator.py, states.py, queue.py, checkpoints.py
+      agents\ topics.py, research.py, factcheck.py, writer.py,
+               storyboard.py, editorial_qc.py
+      providers\ ollama_cloud.py, history_sources.py,
+                 comfyui_images.py, comfyui_wan.py, piper_tts.py,
+                 ffmpeg.py, tiktok_official.py, local_export.py
+      media\ characters.py, prompts.py, assets.py, subtitles.py,
+             animations.py, audio.py, compositor.py, metadata.py
+      publishing\ eligibility.py, drafts.py, status.py
+      monitoring\ logs.py, metrics.py, health.py, costs.py
+  workflows\ comfyui\ (JSON compatibles API, versions et manifests)
+  assets\ style_guides\, fonts_licensed\, music_licensed\
+  data\ db, sources_cache, samples, subjects
+  work\ <job_id>\ (research, script, storyboard, media, renders, reports)
+  output\ ready\, review\, exported\
+  logs\, reports\, tests\
+  tools\ (optionnel si logiciels locaux isolés)
+
+Adapter l'arborescence si nécessaire, expliquer les adaptations. Ne pas dupliquer les abstractions. Éviter un fichier géant monolithique, dépendances cycliques et import-time side effects. Versionner le schéma et fournir migrations non destructrices. Data/output/work/credentials ne doivent pas être committés. Ajouter manifests horodatés, fingerprints des modèles et fichiers.
+
+CONTRAT DE DONNÉES : définir avec Pydantic des objets typés au minimum `Topic`, `SourceDocument`, `Claim`, `VerificationResult`, `ResearchDossier`, `NarrationScript`, `CharacterSheet`, `Scene`, `Storyboard`, `MediaAsset`, `MediaManifest`, `VideoTask`, `QCResult`, `PublicationJob`, `RunReport`. Pour les assertions historiques, chaque claim doit porter sources, citations/page/URL, intervalle temporel, niveau de certitude et étiquette VERIFIED/DISPUTED/UNVERIFIED. Un contenu UNVERIFIED critique empêche la publication. Prévoir version du schéma, détection des erreurs et migrations.
+
+États de job détaillés : CREATED, QUEUED, RESEARCHING, FACT_CHECKING,
+WAITING_FOR_SOURCES, SCRIPTING, STORYBOARDING, GENERATING_IMAGES,
+GENERATING_VIDEO, GENERATING_AUDIO, RENDERING, TECH_QC, EDITORIAL_QC,
+AWAITING_REVIEW, APPROVED, READY_FOR_EXPORT, READY_FOR_UPLOAD,
+UPLOADING, SUBMITTED, PUBLISHED_CONFIRMED, BLOCKED, RETRY_WAIT,
+FAILED, CANCELLED. Documenter transitions autorisées, raisons, temps, compteurs, éléments déjà générés. Ne pas confondre « envoyé » avec « publié ».
+
+===============================================================================
+F. INTERFACE UTILISATEUR — UN SEUL LANCEUR POWERSHELL
+===============================================================================
+
+Livrer `scripts/main.ps1`, facile à lancer manuellement, et tous les paramètres non interactifs pour le Planificateur Windows. En mode interactif, afficher un MENU CLAIR et numéroté :
+  1. Diagnostic complet / prérequis
+  2. Installer / réparer les composants manquants autorisés
+  3. Exécuter les tests du projet
+  4. Créer 1 vidéo TEST (20-30 secondes, sans publication)
+  5. Tester séparément image manga ComfyUI
+  6. Tester séparément clip Wan 2.2 5B (opt-in, faible résolution)
+  7. Lister les tâches, rapports et vidéos produites
+  8. Reprendre une tâche interrompue
+  9. Afficher la configuration / budgets / providers disponibles
+ 10. Préparer une exportation pour TikTok, sans publier
+ 11. Configurer les horaires (désactivés par défaut)
+ 12. Quitter
+L'interface doit être ergonomique, compréhensible en français, robuste aux saisies erronées. Indiquer avant chaque opération ce qu'elle fera ; confirmations pour action payante, publication réelle, suppression, installation privilégiée. Aucun autre questionnement inutile.
+
+CLI non interactive exigée (adapter syntaxe exacte, documenter et tester) :
+  .\scripts\main.ps1 -Mode Doctor
+  .\scripts\main.ps1 -Mode Install
+  .\scripts\main.ps1 -Mode Test
+  .\scripts\main.ps1 -Mode Pilot -DurationSeconds 25 -Publish:$false
+  .\scripts\main.ps1 -Mode TestImage
+  .\scripts\main.ps1 -Mode TestWan
+  .\scripts\main.ps1 -Mode Resume -JobId <id>
+  .\scripts\main.ps1 -Mode Status
+  .\scripts\main.ps1 -Mode Export -JobId <id>
+  .\scripts\main.ps1 -Mode Production -MaxVideos 3   (bloqué par défaut)
+
+Garder `scripts/orchestrator.ps1` comme alias compatible ou migrer explicitement les usages existants. Exécution PowerShell depuis tout cwd, chemins relatifs robustes à partir de $PSScriptRoot, propagation $LASTEXITCODE, sortie standard structurée, sans activation nécessaire du venv. Les scripts d'installation et de runtime doivent rester séparés. Logger dans un dossier par exécution ; fournir codes de sortie documentés : 0 succès, autres valeurs significatives.
+
+===============================================================================
+G. LLMS OLLAMA CLOUD : IMPLÉMENTATION RÉELLE
+===============================================================================
+
+G1. Fournisseur LLM
+- Appeler Ollama depuis Python via l'installation existante, en premier lieu `http://127.0.0.1:11434/api/chat` avec `model="kimi-k3:cloud"` ; URL, modèle et délais configurables. Si nécessaire, prendre en charge endpoint distant officiellement documenté avec secret sécurisé, sans remplacer la configuration utilisateur existante.
+- Ne pas tenter d'installer ou de télécharger Kimi en local. Ne pas transformer des modèles Ollama Cloud en jobs GPU locaux.
+- Limites de débit, retry borné, backoff exponentiel + jitter, distinction erreurs réseau/auth/quota/modèle absent/temps dépassé ; repli non payant ou arrêt clair si service indisponible.
+- Réutiliser prompts versionnés ; enregistrer usage des tokens si exposé par l'API ; masquer éventuelles données d'authentification.
+
+G2. JSON / SCHÉMAS
+La documentation Ollama indique actuellement que les sorties structurées par schéma ne sont PAS prises en charge par Ollama Cloud. Ne PAS supposer que `format=<JSON schema>` fonctionne en Cloud. Demander une sortie JSON textuelle, la parser strictement, valider Pydantic localement, réparer via requête courte dans une boucle bornée, puis arrêter proprement si non-conforme. Conserver le brut et le JSON normalisé dans des fichiers distincts. Le nombre de réparations ne doit jamais être infini.
+
+G3. RÔLES PROMPTS SÉPARÉS
+- sélectionneur de sujets ; documentaliste ; critique de cohérence ; narrateur ; générateur storyboard ; générateur prompts visuels ; contrôleur éditorial. Ces « agents » peuvent être des modules Python appelant le MÊME fournisseur Kimi avec prompts différents : inutile de faire tourner sept modèles GPU.
+- Les vérifications factuelles ne peuvent PAS se baser sur un second appel LLM seul : elles doivent pointer vers de vraies sources externes.
+
+===============================================================================
+H. DÉCOUVERTE DE SUJETS, SOURCES ET VÉRIFICATION HISTORIQUE
+===============================================================================
+
+H1. MÉCANISME DOCUMENTAIRE
+Connecteurs HTTP légitimes, dans la limite des API publiques/robots/conditions de service, pour sources identifiables (archives nationales, bibliothèques, publications universitaires, encyclopédies comme point de départ, institutions historiques, documents primaires lorsque disponibles). Exemples facultatifs et non exhaustifs : Gallica/BnF, bibliothèques et archives reconnues, DOI/Crossref, Wikimedia API, bibliothèques numériques ; ne pas présumer que chaque source possède une API ou une disponibilité fiable.
+
+H2. SOURCES
+Pour chaque événement, enregistrer URL, organisme/auteur, titre, date du document, date de consultation, texte extrait court, type de source, éventuelle pagination, langue, extrait justificatif et licence si reprise de média. Déduplication par identifiant canonique + similarité, cache horodaté et traçabilité.
+
+H3. FACT CHECKING
+- Minimum cible : deux sources indépendantes pertinentes pour les affirmations historiques centrales lorsque disponibles, avec priorité à la qualité plutôt qu'au nombre ; si non disponible, bloquer pour examen ou expliciter la limite. Éviter de compter deux reprises du même article comme deux preuves indépendantes.
+- Vérifier dates, lieux, personnes, chiffres et différences de travaux historiographiques.
+- Pour événements où les bilans sont débattus (ex. Thiaroye, morts, commanditaires et responsabilités), attribuer les estimations à leurs auteurs, éviter les chiffres inventés et expliciter incertitudes.
+- Ne jamais inventer citation, discours, visage ressemblant à une photographie d'archives, preuve historique, document ni lien.
+- Séparer narration factuelle, dialogue fictif et reconstitution visuelle. Aucun dialogue inventé attribué à une personne réelle comme s'il était authentique.
+- Interdire généralisation haineuse contre une nationalité, peuple ou groupe actuel ; traiter l'histoire sans propagande et sans glorification de la violence. Contenu traumatique non graphique, respect des victimes.
+- Si sujet historique non vérifié, conserver en AWAITING_REVIEW/WAITING_FOR_SOURCES ; ne pas lancer la production/publication comme si les faits étaient confirmés.
+
+H4. ANTI-DOUBLON
+SQLite topics table : identifiant événement/époque/région, variantes de noms et titre normalisé ; hash canonique et similarité ; empêcher de produire une seconde vidéo non volontaire sur le même sujet. Prévoir possibilité de « partie 2 » explicite liée à l'événement.
+
+H5. TESTS
+Requêtes HTTP enregistrées/mocks en unitaires, essai réel sur une source publique non payante si accès ; scénarios source indisponible, 404, timeout, 429, HTML trompeur, données contradictoires et citations insuffisantes. Journaliser les preuves exactes.
+
+===============================================================================
+I. SCRIPT FRANÇAIS, STORYBOARD ET DIRECTION ARTISTIQUE
+===============================================================================
+
+I1. NARRATION
+Mode PILOTE : 20 à 30 secondes, durée contrôlée sur voix réellement synthétisée et non simplement estimée. Mode PRODUCTION : cible configurable 60-90 s sous réserve de capacité. Structure : introduction qui attire l'attention sans sensationnalisme, contexte daté, faits documentés, conséquence, conclusion sourcée et non trompeuse. Faits écrits en français correct, sans inventions et sans « ce qu'on vous cache » non étayé. Titre, description, mots-clés et hashtags raisonnables et véridiques.
+
+I2. STORYBOARD
+Chaque scène : scene_id, durée cible, narrateur, faits justifiés et identifiants de sources, personnages, habits époque, lieu, météo/lumière, composition, palette, focales, prompt positif/negative, seed, image_ref éventuelle, choix d'animation local Wan/FFmpeg, durée, transition, audio, position sûre des sous-titres, signalement reconstitution IA.
+
+I3. STYLE DÉFINITIF
+- Dessins manga 2D japonais DÉTAILLÉS de type seinen historique, trait affirmé, ombrage peint, expressions réalistes, ambiance cinématographique sombre, lumière dramatique, couleurs maîtrisées ; personnages et tenues plausibles pour l'époque.
+- PAS 3D jouet, chibi, cartoon enfantin, plastique, bande dessinée occidentale générique, gore explicite ou imitations d'un studio/artiste vivant particulier.
+- Visages et tenues cohérents entre scènes ; créer des fiches personnage et références réutilisées ; vérifier les biais/erreurs historiques ; vérifier orthographe des légendes et ne pas demander au générateur d'image d'inscrire des textes qu'il pourrait mal dessiner.
+- Les images sont des reconstitutions déclarées comme telles. Ne pas simuler une vraie archive photographique si l'image est générée.
+
+I4. ACCEPTATION STORYBOARD
+Valider schema, durée, présence de sources rattachées aux scènes, absence de citations non sourcées, cohérence décor/vêtements/date ; si validation échoue, appliquer auto-correction bornée et produire rapport de blocage.
+
+===============================================================================
+J. COMFYUI LOCAL : INSTALLATION, MODÈLES MANGA ET IMAGES
+===============================================================================
+
+J1. CHOIX TECHNIQUE
+Installer/réutiliser ComfyUI sur Windows dans une instance contrôlable depuis Python et si possible isolée. Utiliser la distribution officielle stable/compatible ; privilégier le chemin existant si déjà présent. Pour automatiser, une instance ComfyUI locale exposant API REST/WebSocket est requise. Si Comfy Desktop ne donne pas facilement accès au lancement API autonome, évaluer l'installation officielle portable/manuel isolée ; documenter la raison. Pas de téléchargement de binaires non fiables ni de forks obscurs sans justification.
+
+J2. INTÉGRATION API
+- Health `http://127.0.0.1:8188` (port configurable).
+- Workflows ComfyUI enregistrés en JSON exporté POUR API (pas JSON d'éditeur si les formats diffèrent).
+- Soumettre avec POST /prompt, suivre par WebSocket et/ou GET /history/<prompt_id>, récupérer sorties via /view, comparer les ids, valider taille/format, limiter temps et stockage. Se référer aux exemples du dépôt officiel ComfyUI, pas aux URLs inventées.
+- Attendre la fin réelle avant de déclarer les fichiers générés ; gérer les queues, interruptions, erreurs OOM, redémarrage contrôlé ; ne jamais lancer plusieurs workflows GPU lourds en parallèle.
+- Adapter mapping des noeuds sans figer arbitrairement les IDs de workflow ; tests automatisés de vérification des entrées/nœuds requis.
+
+J3. MODÈLE ILLUSTRATION
+Sélectionner un checkpoint local de type SDXL ANIME / MANGA, adapté à 8 Go VRAM, avec licence vérifiable permettant l'utilisation envisagée, et provenance officielle. Candidat à examiner, non obligation automatique : Illustrious XL (édition précise et licence applicables à contrôler). Étudier SDXL anime alternatives si nécessaire. Si LoRA utilisée, contrôler licence et taille et documenter ; ne pas importer automatiquement des modèles NSFW, douteux ou sans provenance.
+Réglage de départ indicatif : génération de portraits/scènes en 2D au ratio proche 9:16, résolution adaptée au 8 Go, seed consigné, 1 image par tâche, batch=1 ; upscaling final via FFmpeg ou upscale raisonnable selon benchmark. Séparer résolution de génération de l'export final TikTok 1080x1920 : il n'est pas nécessaire de générer directement 1080x1920 en diffusion.
+
+J4. CONSTANCE DU PERSONNAGE
+- Guide de style global et glossaire d'époque ; fiches personnages et références internes ; prompt fixe + paramètres réutilisés ; si support IPAdapter/ControlNet/LoRA contrôlé et compatible, l'intégrer optionnellement après test mémoire.
+- Détecter prompts invalides, modèles manquants, images vides, mauvais ratio, erreurs de rendu, mains/visages problématiques (contrôle automatique limité) et produire un contact sheet de vérification visuelle.
+- Éviter les régénérations infinies ou coûts locaux incontrôlés ; sauvegarder seeds et paramètres exacts.
+
+J5. LIVRABLES
+Un workflow illustration API JSON, un `ComfyUIImageProvider` fonctionnel, exemples de prompts et au moins une image réelle générée sur la carte si l'installation et les licences ont permis le test. Sinon indiquer précisément ce qui a empêché le test, sans substitution silencieuse par image téléchargée.
+
+===============================================================================
+K. WAN 2.2 5B : ANIMATIONS COURTES CONDITIONNELLES
+===============================================================================
+
+K1. MODÈLE ET DOCUMENTATION
+Utiliser exclusivement pour le premier essai le Wan2.2-TI2V-5B (hybride texte/ image vers vidéo) avec le WORKFLOW NATIF OFFICIEL COMFYUI correspondant, le chargement/déchargement mémoire natif. Ne pas remplacer par A14B par défaut. Reconsulter le guide officiel et les noms de fichiers réellement en vigueur. Versions historiques indiquées dans la documentation :
+  wan2.2_ti2v_5B_fp16.safetensors (diffusion_models)
+  umt5_xxl_fp8_e4m3fn_scaled.safetensors (text_encoders)
+  wan2.2_vae.safetensors (vae)
+Références : https://docs.comfy.org/tutorials/video/wan/wan2_2
+Modèles : https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged
+Le FP16 ~10 Go dépasse physiquement les 8 Go VRAM et nécessite le déchargement des composants vers la RAM, d'où la prudence. Ne pas présenter « tourne sur 8 Go » comme une mesure de vitesse.
+
+K2. GESTION DES RESSOURCES
+- Test pilote d'abord en basse résolution compatible workflow (par exemple 480p, ratio portrait convenable, si support officiel, et seulement quelques secondes / faible nombre de frames), limiter FPS/steps si workflow le permet sans casser l'API.
+- Offloading et paramètres low-VRAM adaptés ; ne pas supposer qu'un flag optionnel existe dans toutes les versions. Contrôler consommation peak VRAM, RAM, débit disque, temps réel, réponse de ComfyUI et intégrité du MP4.
+- Définir limites configurables de temps et de consommation ; si OOM, timeout, freeze, sortie déformée ou trop lente : FAILED_FOR_SCENE -> FALLBACK_FFMPEG (et NON échec de tout le projet), avec log et raisons ; une seule requête GPU lourde à la fois.
+- Ne pas faire 10 essais identiques d'OOM. Stratégie bornée : réduire durée/résolution quand valide, essayer un workflow plus léger documenté si disponible, puis repli.
+- Supprimer après usage les données temporaires lourdes seulement si leur contenu est réplicable et qu'elles n'appartiennent pas à l'utilisateur ; conserver les manifestes et fichiers de production finaux.
+
+K3. QUALITÉ
+- L'image de référence reste le point de départ ; chercher animation douce (travelling, déplacement personnage, respiration, poussière, manteau), éviter scènes d'action complexes, dialogues synchronisés bouche et longues séquences au premier test.
+- Comparer scène I2V et la même image FFmpeg ; produire benchmark temps/qualité approximative et choix rationnel selon les limites 8 Go.
+- Premier pilote de 20-30s : viser idéalement UNE scène Wan 2.2 de 2-4 secondes et compléter par images animées ; si l'essai Wan échoue, rendre quand même la vidéo FFmpeg et signaler que le test Wan n'a pas été validé.
+
+K4. TESTS
+Un test API/queue mock, puis un véritable essai GPU si matériel disponible, modèles téléchargés légalement et disque suffisant ; mesurer temps, VRAM, RAM, consommation disque, nombre de frames, résolution, fps, codec. Générer un rapport spécifique WAN_BENCHMARK.md. Sans test réel : statut « non démontré ».
+
+===============================================================================
+L. VOIX FRANÇAISE, SOUS-TITRES ET MUSIQUE
+===============================================================================
+
+L1. TTS
+Priorité TTS LOCAL GRATUIT CPU, idéalement moteur Piper maintenu/compatible Windows et voix fr_FR dont la fiche de licence autorise la publication envisagée. N'installe pas un dépôt obsolète non compatible sans alternative documentée. Sélectionne concrètement une voix vérifiée et vérifie diction, prononciation des noms historiques, nombres, dates, rythme. Si voix non compatible/licence inconnue : bloque ce fournisseur et documente un autre TTS local légal. Toute API TTS externe payante désactivée par défaut.
+- Générer WAV mono normalisé et normalisation du niveau sonore ; voix sobre, intelligible et non caricaturale.
+- Ne pas cloner la voix d'une personne réelle sans autorisation.
+- Contrôler durée exacte du WAV ; ajuster si besoin scénario/découpage avant montage.
+
+L2. SOUS-TITRAGE
+- Générer SRT/ASS à partir du texte et d'un alignement réel si possible. Si la méthode est estimative, l'indiquer ; éviter le glissement d'horodatage ; un mode de correction manuelle doit rester possible.
+- Police sous licence vérifiée, taille lisible sur mobile, lignes courtes, pas de sous-titres sur le bord inférieur masqué par l'interface TikTok ; accentuation française correcte ; export en UTF-8.
+- Tests SRT : nombre de segments, chronologie croissante, pas de dépassement de durée, aucun sous-titre hors écran ; `ffprobe` valide l'audio et l'image.
+
+L3. MUSIQUE / SFX
+Utiliser uniquement des ressources créées localement ou libres avec licence explicitement compatible ; ne pas télécharger de musiques populaires non licenciées. Mixage : voix clairement au-dessus du fond, pas de dramatisation indécente d'un massacre, pas de bruitage excessivement violent. Prévoir piste silencieuse si aucune musique sûre disponible.
+
+===============================================================================
+M. MONTAGE FFmpeg : SORTIE TIKTOK VERTICALE
+===============================================================================
+
+M1. FORMAT
+MP4, H.264 pour compatibilité, AAC pour audio, format final 1080x1920 (9:16) sauf contrainte déterminée par vérification actuelle, framerate stable choisi et documenté (par ex. 24 ou 30 fps), vidéo sans bord noir parasite, pix_fmt yuv420p si approprié, audio synchronisé ; satisfaire à la documentation TikTok en vigueur.
+
+M2. ÉLÉMENTS DE MONTAGE
+- Ken Burns, recadrage intelligent, travelling, parallax simple optionnel, légère vibration ou poussière contrôlée ; conservation des visages, du contenu principal et des époques.
+- Mélange scènes Wan et images animées FFmpeg, transitions fluides, couverture 100% de la durée de narration, pas de black frame accidentelle, pas de cuts brutalement désynchronisés.
+- Sous-titres stylisés cohérents sans masquer les visages ; indication explicite « Reconstitution historique générée par IA » et mention des sources en description ou dossier associé ; cartes de sources si nécessaire.
+- Générer miniature verticale, métadonnées description, hashtags, sources ; ne pas incruster de faux logos d'archives.
+- Une fois la vidéo produite, FFprobe + décodage FFmpeg `-f null` sur fichier complet, durée proche cible, présence audio, résolution, aspect, codecs, image non vide et vérification d'absence de corruption.
+
+M3. SORTIES
+`output/ready/<job_id>_final.mp4`, `<job_id>_cover.jpg`, `<job_id>_caption.txt`, `<job_id>_sources.md`, `<job_id>_manifest.json`, `<job_id>_qc.json` ; versionner reproductibilité (seeds, modèles, workflows, réglages, checksums).
+
+===============================================================================
+N. TIKTOK : PUBLICATION LÉGALE, MODE TEST PAR DÉFAUT
+===============================================================================
+
+N1. NE PAS PROMETTRE DE PUBLICATION PUBLIQUE AUTOMATIQUE
+L'API officielle TikTok demande des autorisations (`video.upload`, `video.publish` selon le flux) et limite les clients non audités à la visibilité privée dans les conditions annoncées. Les directives d'usage peuvent exclure les simples utilitaires personnels publiant automatiquement sur leur propre compte. Vérifier les conditions en vigueur ; ce cahier des charges n'autorise pas à les contourner.
+
+N2. MODES À IMPLÉMENTER
+- `LOCAL_EXPORT` : 100 % réel, sans API TikTok ; export MP4 + description + source + manifest, statut READY_FOR_EXPORT ; mode par défaut.
+- `TIKTOK_DRAFT` : connecteur officiel quand le compte/dev app et scopes requis sont valides ; user consent/flux UI si requis ; l'envoi en brouillon ne vaut pas publication. Test uniquement si autorisé.
+- `TIKTOK_PRIVATE_DIRECT` : uniquement quand autorisé par l'API et consentement explicite ; respecter visibilité retournée par TikTok, statuts, quotas et contrôles ; désactivé par défaut.
+- `TIKTOK_PUBLIC_DIRECT` : NE PAS ACTIVER sans autorisations, audit approprié, conformité au cas d'usage et validation explicite après consultation du propriétaire. L'absence d'accès doit être « bloquée par service » et non un échec d'installation.
+- `APPROVED_THIRD_PARTY` : interface optionnelle si l'utilisateur choisit ultérieurement un fournisseur officiellement autorisé ; jamais d'abonnement automatique.
+
+N3. DONNÉES ET CONFORMITÉ
+- Ajouter métadonnées AIGC si supportées/requises par l'API (ex. `is_aigc` selon endpoints réellement utilisés) ; mentionner « Reconstitution historique générée par IA » si nécessaire. Ne pas se faire passer pour une archive réelle.
+- Inclure les paramètres de visibilité/consentement exigés ; pas de publication par défaut sur PUBLIC_TO_EVERYONE. Ne jamais marquer PUBLISHED_CONFIRMED à partir d'une simple réponse d'upload ; attendre statut confirmé par API.
+- Dédupliquer upload/publication via idempotence, conserver `publish_id` et id vidéo lorsqu'ils existent ; protéger les tokens OAuth, rafraîchissement éventuel, scopes et erreurs.
+- Ne pas utiliser Selenium, Playwright, macros ou bots pour contourner restrictions TikTok.
+- Fournir `docs/TIKTOK.md` avec ce qui est possible, ce qui est bloqué, démarche légitime pour connexion, prérequis et limites. Ne jamais inventer des capacités sur un compte utilisateur non connecté.
+
+N4. L'OBJECTIF TEST COMPTE
+Le propriétaire veut tester UNE vidéo sur un compte TikTok. Préparer le livrable pour qu'il puisse l'importer manuellement ; l'envoi API privé peut être essayé uniquement si l'accès autorisé existe et que l'utilisateur a donné accord. Rien n'est publié publiquement sans consentement spécifique.
+
+===============================================================================
+O. SQLITE, REPRISE, PLANIFICATION ET EXPLOITATION
+===============================================================================
+
+O1. SQLITE
+Migration/version DB, contraintes unique, transactions courtes, backup avant migration, éventuellement WAL, erreurs détaillées, index appropriés. Tables possibles : topics, documents, claims, tasks, stages, assets, character_sheets, publications, run_history, metrics, settings_versions. Éviter duplications de même sujet, même job et publication.
+
+O2. REPRISE ROBUSTE
+Chaque phase produit checkpoint atomique avec artefacts vérifiés ; panne Windows, perte réseau ou OOM ne doit pas forcer la régénération d'images déjà valides. Reprendre au dernier checkpoint validé, retries bornés, états de quarantaine et intervention humaine pour échecs répétés. Verrou global avec PID/horodatage et expiration prudente ; tuer uniquement les processus appartenant au projet après identification.
+
+O3. PLANIFICATEUR WINDOWS
+Définir une fonction qui crée les tâches planifiées non interactives pour TROIS créneaux/jour paramétrables (fuseau Europe/Paris, DST pris en charge par le système) MAIS LES LAISSER DÉSACTIVÉES par défaut jusqu'à accord après tests réels. Il ne faut pas inventer ni imposer des horaires. Documenter comportement si PC éteint/sommeil, batterie, absence Internet, ressources GPU occupées ; ne jamais annoncer 24/7 si PC arrêté. Une tâche produit un slot/job unique, pas 3 fois le même sujet. Limite 3 productions par jour configurée, jours calendaires locaux, concurrence 1 pour GPU.
+
+O4. METRICS
+Par phase : date/heure, état, durée réelle, fournisseur utilisé, erreur, nombre de retries, fichiers/tailles, pic VRAM/RAM approximatif, charge, estimation kWh si mesurable, coût externe réel si connu/0 si aucun fournisseur payant, statut QC, raison du fallback, succès API confirmé/non confirmé.
+
+O5. BACKUP ET MAINTENANCE
+`backup.ps1` sauvegarde DB, config non secrète, rapports ; jamais effacer outputs utilisateurs automatiquement. Politique de rétention configurable pour caches/rejets ; rapport avant nettoyage. `update.ps1` sauvegarde et teste avant mise à jour ; dépendances pin/lock si possible ; aucune mise à jour forcée de pilotes ou software système.
+
+===============================================================================
+P. MODES D'ESSAI : TESTS UNITAIRES, INTÉGRATION ET E2E
+===============================================================================
+
+P1. PYTHON ET POWERSHELL
+Installer dépendances dans venv, pyproject.toml cohérent, tests pytest, type-check si adapté, ruff, validation AST/scripts PowerShell, codes de sortie contrôlés ; conserver logs. Tester installation depuis un autre répertoire, chemins comportant espaces/accents, erreurs d'exécution et redémarrage.
+
+P2. TESTS UNITAIRES OBLIGATOIRES
+- configuration, defaults sûrs, .env absent, chemins absolus, choix providers,
+- schémas et payloads malformés,
+- SQLite transactions et migrations, anti-doublons, reprise,
+- state machine transitions autorisées/interdites,
+- parsing de JSON Kimi, réparations bornées,
+- validation de sources et ambiguïtés historiques,
+- prompt manga, caractère non graphique et style,
+- adapter ComfyUI API (mock HTTP/WebSocket), timeouts et erreur OOM,
+- adaptateur Wan, fallback FFmpeg,
+- Piper absent/licence/voix manquante,
+- SRT et durées,
+- construction FFmpeg et vérification MP4,
+- zéro publication/dépense par défaut,
+- scheduler désactivé par défaut,
+- reprise après crash, doublons de publication et contre-tests de sécurité.
+
+P3. TESTS D'INTÉGRATION
+- migration/écriture/lecture sur une base temporaire distincte,
+- test Ollama Cloud réel borné si accès existant, sauf risque de facturation hors forfait ; version mock systématique,
+- ComfyUI health + génération image réelle si modèle disponible,
+- Wan 2.2 5B réel si disque/RAM/VRAM compatibles,
+- TTS réel FR et contrôle audio,
+- FFmpeg montage MP4 9:16 + ffprobe et décodage,
+- recherche HTTP sur une source autorisée,
+- CLI interactive (tests automatisés ou scénario documenté) et non interactive,
+- restart/résilience sur tâches partielles,
+- API TikTok uniquement mock tant qu'aucune autorisation réelle.
+
+P4. TEST FINAL PILOTE
+Générer un seul épisode de 20-30 secondes : recherche et documentation réelles d'un sujet historique explicitement sourcé ; voix française réelle ; 3-6 illustrations manga locales ; au moins une tentative de courte animation Wan si installable, avec fallback prouvé ; montage complet FFmpeg ; sous-titres ; thumbnail ; sources ; contrôles. Laisser vidéo dans `output/ready` et n'effectuer aucun upload sans autorisation. Ne pas attribuer un score arbitraire de qualité à la vidéo ; produire contact sheet et une checklist de contrôle visuel à examiner humainement.
+
+P5. BENCHMARK RÉEL
+Chronométrer par sous-système. Distinguer démarrage/chargement modèle de production. Mesurer temps d'image, clip 2-4s, voix, assemblage et total ; estimer si 3 vidéos/jour sont POSSIBLES : durée totale prévisionnelle, mémoire, disponibilité PC, gestion files ; si impossible, expliciter la raison et propositions (plus de plans FFmpeg, moins de clips Wan, génération nocturne, 20-30s, bascule cloud payante SEULEMENT avec accord).
+
+P6. PRÉCAUTION
+Les tests mock ne prouvent jamais que ComfyUI, Wan, Ollama réel ou TikTok fonctionne. Toute conclusion finale doit présenter séparément tests statiques, unitaires, intégrations réelles et publication effective.
+
+===============================================================================
+Q. AUTO-CORRECTION / AUDIT INTERNE AUTOMATIQUE
+===============================================================================
+
+Q1. BOUCLE DE QUALITÉ
+Après chaque grande phase, exécuter :
+  Analyser code -> vérifier contrat -> lancer tests -> détecter erreurs -> corriger la cause racine -> ajouter test de régression -> relancer.
+Maximum raisonnable d'itérations par cause pour éviter boucle infinie ; si échec persistant, garder diagnostics, réduire proprement le périmètre et indiquer NON CONFORME/PARTIEL. Ne jamais remplacer test cassé par un assert sans sens, modifier les critères pour obtenir du vert ni masquer exceptions.
+
+Q2. MATRICE D'EXIGENCES
+Construire `reports/REQUIREMENTS_MATRIX.csv` et `.md` : identifiant A1...Q2 / statut DONE, PARTIAL, BLOCKED, NOT_DONE / fichier du code / numéro de test / preuve / limite et action restante. Ne jamais marquer DONE un composant non exécuté.
+
+Q3. DOUBLE REVUE
+- Revue architecture : découplage modules, budgets, contraintes matérielles, secrets, idempotence, absence de dépendances inutiles.
+- Revue fonctionnelle : domaine historique correct, style manga détaillé, provenance des faits, premier pilote, sécurité TikTok, modes manuel/automatique, conformité à chaque exigence.
+- Revue sécurité : les appels API locaux n'écoutent pas publiquement, pas de mots de passe dans logs, pas de téléchargement de code opaque, pas de chaîne shell non échappée, pas de publication non consentie.
+- Revue qualité : FFmpeg output réel et décodable, fichiers non vides, ratios corrects, mode fallback testé, pas de fausses mesures.
+
+Q4. TESTS À REFAIRE À LA FIN
+Repartir d'un état propre sans détruire les données : lancer doctor, installation idempotente, test unitaire, intégration, dry-run, test vidéo, reprise d'une tâche et export. Écrire les commandes exactes et leurs codes de retour.
+
+===============================================================================
+R. DOCUMENTATION À LIVRER
+===============================================================================
+
+Tout documenter en FRANÇAIS CLAIR, pas à pas, commandes prêtes à copier dans PowerShell.
+Obligatoires :
+- `README.md` : vision, usage et limites confirmées.
+- `docs/INSTALLATION.md` : prérequis détectés, installation, modèles, licences, risques disque, diagnostic.
+- `docs/ARCHITECTURE.md` : schéma et contrats données, flux, API et composants.
+- `docs/CONFIGURATION.md` : exemple .env COMPLET sans secrets, valeurs par défaut, fournisseurs, chemins, modèles, options GPU, budgets.
+- `docs/RUNBOOK.md` : les commandes utilisateur, menu, planificateur, sauvegarde, dépannage, restauration, arrêt, reprise.
+- `docs/FACT_CHECKING.md` : sources, niveau de certitude, controverses, contrôle éditorial.
+- `docs/COMFYUI.md` : installation, modèles choisis, workflow images/Wan, tests, résultats, limites RTX 4060.
+- `docs/LICENCES.md` : URL+version+licence du checkpoint manga, Wan, Piper, voix FR, polices/musique ; si licence non vérifiée, signaler « bloquée ».
+- `docs/TIKTOK.md` : API, consentement, restrictions, export, actions humaines restantes ; aucun contournement.
+- `docs/SECURITY.md` : secrets, accès locaux, publications, budget, mises à jour.
+- `docs/QUALITY.md` : critères QC, mesures et seuils, rapports.
+- `docs/AUDIT_LEGACY.md` : différences première version/correctifs.
+- `reports/FINAL_REPORT_<timestamp>.md` et `.json`, `reports/REQUIREMENTS_MATRIX.*`, `reports/PREFLIGHT_*`, `reports/WAN_BENCHMARK.md` si GPU testé.
+
+===============================================================================
+S. LIVRABLES EXIGÉS AVANT FIN DE MISSION
+===============================================================================
+
+S1. CODE ET INFRA
+- Code Python réellement importable et installable ; environnement isolé ; scripts PowerShell opérationnels et documentés.
+- SQLite initialisée et migrations réussies ; tâches reprenables.
+- ComfyUI installé/réutilisé, appelable par API, si prerequis compatibles ; au minimum gestion d'indisponibilité robuste.
+- ImageProvider manga testé, WanProvider 5B testé ou correctement bloqué ; FFmpeg fallback réellement fonctionnel ; TTS fonctionnel ou blocage prouvé.
+- Un script démarrage unique + modes et menu ; pas d'installation pip en plein cycle quotidien.
+- Configuration sûre : auto-publication désactivée, aucune nouvelle dépense API, planification désactivée tant que non validée.
+- Workflow TikTok export hors API parfaitement opérationnel ; connecteur officiel TikTok sans comportement interdit, tests mocks.
+
+S2. ARTEFACTS DE TEST
+- `output/ready/*_final.mp4` PILOTE RÉEL si les composants requis sont disponibles et correctement testés ; sinon un résultat E2E synthétique marqué DEMO/MOCK avec statut NON VALIDÉ RÉEL et explication du manque.
+- Image manga réelle, planche-contact, clip Wan si possible, voix FR, sous-titres, caption, manifeste, sources, logs, diagnostics.
+- Rapport comparant rendu Wan vs repli FFmpeg si les deux existent.
+
+S3. DOCUMENTS ET VALIDATION
+- Documentation exhaustive mais lisible ; logs horodatés, preuves factuelles pour tests ; aucune promesse sur résultats non mesurés.
+- Aucun upload vers TikTok et aucune tâche Windows de production activée sans consentement spécifique.
+- À la toute fin, donner un résumé accessible : ce qui marche VRAIMENT, ce qui n'a été que SIMULÉ, ce qui reste BLOQUÉ, combien coûte potentiellement un essai, et quelle UNIQUE action prochaine est la plus utile.
+
+===============================================================================
+T. FORMAT IMPÉRATIF DU RAPPORT FINAL CODEX
+===============================================================================
+
+Créer `reports/FINAL_REPORT_<timestamp>.md` avec ces rubriques dans cet ordre :
+
+01. Résumé exécutif : VERDICT GLOBAL = OPÉRATIONNEL / PARTIEL / BLOQUÉ, sans euphorie.
+02. Machine réellement observée : versions Windows, RAM, GPU, VRAM, CPU, disque, pilotes, Python, Ollama, ComfyUI et licences (pas de secrets).
+03. État initial, fichiers préexistants et sauvegarde effectuée.
+04. Liste exhaustive des fichiers créés/modifiés/supprimés ; pour chacun raison.
+05. Arborescence finale réelle.
+06. Modèles retenus : noms exacts, versions, liens d'origine, licence, poids et disques, empreintes si disponibles.
+07. Configuration des fournisseurs : local/cloud, autorisé/indisponible, facturation et limites.
+08. Détails de chaque pipeline : sujet, sources, script, storyboard, images, Wan, voix, SRT, montage, QC, TikTok.
+09. Commandes de test EXACTES et sorties essentielles (codes de sortie et dates), distinction mock vs réel.
+10. Tableau récapitulatif PASS/FAIL/SKIPPED/BLOCKED pour toutes exigences, liens vers la matrice.
+11. Résultats du benchmark GPU, mémoire, temps, fps, résolution, stabilité, OOM, températures SI mesurées.
+12. Fichiers livrés : chemins Windows exacts des vidéos, images, voix, manifests, sources et logs.
+13. Coûts : abonnement existant, coût externe nouveau réel, hypothèses électricité, éventuels quotas.
+14. Publication TikTok : NON PUBLIÉ / EXPORTÉ / PRIVÉ CONFIRMÉ / PUBLIC CONFIRMÉ, preuve API si applicable, limites documentées.
+15. Auto-corrections : chaque problème trouvé, correction apportée, test ajouté et vérification après correction.
+16. Failles/risques/restes à faire : classés CRITIQUE, IMPORTANT, MINEUR avec responsable et remédiation.
+17. Démonstration manuelle reproductible (commandes complètes) pour lancer le pilote et retrouver les fichiers.
+18. Condition objective de passage à 3 vidéos/jour, indicateurs de capacité et garde-fous avant activation.
+19. Conclusions sur l'adéquation à la demande : 2D manga DÉTAILLÉ, histoire vérifiable, budget 0€ supplémentaire visé, autonomie et conformité.
+20. Prochaine action humaine unique, si nécessaire, avec raison ; sinon indiquer prêt pour revue de l'utilisateur.
+
+Inclure une section « Ce que je n'ai PAS pu tester / vérifier » sans honte. Un pilote sorti du pipeline seulement grâce à des mocks ne peut pas être appelé « production complète fonctionnelle ». Accompagner le rapport d'un JSON machine-readable, validation du JSON par schéma, et d'un sommaire court affiché à l'écran.
+
+===============================================================================
+U. CHECKLIST D'ACCEPTATION FINALE : À RELIRE AVANT DE TERMINER
+===============================================================================
+
+[ ] Le projet parle d'HISTOIRE illustrée en manga, et jamais de l'histoire du manga.
+[ ] Dessins manga 2D détaillés, style mature historique ; pas de rendu 3D / chibi.
+[ ] Machine RTX 4060 8 Go / 32 Go reconnue réellement.
+[ ] Volume disque évalué AVANT tout modèle de plusieurs Go.
+[ ] Ollama Cloud existant conservé ; `kimi-k3:cloud` par défaut si accessible.
+[ ] Aucun LLM gourmand local installé par défaut.
+[ ] ComfyUI local sécurisé, API fonctionnelle si installé.
+[ ] Image manga via ComfyUI : test réel ou statut bloqué avec preuve.
+[ ] Wan 2.2 TI2V-5B avec offloading ; petit clip réel ou preuve explicite du blocage.
+[ ] Wan 14B non requis ; fallback FFmpeg testé.
+[ ] Voix française réelle et licence vérifiée ou blocage documenté.
+[ ] Vérification historique avec URLs/citations réelles, controverses correctement signalées.
+[ ] Scénario/storyboard validés ; pas de JSON Cloud garanti supposé.
+[ ] Sous-titres cohérents avec la voix et lisibles sur téléphone.
+[ ] FFmpeg produit un MP4 réel vertical décodable.
+[ ] Gestion états, anti-doublons, reprise, isolation tests, budgets, logs.
+[ ] Scripts PowerShell : installation, diagnostic, test, menu, pilote, status, reprise et export.
+[ ] Pas de paiement externe, pas d'installation Admin ou modification globale sans accord.
+[ ] Pas de TikTok public direct sans accès confirmé et accord ; import manuel possible.
+[ ] AIGC/reconstitution historique explicitement indiqués et contenu non graphique.
+[ ] Planificateur 3/jour implémenté MAIS non activé par défaut.
+[ ] Tests unitaires, intégration, e2e et benchmarks étiquetés réel/mock.
+[ ] Auto-correction + tests de régression exécutés, résultats datés.
+[ ] Documents complets, matrice de conformité, rapport final détaillé.
+[ ] Tous les échecs, limitations et tâches humaines restantes sont explicités.
+
+DERNIÈRE INSTRUCTION
+-------------------
+Exécute ce projet dans le cadre des autorisations dont tu disposes. Avance de façon autonome jusqu'à la meilleure complétude réelle possible ; ne t'interromps pas simplement pour poser des questions de routine. En cas de décision technique courante, choisis une option libre, documentée et prudente puis teste. En cas d'action irréversible, de coût supplémentaire, de changement global du PC, de licence incompatible ou de publication TikTok : laisse désactivé et indique ce qui est requis. Une fois toutes les phases terminées, RELIS TOUT LE CODE, RELIS LE CAHIER DES CHARGES, RELANCE LES TESTS ET LIVRE LE RAPPORT EXHAUSTIF. N'ANNONCE PAS SUCCÈS SI LA PREUVE N'EXISTE PAS.
+
+FIN DU PROMPT MAÎTRE.
+================================================================================

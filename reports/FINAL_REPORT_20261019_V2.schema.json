@@ -1,0 +1,101 @@
+{
+  "$defs": {
+    "Section": {
+      "properties": {
+        "number": {
+          "title": "Number",
+          "type": "integer"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "number",
+        "title",
+        "text"
+      ],
+      "title": "Section",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "2.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "verdict": {
+      "const": "PARTIEL",
+      "title": "Verdict",
+      "type": "string"
+    },
+    "sections": {
+      "items": {
+        "$ref": "#/$defs/Section"
+      },
+      "maxItems": 20,
+      "minItems": 20,
+      "title": "Sections",
+      "type": "array"
+    },
+    "components": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Components",
+      "type": "array"
+    },
+    "changes": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Changes",
+      "type": "array"
+    },
+    "tests": {
+      "additionalProperties": true,
+      "title": "Tests",
+      "type": "object"
+    },
+    "pilot": {
+      "additionalProperties": true,
+      "title": "Pilot",
+      "type": "object"
+    },
+    "wan": {
+      "additionalProperties": true,
+      "title": "Wan",
+      "type": "object"
+    },
+    "next_action": {
+      "title": "Next Action",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "created_at",
+    "verdict",
+    "sections",
+    "components",
+    "changes",
+    "tests",
+    "pilot",
+    "wan",
+    "next_action"
+  ],
+  "title": "Report",
+  "type": "object"
+}

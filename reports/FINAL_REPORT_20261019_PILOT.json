@@ -1,0 +1,1425 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-19T11:35:57.517738+02:00",
+  "verdict": "PARTIEL",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Résumé exécutif",
+      "text": "VERDICT GLOBAL = PARTIEL. Le pilote réel est opérationnel et exporté pour revue. La chaîne autonome générale et le débit quotidien ne sont pas déclarés validés."
+    },
+    {
+      "number": 2,
+      "title": "Machine réellement observée",
+      "text": "Windows-11-10.0.26300-SP0; projet Python 3.11.9; ComfyUI 0.41.0; NVIDIA GeForce RTX 4060 Laptop GPU, 596.08, 8188 MiB; RAM 31.69 Gio\nCPU : Intel64 Family 6 Model 183 Stepping 1, GenuineIntel\nPython ComfyUI : 3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]\nPyTorch : 2.14.0+cu130"
+    },
+    {
+      "number": 3,
+      "title": "État initial et sauvegardes",
+      "text": "Base initiale : smoke test existant, aucun modèle image ni voix FR, connecteurs incomplets. Sauvegarde avant modifications : C:\\TikTokHistoryFactory\\backups\\pilot-20261019-094855. Sauvegardes supplémentaires : backups/before-pilot-*, pilot-before-visual-revision-03, pilot-before-visual-revision-04 et pilot-before-final-render. Le dépôt racine n’est pas Git ; aucune initialisation de distant."
+    },
+    {
+      "number": 4,
+      "title": "Fichiers créés ou corrigés",
+      "text": "- MODIFIED : .env — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : .env.example — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : .gitignore — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\piper-1.8.0-COPYING — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\sdxl-LICENSE.md — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\sdxl-LICENSE.md.provenance.json — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\sdxl-README.md — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\sdxl-README.md.provenance.json — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\siwis-MODEL_CARD.md — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\siwis-MODEL_CARD.md.provenance.json — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\wan-Apache-2.0.txt — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : assets\\licenses\\wan-Apache-2.0.txt.provenance.json — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : data\\subjects\\thiaroye-1944.json — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\ARCHITECTURE.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\AUDIT_LEGACY.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\COMFYUI.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\CONFIGURATION.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\FACT_CHECKING.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\INSTALLATION.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\LICENCES.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\QUALITY.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\RUNBOOK.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : docs\\SECURITY.md — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : pyproject.toml — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : README.md — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : requirements-lock.txt — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : scripts\\acquire_pilot_assets.py — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : scripts\\build_final_report.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : scripts\\main.ps1 — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : scripts\\orchestrator.ps1 — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : scripts\\schedule.ps1 — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : tests\\test_pilot_contracts.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tests\\test_providers.py — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : tests\\test_real_pilot.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\__main__.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\cli.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\config\\settings.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\database\\models.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\media\\animations.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\media\\compositor.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\media\\prompts.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\media\\subtitles.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\monitoring\\health.py — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : tiktok_history_factory\\pipeline\\checkpoints.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\pipeline\\orchestrator.py — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : tiktok_history_factory\\pipeline\\pilot.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\providers\\comfyui_images.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\providers\\comfyui_wan.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\providers\\ffmpeg.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\providers\\history_sources.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\providers\\local_export.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\providers\\ollama_cloud.py — Pilot integration, verification or documentation; see subsystem reports\n- MODIFIED : tiktok_history_factory\\providers\\piper_tts.py — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : workflows\\comfyui\\pilot_sdxl_api.json — Pilot integration, verification or documentation; see subsystem reports\n- CREATED : workflows\\comfyui\\wan22_5b_api.json — Pilot integration, verification or documentation; see subsystem reports\nListe des sources, scripts, dépendances et licences ; les médias et poids sont détaillés aux sections 5, 6 et 12. Caches Python et copies de sauvegarde exclus de cette liste. Aucune donnée utilisateur supprimée. .env contient des valeurs privées et reste exclu des exports."
+    },
+    {
+      "number": 5,
+      "title": "Arborescence des livrables réels",
+      "text": "output\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\animation\\clip.mp4\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\animation\\clip.wan.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\animation\\clip.workflow.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\animation\\visual-review.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\artifact_hashes.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\audio\\scene-01.wav\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\audio\\scene-02.wav\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\audio\\scene-03.wav\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\audio\\scene-04.wav\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\caption.txt\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\characters.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\contact-sheet.jpg\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\cover.jpg\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\CREDITS.txt\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\manifest.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-01-v3.generation.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-01-v3.png\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-02-v3.generation.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-02-v3.png\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-03-v4.generation.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-03-v4.png\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-04-v3.generation.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\media\\scene-04-v3.png\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\pilot.mp4\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\qc.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\scenario.txt\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\sources.md\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\storyboard.json\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\subtitles.ass\noutput\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\subtitles.srt"
+    },
+    {
+      "number": 6,
+      "title": "Modèles, provenance et licences",
+      "text": "SDXL officiel, 6 938 078 334 octets, révision 462165984030d82259a11f4367a4eed129e94a7b, Open RAIL++-M. Voix SIWIS 63 201 294 octets, CC-BY 4.0. Wan : 18 144 966 705 octets, Apache 2.0, détails et SHA-256 dans wan-model-evaluation.json. Vérifications locales consignées dans les .provenance.json. Piper GPL-3.0. Polices Windows seulement rasterisées. Aucun modèle NSFW spécialisé installé. Voir docs/LICENCES.md."
+    },
+    {
+      "number": 7,
+      "title": "Fournisseurs et limites",
+      "text": "Kimi Cloud par la passerelle existante http://127.0.0.1:11434/api/chat ; aucun réglage global modifié. ComfyUI local, Piper local CPU, montage local FFmpeg. Sources publiques et Hugging Face. Aucun service payant à l’usage ajouté. Solde du forfait inconnu."
+    },
+    {
+      "number": 8,
+      "title": "Déroulement du pilote",
+      "text": "- Assemblée nationale, question au gouvernement n°259 et réponse ministérielle, décembre 2024 : https://questions.assemblee-nationale.fr/q17/17-259QG.htm\n- Martin Mourre, Thiaroye 1944, Presses universitaires de Rennes, notice de l'éditeur, 2017 : https://pur-editions.fr/product/8410/thiaroye-1944\n- Wikipedia, Massacre de Thiaroye, introduction et références : https://fr.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&format=json&titles=Massacre_de_Thiaroye\nScénario français source-verrouillé, 4 scènes symboliques sans gore ni chiffre de victimes. PNG réels, fiche personnage composite, narration Piper, SRT/ASS alignés aux phrases, animation Wan+FFmpeg, MP4 et QC. Les illlustrations ne constituent pas des archives."
+    },
+    {
+      "number": 9,
+      "title": "Tests exacts et codes de sortie",
+      "text": "{\n  \"exit_code\": 0,\n  \"log\": \"reports/tests-final.log\",\n  \"command\": \"$env:THF_INTEGRATION='1'; .\\\\.venv\\\\Scripts\\\\python.exe -m unittest discover -s tests -v\",\n  \"scope\": \"Unit tests including explicit mocks, plus integration checks of real pilot files\",\n  \"timestamp\": \"2026-10-19T11:35:06.9365642+02:00\",\n  \"count\": 41,\n  \"other_observed_commands\": [\n    {\n      \"command\": \"& .\\\\scripts\\\\main.ps1 -Mode Doctor\",\n      \"exit_code\": 0,\n      \"result\": \"7 health checks OK\"\n    },\n    {\n      \"command\": \"& C:\\\\TikTokHistoryFactory\\\\scripts\\\\main.ps1 -Mode Resume -JobId 4\",\n      \"cwd\": \"C:\\\\\",\n      \"exit_code\": 0,\n      \"result\": \"All seven stages resumed without regeneration\"\n    },\n    {\n      \"command\": \".\\\\.venv\\\\Scripts\\\\python.exe -m tiktok_history_factory pilot --try-wan --work-dir C:\\\\TikTokHistoryFactory\\\\work\\\\pilot-thiaroye-1944\",\n      \"exit_code\": 0,\n      \"result\": \"Real 17-frame Wan generation and valid final MP4\"\n    },\n    {\n      \"command\": \"PowerShell Parser::ParseFile on scripts/*.ps1; Python ast.parse on package/tests\",\n      \"exit_code\": 0,\n      \"result\": \"No syntax error in final checked sources\"\n    }\n  ]\n}\nTests API native/compatible OpenAI et erreurs OOM/timeout : simulations unitaires explicitement identifiées. Les tests d’intégration lisent les médias réels. Le test technique de SaveVideo à deux images unies est seulement un contrôle de contrat, jamais appelé vidéo Wan."
+    },
+    {
+      "number": 10,
+      "title": "Récapitulatif des exigences",
+      "text": "Voir REQUIREMENTS_MATRIX.md et .csv. Les lignes PARTIAL ne sont pas présentées comme terminées ; les exigences TikTok et production restent désactivées."
+    },
+    {
+      "number": 11,
+      "title": "Benchmark réel",
+      "text": "Images retenues, secondes de génération par fichier : [20.11, 20.11, 20.16, 22.11]. Le premier essai initial a pris 26,23 s, sans OOM. Pic VRAM SDXL non échantillonné, non inventé. Wan : SUCCESS, temps 86.48 s. Télémétrie GPU brute dans clip.wan.json si disponible. Les clips FFmpeg et la voix sont chronométrés dans run_history ; pas de capacité 3/jour déduite de ce seul épisode."
+    },
+    {
+      "number": 12,
+      "title": "Fichiers livrés",
+      "text": "Vidéo : C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\pilot.mp4\nDossier complet : C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\nPreuves et médias intermédiaires : C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\nLicences : C:\\TikTokHistoryFactory\\assets\\licenses"
+    },
+    {
+      "number": 13,
+      "title": "Coûts",
+      "text": "Aucun achat, aucun abonnement nouveau, aucune API TTS/image à l’usage. Usage de l’abonnement Ollama existant dans sa connexion actuelle ; tokens retournés par les appels conservés, solde non connu. Énergie totale et facture électrique non mesurées. KWH_PRICE_EUR configurable ; une mesure GPU seule ne représente pas la consommation complète du PC."
+    },
+    {
+      "number": 14,
+      "title": "Publication TikTok",
+      "text": "NON PUBLIÉ. Aucun appel API TikTok, aucun upload, aucune tâche quotidienne créée ou activée. Exports locaux exclusivement destinés à une revue humaine."
+    },
+    {
+      "number": 15,
+      "title": "Auto-corrections",
+      "text": "Route Ollama corrigée ; API image réelle ; détection Piper fiable ; vrai stdin TTS et contrôle silence ; compositeur compatible ; boucle pilote et checkpoint ; sauvegarde DB ; anti-doublon SQL ; export bloqué sans fichier ; sous-titre résiduel corrigé ; anachronismes visuels rejetés ; résolution ASS explicite après inspection du MP4 ; tests d’intégration et de reprise. Un test a échoué à cause d’une indentation puis a été corrigé et relancé. Un lien de licence Wan absent du dépôt de poids a été remplacé par le texte officiel du dépôt Wan-Video."
+    },
+    {
+      "number": 16,
+      "title": "Risques et restes à faire",
+      "text": "IMPORTANT : revue humaine du style manga seinen, des accessoires, de la diction et des sources avant diffusion. IMPORTANT : recherche autonome multi-sujets, machine d’états exhaustive, Pydantic généralisé et planification réellement certifiée restent partiels. IMPORTANT : outils legacy supervisor.py et anciens générateurs ne doivent pas servir de lanceur ; schéma SQLite incompatible et boucle récurrente. MINEUR : découpage de sous-titres à la phrase, sans alignement mot à mot. Aucun blocage critique pour lire le pilote livré."
+    },
+    {
+      "number": 17,
+      "title": "Démonstration reproductible",
+      "text": "& C:\\TikTokHistoryFactory\\scripts\\main.ps1 -Mode Doctor\n& C:\\TikTokHistoryFactory\\scripts\\main.ps1 -Mode Resume -JobId 4\n& C:\\TikTokHistoryFactory\\scripts\\main.ps1 -Mode Export\nLa reprise conserve les étapes validées. Ajouter --try-wan à la commande Python seulement pour le mode optionnel documenté. Le menu est disponible sans argument."
+    },
+    {
+      "number": 18,
+      "title": "Conditions avant trois vidéos quotidiennes",
+      "text": "Validation explicite du pilote par le propriétaire ; validation de plusieurs dossiers indépendants ; mesure du débit complet, incidents et reprises ; contrôle des quotas ; horaires choisis par le propriétaire ; concurrence GPU 1 ; tests de charge. Aucun horaire imposé ni production quotidienne déclenchée."
+    },
+    {
+      "number": 19,
+      "title": "Adéquation à la demande",
+      "text": "Vrai pilote historique français de 20–30 s, quatre dessins 2D détaillés et déclarés IA, non graphiques, médias réellement produits. Style guidé seinen, à valider humainement : SDXL généraliste ne garantit pas chaque détail. Chaîne pilote fonctionnelle ; autonomie documentaire générale non certifiée. Le test synthétique antérieur reste distinct et n’est pas livré comme pilote réel."
+    },
+    {
+      "number": 20,
+      "title": "Prochaine action humaine unique",
+      "text": "Visionner et écouter le pilote livré, puis valider ou préciser les corrections de style, d’histoire et de diction. Aucune activation de cadence ou de publication n’est demandée ici."
+    }
+  ],
+  "subsystems": [
+    {
+      "name": "Infrastructure",
+      "status": "OK",
+      "proof": "Windows-11-10.0.26300-SP0; projet Python 3.11.9; ComfyUI 0.41.0; NVIDIA GeForce RTX 4060 Laptop GPU, 596.08, 8188 MiB; RAM 31.69 Gio",
+      "limitation": "CPU : Intel64 Family 6 Model 183 Stepping 1, GenuineIntel"
+    },
+    {
+      "name": "Recherche historique",
+      "status": "PARTIEL",
+      "proof": "3 sources collectées, extraits retrouvés, 4 claims avec références",
+      "limitation": "Dossier révisé ; découverte autonome et preuve automatique de vérité non validées"
+    },
+    {
+      "name": "Ollama Cloud",
+      "status": "OK",
+      "proof": "Kimi-k3:cloud répond via Ollama local /api/chat ; réponse réelle et usage tokens conservés",
+      "limitation": "Solde et quotas du compte non consultés ; aucun crédit supplémentaire acheté"
+    },
+    {
+      "name": "ComfyUI manga",
+      "status": "OK",
+      "proof": "4 illustrations locales SDXL, PNG 768x1344 avec workflow/seed/prompt_id/SHA-256",
+      "limitation": "Modèle généraliste ; esthétique seinen et détails symboliques soumis à revue humaine"
+    },
+    {
+      "name": "TTS français",
+      "status": "OK",
+      "proof": "Piper 1.8.0, SIWIS fr_FR, WAV 22050 Hz mono non silencieux",
+      "limitation": "Écoute humaine et prononciation de Thiaroye non certifiées par une mesure automatique"
+    },
+    {
+      "name": "Animation",
+      "status": "OK",
+      "proof": "FFmpeg réel ; essai Wan : SUCCESS",
+      "limitation": "Le succès technique Wan ne prouve pas sa qualité visuelle ; voir WAN_BENCHMARK.md"
+    },
+    {
+      "name": "FFmpeg",
+      "status": "OK",
+      "proof": "1080x1920 H.264/AAC, 30 fps, 29.100 s, décodage complet sans erreur",
+      "limitation": ""
+    },
+    {
+      "name": "Orchestration",
+      "status": "PARTIEL",
+      "proof": "7 phases réelles, statuts SQLite, verrou exclusif, checkpoints SHA-256, reprise sans nouveaux médias",
+      "limitation": "Pilote à dossier révisé ; automatisation générale multi-sujets non certifiée"
+    },
+    {
+      "name": "SQLite",
+      "status": "OK",
+      "proof": "Base intègre, job 4 awaiting_review, historiques de phases ; sauvegardes cohérentes",
+      "limitation": "Trois anciennes tâches de test conservées ; aucun ancien élément supprimé"
+    },
+    {
+      "name": "Pilote vidéo réel",
+      "status": "OK",
+      "proof": "C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\pilot.mp4",
+      "limitation": "AWAITING_REVIEW ; aucune publication autorisée"
+    }
+  ],
+  "changes": [
+    {
+      "path": ".env",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": ".env.example",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": ".gitignore",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\piper-1.8.0-COPYING",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\sdxl-LICENSE.md",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\sdxl-LICENSE.md.provenance.json",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\sdxl-README.md",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\sdxl-README.md.provenance.json",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\siwis-MODEL_CARD.md",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\siwis-MODEL_CARD.md.provenance.json",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\wan-Apache-2.0.txt",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "assets\\licenses\\wan-Apache-2.0.txt.provenance.json",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "data\\subjects\\thiaroye-1944.json",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\ARCHITECTURE.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\AUDIT_LEGACY.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\COMFYUI.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\CONFIGURATION.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\FACT_CHECKING.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\INSTALLATION.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\LICENCES.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\QUALITY.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\RUNBOOK.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "docs\\SECURITY.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "pyproject.toml",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "README.md",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "scripts\\acquire_pilot_assets.py",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "scripts\\build_final_report.py",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "scripts\\main.ps1",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "scripts\\orchestrator.ps1",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "scripts\\schedule.ps1",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tests\\test_pilot_contracts.py",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tests\\test_providers.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tests\\test_real_pilot.py",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\__main__.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\cli.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\config\\settings.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\database\\models.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\media\\animations.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\media\\compositor.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\media\\prompts.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\media\\subtitles.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\monitoring\\health.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\pipeline\\checkpoints.py",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\pipeline\\orchestrator.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\pipeline\\pilot.py",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\providers\\comfyui_images.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\providers\\comfyui_wan.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\providers\\ffmpeg.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\providers\\history_sources.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\providers\\local_export.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\providers\\ollama_cloud.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "tiktok_history_factory\\providers\\piper_tts.py",
+      "kind": "MODIFIED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "workflows\\comfyui\\pilot_sdxl_api.json",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    },
+    {
+      "path": "workflows\\comfyui\\wan22_5b_api.json",
+      "kind": "CREATED",
+      "reason": "Pilot integration, verification or documentation; see subsystem reports"
+    }
+  ],
+  "tests": {
+    "exit_code": 0,
+    "log": "reports/tests-final.log",
+    "command": "$env:THF_INTEGRATION='1'; .\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+    "scope": "Unit tests including explicit mocks, plus integration checks of real pilot files",
+    "timestamp": "2026-10-19T11:35:06.9365642+02:00",
+    "count": 41,
+    "other_observed_commands": [
+      {
+        "command": "& .\\scripts\\main.ps1 -Mode Doctor",
+        "exit_code": 0,
+        "result": "7 health checks OK"
+      },
+      {
+        "command": "& C:\\TikTokHistoryFactory\\scripts\\main.ps1 -Mode Resume -JobId 4",
+        "cwd": "C:\\",
+        "exit_code": 0,
+        "result": "All seven stages resumed without regeneration"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe -m tiktok_history_factory pilot --try-wan --work-dir C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944",
+        "exit_code": 0,
+        "result": "Real 17-frame Wan generation and valid final MP4"
+      },
+      {
+        "command": "PowerShell Parser::ParseFile on scripts/*.ps1; Python ast.parse on package/tests",
+        "exit_code": 0,
+        "result": "No syntax error in final checked sources"
+      }
+    ]
+  },
+  "pilot": {
+    "output": "C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-pilote\\revision-7-wan-attempt\\pilot.mp4",
+    "duration": 29.1,
+    "status": "AWAITING_REVIEW",
+    "scenes": 4,
+    "image_seconds": [
+      20.11,
+      20.11,
+      20.16,
+      22.11
+    ],
+    "voice": {
+      "duration": 29.1,
+      "sample_rate": 22050,
+      "channels": 1,
+      "rms": 4998.57
+    },
+    "video_sha256": "e8387bd8cd0d838c00d3edb5eb8c721b2effa17cb929db502555078586551cc6",
+    "animation": {
+      "status": "SUCCESS",
+      "mode": "Wan+FFmpeg",
+      "clip": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\wan\\clip.mp4",
+      "attempt": {
+        "status": "SUCCESS",
+        "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+        "image_sha256": "c3518b38ee22c2a9fd27ef56b528d119d32b647d5f76714e18e35846ffa956b7",
+        "width": 480,
+        "height": 832,
+        "frames": 17,
+        "fps": 8,
+        "steps": 12,
+        "offload": "Native ComfyUI memory management; text encoder explicitly on CPU",
+        "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\wan\\clip.mp4",
+        "fingerprint": "bdaff273dc65c8c535b95c84aee678c94aa000b78129e6994cb8b70d93623b5c",
+        "system_before": {
+          "system": {
+            "os": "win32",
+            "ram_total": 34029125632,
+            "ram_free": 12664569856,
+            "comfyui_version": "0.41.0",
+            "required_frontend_version": "1.55.17",
+            "installed_templates_version": "0.11.84",
+            "required_templates_version": "0.11.84",
+            "comfy_package_versions": [
+              {
+                "name": "comfyui-frontend-package",
+                "installed": "1.55.17",
+                "required": "1.55.17"
+              },
+              {
+                "name": "comfyui-workflow-templates",
+                "installed": "0.11.84",
+                "required": "0.11.84"
+              },
+              {
+                "name": "comfyui-embedded-docs",
+                "installed": "0.5.14",
+                "required": "0.5.14"
+              },
+              {
+                "name": "comfy-kitchen",
+                "installed": "0.2.37",
+                "required": "0.2.37"
+              },
+              {
+                "name": "comfy-aimdo",
+                "installed": "0.5.6",
+                "required": "0.5.6"
+              }
+            ],
+            "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+            "pytorch_version": "2.14.0+cu130",
+            "embedded_python": true,
+            "deploy_environment": "local-portable",
+            "argv": [
+              "ComfyUI\\main.py",
+              "--windows-standalone-build"
+            ]
+          },
+          "devices": [
+            {
+              "name": "cuda:0 NVIDIA GeForce RTX 4060 Laptop GPU : cudaMallocAsync",
+              "type": "cuda",
+              "index": 0,
+              "vram_total": 8585216000,
+              "vram_free": 7390232576,
+              "torch_vram_total": 33554432,
+              "torch_vram_free": 25034752
+            }
+          ]
+        },
+        "sha256": "cdc82fa31b2945bfe4f6b5b699cc6a14f09fcb091a2641522fde100daf5d90cc",
+        "history": {
+          "prompt": [
+            12,
+            "e43a77dc-9f65-4663-ba69-25997f49640d",
+            {
+              "37": {
+                "class_type": "UNETLoader",
+                "inputs": {
+                  "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+                  "weight_dtype": "default"
+                }
+              },
+              "38": {
+                "class_type": "CLIPLoader",
+                "inputs": {
+                  "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+                  "type": "wan",
+                  "device": "cpu"
+                }
+              },
+              "39": {
+                "class_type": "VAELoader",
+                "inputs": {
+                  "vae_name": "wan2.2_vae.safetensors"
+                }
+              },
+              "48": {
+                "class_type": "ModelSamplingSD3",
+                "inputs": {
+                  "model": [
+                    "37",
+                    0
+                  ],
+                  "shift": 8.0
+                }
+              },
+              "56": {
+                "class_type": "LoadImage",
+                "inputs": {
+                  "image": "thf-c3518b38ee22c2a9.png"
+                }
+              },
+              "55": {
+                "class_type": "Wan22ImageToVideoLatent",
+                "inputs": {
+                  "vae": [
+                    "39",
+                    0
+                  ],
+                  "width": 480,
+                  "height": 832,
+                  "length": 17,
+                  "batch_size": 1,
+                  "start_image": [
+                    "56",
+                    0
+                  ]
+                }
+              },
+              "6": {
+                "class_type": "CLIPTextEncode",
+                "inputs": {
+                  "text": "Preserve the original monochrome ink drawing. Very slow camera push forward, subtle tree movement. No new objects, no people.",
+                  "clip": [
+                    "38",
+                    0
+                  ]
+                }
+              },
+              "7": {
+                "class_type": "CLIPTextEncode",
+                "inputs": {
+                  "text": "color, photograph, distortion, text, watermark, gore, new people, flickering",
+                  "clip": [
+                    "38",
+                    0
+                  ]
+                }
+              },
+              "3": {
+                "class_type": "KSampler",
+                "inputs": {
+                  "model": [
+                    "48",
+                    0
+                  ],
+                  "positive": [
+                    "6",
+                    0
+                  ],
+                  "negative": [
+                    "7",
+                    0
+                  ],
+                  "latent_image": [
+                    "55",
+                    0
+                  ],
+                  "seed": 19441201,
+                  "steps": 12,
+                  "cfg": 5.0,
+                  "sampler_name": "uni_pc",
+                  "scheduler": "simple",
+                  "denoise": 1.0
+                }
+              },
+              "8": {
+                "class_type": "VAEDecode",
+                "inputs": {
+                  "samples": [
+                    "3",
+                    0
+                  ],
+                  "vae": [
+                    "39",
+                    0
+                  ]
+                }
+              },
+              "57": {
+                "class_type": "CreateVideo",
+                "inputs": {
+                  "images": [
+                    "8",
+                    0
+                  ],
+                  "fps": 8.0
+                }
+              },
+              "58": {
+                "class_type": "SaveVideo",
+                "inputs": {
+                  "video": [
+                    "57",
+                    0
+                  ],
+                  "filename_prefix": "history_factory/wan_pilot",
+                  "format": "auto",
+                  "codec": "auto"
+                }
+              }
+            },
+            {
+              "client_id": "history-factory-wan-single-test",
+              "create_time": 1792401947722
+            },
+            [
+              "58"
+            ]
+          ],
+          "outputs": {
+            "58": {
+              "images": [
+                {
+                  "filename": "wan_pilot_00001_.mp4",
+                  "subfolder": "history_factory",
+                  "type": "output",
+                  "metadata": {
+                    "kind": "video",
+                    "width": 480,
+                    "height": 832,
+                    "duration": 2.125,
+                    "fps": 8.0,
+                    "frame_count": 17
+                  },
+                  "id": "c1962f47-305d-4d41-afdf-95a4a415c27d"
+                }
+              ],
+              "animated": [
+                true
+              ]
+            }
+          },
+          "status": {
+            "status_str": "success",
+            "completed": true,
+            "messages": [
+              [
+                "execution_start",
+                {
+                  "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+                  "timestamp": 1792401947723
+                }
+              ],
+              [
+                "execution_cached",
+                {
+                  "nodes": [],
+                  "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+                  "timestamp": 1792401947731
+                }
+              ],
+              [
+                "execution_success",
+                {
+                  "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+                  "timestamp": 1792402031030
+                }
+              ]
+            ]
+          },
+          "meta": {
+            "58": {
+              "node_id": "58",
+              "display_node": "58",
+              "parent_node": null,
+              "real_node_id": "58"
+            }
+          }
+        },
+        "seconds": 86.48,
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+              "profile": "High",
+              "level": 22,
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "mime_codec_string": "avc1.640016",
+              "width": 480,
+              "height": 832,
+              "coded_width": 480,
+              "coded_height": 832,
+              "has_b_frames": 2,
+              "pix_fmt": "yuv420p",
+              "color_range": "tv",
+              "color_space": "bt709",
+              "color_transfer": "iec61966-2-1",
+              "color_primaries": "bt709",
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "8/1",
+              "avg_frame_rate": "8/1",
+              "time_base": "1/16384",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 34816,
+              "duration": "2.125000",
+              "bit_rate": "2774915",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "17",
+              "extradata_size": 49,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler"
+              }
+            }
+          ],
+          "format": {
+            "filename": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\wan\\clip.mp4",
+            "nb_streams": 1,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "format_long_name": "QuickTime / MOV",
+            "start_time": "0.000000",
+            "duration": "2.125000",
+            "size": "739865",
+            "bit_rate": "2785374",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "prompt": "{\"37\": {\"class_type\": \"UNETLoader\", \"inputs\": {\"unet_name\": \"wan2.2_ti2v_5B_fp16.safetensors\", \"weight_dtype\": \"default\"}}, \"38\": {\"class_type\": \"CLIPLoader\", \"inputs\": {\"clip_name\": \"umt5_xxl_fp8_e4m3fn_scaled.safetensors\", \"type\": \"wan\", \"device\": \"cpu\"}}, \"39\": {\"class_type\": \"VAELoader\", \"inputs\": {\"vae_name\": \"wan2.2_vae.safetensors\"}}, \"48\": {\"class_type\": \"ModelSamplingSD3\", \"inputs\": {\"model\": [\"37\", 0], \"shift\": 8.0}}, \"56\": {\"class_type\": \"LoadImage\", \"inputs\": {\"image\": \"thf-c3518b38ee22c2a9.png\"}, \"is_changed\": [\"c3518b38ee22c2a9fd27ef56b528d119d32b647d5f76714e18e35846ffa956b7\"]}, \"55\": {\"class_type\": \"Wan22ImageToVideoLatent\", \"inputs\": {\"vae\": [\"39\", 0], \"width\": 480, \"height\": 832, \"length\": 17, \"batch_size\": 1, \"start_image\": [\"56\", 0]}}, \"6\": {\"class_type\": \"CLIPTextEncode\", \"inputs\": {\"text\": \"Preserve the original monochrome ink drawing. Very slow camera push forward, subtle tree movement. No new objects, no people.\", \"clip\": [\"38\", 0]}}, \"7\": {\"class_type\": \"CLIPTextEncode\", \"inputs\": {\"text\": \"color, photograph, distortion, text, watermark, gore, new people, flickering\", \"clip\": [\"38\", 0]}}, \"3\": {\"class_type\": \"KSampler\", \"inputs\": {\"model\": [\"48\", 0], \"positive\": [\"6\", 0], \"negative\": [\"7\", 0], \"latent_image\": [\"55\", 0], \"seed\": 19441201, \"steps\": 12, \"cfg\": 5.0, \"sampler_name\": \"uni_pc\", \"scheduler\": \"simple\", \"denoise\": 1.0}}, \"8\": {\"class_type\": \"VAEDecode\", \"inputs\": {\"samples\": [\"3\", 0], \"vae\": [\"39\", 0]}}, \"57\": {\"class_type\": \"CreateVideo\", \"inputs\": {\"images\": [\"8\", 0], \"fps\": 8.0}}, \"58\": {\"class_type\": \"SaveVideo\", \"inputs\": {\"video\": [\"57\", 0], \"filename_prefix\": \"history_factory/wan_pilot\", \"format\": \"auto\", \"codec\": \"auto\"}}}",
+              "encoder": "Lavf63.1.102"
+            }
+          }
+        },
+        "decode": {
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "",
+          "success": true
+        },
+        "telemetry": [
+          {
+            "elapsed": 0.2,
+            "gpu": "168, 0, 1.93, 52"
+          },
+          {
+            "elapsed": 4.3,
+            "gpu": "616, 0, 9.03, 56"
+          },
+          {
+            "elapsed": 8.4,
+            "gpu": "616, 0, 1.99, 53"
+          },
+          {
+            "elapsed": 12.5,
+            "gpu": "616, 0, 2.12, 52"
+          },
+          {
+            "elapsed": 16.5,
+            "gpu": "616, 0, 2.77, 52"
+          },
+          {
+            "elapsed": 20.6,
+            "gpu": "616, 0, 2.19, 52"
+          },
+          {
+            "elapsed": 24.7,
+            "gpu": "616, 0, 2.04, 51"
+          },
+          {
+            "elapsed": 28.8,
+            "gpu": "616, 0, 2.03, 51"
+          },
+          {
+            "elapsed": 32.9,
+            "gpu": "616, 0, 2.16, 51"
+          },
+          {
+            "elapsed": 37.0,
+            "gpu": "616, 0, 2.24, 50"
+          },
+          {
+            "elapsed": 41.1,
+            "gpu": "616, 0, 2.18, 50"
+          },
+          {
+            "elapsed": 45.2,
+            "gpu": "616, 0, 4.80, 50"
+          },
+          {
+            "elapsed": 49.3,
+            "gpu": "616, 0, 2.07, 50"
+          },
+          {
+            "elapsed": 53.3,
+            "gpu": "1224, 73, 6.81, 50"
+          },
+          {
+            "elapsed": 57.4,
+            "gpu": "6792, 40, 39.57, 63"
+          },
+          {
+            "elapsed": 61.4,
+            "gpu": "6958, 100, 95.77, 85"
+          },
+          {
+            "elapsed": 65.5,
+            "gpu": "6958, 100, 78.26, 86"
+          },
+          {
+            "elapsed": 69.6,
+            "gpu": "6958, 100, 83.33, 87"
+          },
+          {
+            "elapsed": 73.6,
+            "gpu": "6958, 100, 79.70, 87"
+          },
+          {
+            "elapsed": 77.7,
+            "gpu": "7022, 59, 51.68, 76"
+          },
+          {
+            "elapsed": 81.8,
+            "gpu": "6638, 100, 78.86, 85"
+          }
+        ],
+        "visual_qc": "AWAITING_REVIEW"
+      }
+    },
+    "publication": "NON PUBLIÉ"
+  },
+  "wan": {
+    "status": "SUCCESS",
+    "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+    "image_sha256": "c3518b38ee22c2a9fd27ef56b528d119d32b647d5f76714e18e35846ffa956b7",
+    "width": 480,
+    "height": 832,
+    "frames": 17,
+    "fps": 8,
+    "steps": 12,
+    "offload": "Native ComfyUI memory management; text encoder explicitly on CPU",
+    "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\wan\\clip.mp4",
+    "fingerprint": "bdaff273dc65c8c535b95c84aee678c94aa000b78129e6994cb8b70d93623b5c",
+    "system_before": {
+      "system": {
+        "os": "win32",
+        "ram_total": 34029125632,
+        "ram_free": 12664569856,
+        "comfyui_version": "0.41.0",
+        "required_frontend_version": "1.55.17",
+        "installed_templates_version": "0.11.84",
+        "required_templates_version": "0.11.84",
+        "comfy_package_versions": [
+          {
+            "name": "comfyui-frontend-package",
+            "installed": "1.55.17",
+            "required": "1.55.17"
+          },
+          {
+            "name": "comfyui-workflow-templates",
+            "installed": "0.11.84",
+            "required": "0.11.84"
+          },
+          {
+            "name": "comfyui-embedded-docs",
+            "installed": "0.5.14",
+            "required": "0.5.14"
+          },
+          {
+            "name": "comfy-kitchen",
+            "installed": "0.2.37",
+            "required": "0.2.37"
+          },
+          {
+            "name": "comfy-aimdo",
+            "installed": "0.5.6",
+            "required": "0.5.6"
+          }
+        ],
+        "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+        "pytorch_version": "2.14.0+cu130",
+        "embedded_python": true,
+        "deploy_environment": "local-portable",
+        "argv": [
+          "ComfyUI\\main.py",
+          "--windows-standalone-build"
+        ]
+      },
+      "devices": [
+        {
+          "name": "cuda:0 NVIDIA GeForce RTX 4060 Laptop GPU : cudaMallocAsync",
+          "type": "cuda",
+          "index": 0,
+          "vram_total": 8585216000,
+          "vram_free": 7390232576,
+          "torch_vram_total": 33554432,
+          "torch_vram_free": 25034752
+        }
+      ]
+    },
+    "sha256": "cdc82fa31b2945bfe4f6b5b699cc6a14f09fcb091a2641522fde100daf5d90cc",
+    "history": {
+      "prompt": [
+        12,
+        "e43a77dc-9f65-4663-ba69-25997f49640d",
+        {
+          "37": {
+            "class_type": "UNETLoader",
+            "inputs": {
+              "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+              "weight_dtype": "default"
+            }
+          },
+          "38": {
+            "class_type": "CLIPLoader",
+            "inputs": {
+              "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+              "type": "wan",
+              "device": "cpu"
+            }
+          },
+          "39": {
+            "class_type": "VAELoader",
+            "inputs": {
+              "vae_name": "wan2.2_vae.safetensors"
+            }
+          },
+          "48": {
+            "class_type": "ModelSamplingSD3",
+            "inputs": {
+              "model": [
+                "37",
+                0
+              ],
+              "shift": 8.0
+            }
+          },
+          "56": {
+            "class_type": "LoadImage",
+            "inputs": {
+              "image": "thf-c3518b38ee22c2a9.png"
+            }
+          },
+          "55": {
+            "class_type": "Wan22ImageToVideoLatent",
+            "inputs": {
+              "vae": [
+                "39",
+                0
+              ],
+              "width": 480,
+              "height": 832,
+              "length": 17,
+              "batch_size": 1,
+              "start_image": [
+                "56",
+                0
+              ]
+            }
+          },
+          "6": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+              "text": "Preserve the original monochrome ink drawing. Very slow camera push forward, subtle tree movement. No new objects, no people.",
+              "clip": [
+                "38",
+                0
+              ]
+            }
+          },
+          "7": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+              "text": "color, photograph, distortion, text, watermark, gore, new people, flickering",
+              "clip": [
+                "38",
+                0
+              ]
+            }
+          },
+          "3": {
+            "class_type": "KSampler",
+            "inputs": {
+              "model": [
+                "48",
+                0
+              ],
+              "positive": [
+                "6",
+                0
+              ],
+              "negative": [
+                "7",
+                0
+              ],
+              "latent_image": [
+                "55",
+                0
+              ],
+              "seed": 19441201,
+              "steps": 12,
+              "cfg": 5.0,
+              "sampler_name": "uni_pc",
+              "scheduler": "simple",
+              "denoise": 1.0
+            }
+          },
+          "8": {
+            "class_type": "VAEDecode",
+            "inputs": {
+              "samples": [
+                "3",
+                0
+              ],
+              "vae": [
+                "39",
+                0
+              ]
+            }
+          },
+          "57": {
+            "class_type": "CreateVideo",
+            "inputs": {
+              "images": [
+                "8",
+                0
+              ],
+              "fps": 8.0
+            }
+          },
+          "58": {
+            "class_type": "SaveVideo",
+            "inputs": {
+              "video": [
+                "57",
+                0
+              ],
+              "filename_prefix": "history_factory/wan_pilot",
+              "format": "auto",
+              "codec": "auto"
+            }
+          }
+        },
+        {
+          "client_id": "history-factory-wan-single-test",
+          "create_time": 1792401947722
+        },
+        [
+          "58"
+        ]
+      ],
+      "outputs": {
+        "58": {
+          "images": [
+            {
+              "filename": "wan_pilot_00001_.mp4",
+              "subfolder": "history_factory",
+              "type": "output",
+              "metadata": {
+                "kind": "video",
+                "width": 480,
+                "height": 832,
+                "duration": 2.125,
+                "fps": 8.0,
+                "frame_count": 17
+              },
+              "id": "c1962f47-305d-4d41-afdf-95a4a415c27d"
+            }
+          ],
+          "animated": [
+            true
+          ]
+        }
+      },
+      "status": {
+        "status_str": "success",
+        "completed": true,
+        "messages": [
+          [
+            "execution_start",
+            {
+              "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+              "timestamp": 1792401947723
+            }
+          ],
+          [
+            "execution_cached",
+            {
+              "nodes": [],
+              "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+              "timestamp": 1792401947731
+            }
+          ],
+          [
+            "execution_success",
+            {
+              "prompt_id": "e43a77dc-9f65-4663-ba69-25997f49640d",
+              "timestamp": 1792402031030
+            }
+          ]
+        ]
+      },
+      "meta": {
+        "58": {
+          "node_id": "58",
+          "display_node": "58",
+          "parent_node": null,
+          "real_node_id": "58"
+        }
+      }
+    },
+    "seconds": 86.48,
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "level": 22,
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640016",
+          "width": 480,
+          "height": 832,
+          "coded_width": 480,
+          "coded_height": 832,
+          "has_b_frames": 2,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "iec61966-2-1",
+          "color_primaries": "bt709",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "8/1",
+          "avg_frame_rate": "8/1",
+          "time_base": "1/16384",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 34816,
+          "duration": "2.125000",
+          "bit_rate": "2774915",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "17",
+          "extradata_size": 49,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler"
+          }
+        }
+      ],
+      "format": {
+        "filename": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\wan\\clip.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "2.125000",
+        "size": "739865",
+        "bit_rate": "2785374",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "prompt": "{\"37\": {\"class_type\": \"UNETLoader\", \"inputs\": {\"unet_name\": \"wan2.2_ti2v_5B_fp16.safetensors\", \"weight_dtype\": \"default\"}}, \"38\": {\"class_type\": \"CLIPLoader\", \"inputs\": {\"clip_name\": \"umt5_xxl_fp8_e4m3fn_scaled.safetensors\", \"type\": \"wan\", \"device\": \"cpu\"}}, \"39\": {\"class_type\": \"VAELoader\", \"inputs\": {\"vae_name\": \"wan2.2_vae.safetensors\"}}, \"48\": {\"class_type\": \"ModelSamplingSD3\", \"inputs\": {\"model\": [\"37\", 0], \"shift\": 8.0}}, \"56\": {\"class_type\": \"LoadImage\", \"inputs\": {\"image\": \"thf-c3518b38ee22c2a9.png\"}, \"is_changed\": [\"c3518b38ee22c2a9fd27ef56b528d119d32b647d5f76714e18e35846ffa956b7\"]}, \"55\": {\"class_type\": \"Wan22ImageToVideoLatent\", \"inputs\": {\"vae\": [\"39\", 0], \"width\": 480, \"height\": 832, \"length\": 17, \"batch_size\": 1, \"start_image\": [\"56\", 0]}}, \"6\": {\"class_type\": \"CLIPTextEncode\", \"inputs\": {\"text\": \"Preserve the original monochrome ink drawing. Very slow camera push forward, subtle tree movement. No new objects, no people.\", \"clip\": [\"38\", 0]}}, \"7\": {\"class_type\": \"CLIPTextEncode\", \"inputs\": {\"text\": \"color, photograph, distortion, text, watermark, gore, new people, flickering\", \"clip\": [\"38\", 0]}}, \"3\": {\"class_type\": \"KSampler\", \"inputs\": {\"model\": [\"48\", 0], \"positive\": [\"6\", 0], \"negative\": [\"7\", 0], \"latent_image\": [\"55\", 0], \"seed\": 19441201, \"steps\": 12, \"cfg\": 5.0, \"sampler_name\": \"uni_pc\", \"scheduler\": \"simple\", \"denoise\": 1.0}}, \"8\": {\"class_type\": \"VAEDecode\", \"inputs\": {\"samples\": [\"3\", 0], \"vae\": [\"39\", 0]}}, \"57\": {\"class_type\": \"CreateVideo\", \"inputs\": {\"images\": [\"8\", 0], \"fps\": 8.0}}, \"58\": {\"class_type\": \"SaveVideo\", \"inputs\": {\"video\": [\"57\", 0], \"filename_prefix\": \"history_factory/wan_pilot\", \"format\": \"auto\", \"codec\": \"auto\"}}}",
+          "encoder": "Lavf63.1.102"
+        }
+      }
+    },
+    "decode": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "success": true
+    },
+    "telemetry": [
+      {
+        "elapsed": 0.2,
+        "gpu": "168, 0, 1.93, 52"
+      },
+      {
+        "elapsed": 4.3,
+        "gpu": "616, 0, 9.03, 56"
+      },
+      {
+        "elapsed": 8.4,
+        "gpu": "616, 0, 1.99, 53"
+      },
+      {
+        "elapsed": 12.5,
+        "gpu": "616, 0, 2.12, 52"
+      },
+      {
+        "elapsed": 16.5,
+        "gpu": "616, 0, 2.77, 52"
+      },
+      {
+        "elapsed": 20.6,
+        "gpu": "616, 0, 2.19, 52"
+      },
+      {
+        "elapsed": 24.7,
+        "gpu": "616, 0, 2.04, 51"
+      },
+      {
+        "elapsed": 28.8,
+        "gpu": "616, 0, 2.03, 51"
+      },
+      {
+        "elapsed": 32.9,
+        "gpu": "616, 0, 2.16, 51"
+      },
+      {
+        "elapsed": 37.0,
+        "gpu": "616, 0, 2.24, 50"
+      },
+      {
+        "elapsed": 41.1,
+        "gpu": "616, 0, 2.18, 50"
+      },
+      {
+        "elapsed": 45.2,
+        "gpu": "616, 0, 4.80, 50"
+      },
+      {
+        "elapsed": 49.3,
+        "gpu": "616, 0, 2.07, 50"
+      },
+      {
+        "elapsed": 53.3,
+        "gpu": "1224, 73, 6.81, 50"
+      },
+      {
+        "elapsed": 57.4,
+        "gpu": "6792, 40, 39.57, 63"
+      },
+      {
+        "elapsed": 61.4,
+        "gpu": "6958, 100, 95.77, 85"
+      },
+      {
+        "elapsed": 65.5,
+        "gpu": "6958, 100, 78.26, 86"
+      },
+      {
+        "elapsed": 69.6,
+        "gpu": "6958, 100, 83.33, 87"
+      },
+      {
+        "elapsed": 73.6,
+        "gpu": "6958, 100, 79.70, 87"
+      },
+      {
+        "elapsed": 77.7,
+        "gpu": "7022, 59, 51.68, 76"
+      },
+      {
+        "elapsed": 81.8,
+        "gpu": "6638, 100, 78.86, 85"
+      }
+    ],
+    "visual_qc": "AWAITING_REVIEW"
+  },
+  "next_action": "Visionner et écouter le pilote livré, puis valider ou préciser les corrections de style, d’histoire et de diction. Aucune activation de cadence ou de publication n’est demandée ici."
+}

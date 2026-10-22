@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-10-19T12:23:33.4770512+02:00",
+  "command": "THF_INTEGRATION=1; .\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "log": "reports/tests-v2.log",
+  "exit_code": 0
+}

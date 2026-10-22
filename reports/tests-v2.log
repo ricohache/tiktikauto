@@ -1,0 +1,80 @@
+test_default_config_is_valid (test_config.TestConfigValidator.test_default_config_is_valid)
+La configuration par defaut est valide. ... ok
+test_default_values (test_config.TestSettings.test_default_values)
+Les valeurs par defaut sont securisees. ... ok
+test_ensure_directories (test_config.TestSettings.test_ensure_directories)
+Creation des repertoires fonctionne. ... ok
+test_no_secrets_in_code (test_config.TestSettings.test_no_secrets_in_code)
+Aucun secret n'est code en dur. ... ok
+test_paths_are_absolute (test_config.TestSettings.test_paths_are_absolute)
+Les chemins sont absolus depuis la racine projet. ... ok
+test_duplicate_prevention (test_database.TestDatabase.test_duplicate_prevention)
+Le hash empeche les doublons. ... ok
+test_init_creates_tables (test_database.TestDatabase.test_init_creates_tables)
+L'initialisation cree les tables. ... ok
+test_insert_and_retrieve_video_task (test_database.TestDatabase.test_insert_and_retrieve_video_task)
+Insertion et recuperation d'une tache video. ... ok
+test_topic_insertion (test_database.TestDatabase.test_topic_insertion)
+Insertion d'un topic. ... ok
+test_update_status (test_database.TestDatabase.test_update_status)
+Mise a jour du statut d'une tache. ... ok
+test_electricity_calculation (test_monitoring.TestCosts.test_electricity_calculation)
+Le calcul de l'electricite est correct. ... ok
+test_log_event (test_monitoring.TestLogs.test_log_event)
+Un evenement est loggue. ... ok
+test_phase_duration (test_monitoring.TestMetrics.test_phase_duration)
+La duree d'une phase est positive. ... ok
+test_summary_counts (test_monitoring.TestMetrics.test_summary_counts)
+Le resume compte correctement. ... ok
+test_missing_artifact_never_commits_success (test_pilot_contracts.PilotContracts.test_missing_artifact_never_commits_success) ... ok
+test_mock_comfy_oom_is_not_success (test_pilot_contracts.PilotContracts.test_mock_comfy_oom_is_not_success) ... ok
+test_mock_native_and_openai_api_routes (test_pilot_contracts.PilotContracts.test_mock_native_and_openai_api_routes) ... ok
+test_mock_timeout_resume_never_duplicates_submission (test_pilot_contracts.PilotContracts.test_mock_timeout_resume_never_duplicates_submission) ... ok
+test_piper_not_available_without_model (test_pilot_contracts.PilotContracts.test_piper_not_available_without_model) ... ok
+test_reject_silent_wav (test_pilot_contracts.PilotContracts.test_reject_silent_wav) ... ok
+test_reject_unreferenced_claim (test_pilot_contracts.PilotContracts.test_reject_unreferenced_claim) ... ok
+RESUMED stage
+test_resume_rechecks_actual_content_and_inputs (test_pilot_contracts.PilotContracts.test_resume_rechecks_actual_content_and_inputs) ... ok
+test_source_rejects_unapproved_url_without_network (test_pilot_contracts.PilotContracts.test_source_rejects_unapproved_url_without_network) ... ok
+test_subtitle_remainder_has_positive_duration (test_pilot_contracts.PilotContracts.test_subtitle_remainder_has_positive_duration) ... ok
+test_enqueue_duplicate (test_pipeline.TestPipeline.test_enqueue_duplicate)
+Enfilement d'un doublon retourne l'ID existant. ... ok
+test_enqueue_new_task (test_pipeline.TestPipeline.test_enqueue_new_task)
+Enfilement d'un nouveau sujet. ... ok
+test_placeholder_does_not_mark_failed (test_pipeline.TestPipeline.test_placeholder_does_not_mark_failed)
+Le pipeline placeholder ne marque pas FAILED. ... ok
+test_topic_hash_normalization (test_pipeline.TestPipeline.test_topic_hash_normalization)
+Le hash normalise les slugs. ... ok
+test_update_status (test_pipeline.TestPipeline.test_update_status)
+Mise a jour du statut. ... ok
+test_probe_without_ffmpeg (test_providers.TestFFmpegProvider.test_probe_without_ffmpeg)
+Graceful degradation si FFmpeg absent. ... ok
+test_export_blocks_missing_video (test_providers.TestLocalExport.test_export_blocks_missing_video) ... ok
+test_export_creates_manifest (test_providers.TestLocalExport.test_export_creates_manifest)
+L'export cree un manifeste. ... ok
+test_blocked_without_credentials (test_providers.TestTikTokProvider.test_blocked_without_credentials)
+Bloque si credentials manquants. ... ok
+test_local_export_by_default (test_providers.TestTikTokProvider.test_local_export_by_default)
+Par defaut : LOCAL_EXPORT, aucun appel API. ... ok
+test_actual_ass_canvas_and_caption_bounds (test_real_pilot.RealPilotIntegration.test_actual_ass_canvas_and_caption_bounds) ... ok
+test_actual_checkpoint_files_are_unchanged (test_real_pilot.RealPilotIntegration.test_actual_checkpoint_files_are_unchanged) ... ok
+test_compositor_uses_the_actual_voice_pcm (test_real_pilot.RealPilotIntegration.test_compositor_uses_the_actual_voice_pcm) ... ok
+test_export_and_full_decode (test_real_pilot.RealPilotIntegration.test_export_and_full_decode) ... ok
+test_no_rejected_images_and_no_permanent_overlay (test_real_pilot.RealPilotIntegration.test_no_rejected_images_and_no_permanent_overlay) ... ok
+test_real_diffusion_images_and_english_voice (test_real_pilot.RealPilotIntegration.test_real_diffusion_images_and_english_voice) ... ok
+test_real_wan_clip_when_present (test_real_pilot.RealPilotIntegration.test_real_wan_clip_when_present) ... ok
+test_sqlite_requires_review_and_has_no_publication (test_real_pilot.RealPilotIntegration.test_sqlite_requires_review_and_has_no_publication) ... ok
+test_acceleration_is_rejected (test_v2.V2Contracts.test_acceleration_is_rejected) ... ok
+test_captions_reject_three_lines (test_v2.V2Contracts.test_captions_reject_three_lines) ... ok
+test_explicit_english_locale_must_match_voice (test_v2.V2Contracts.test_explicit_english_locale_must_match_voice) ... ok
+test_french_voice_cannot_silently_replace_english (test_v2.V2Contracts.test_french_voice_cannot_silently_replace_english) ... ok
+test_new_defaults_are_english_french (test_v2.V2Contracts.test_new_defaults_are_english_french) ... ok
+test_no_permanent_drawtext_or_tempo_filter (test_v2.V2Contracts.test_no_permanent_drawtext_or_tempo_filter) ... ok
+test_style_leads_prompt_and_lora_connects_both_encoders (test_v2.V2Contracts.test_style_leads_prompt_and_lora_connects_both_encoders) ... ok
+test_translation_and_voice_do_not_invalidate_images (test_v2.V2Contracts.test_translation_and_voice_do_not_invalidate_images) ... ok
+test_translation_mismatch_is_rejected (test_v2.V2Contracts.test_translation_mismatch_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 1.536s
+
+OK

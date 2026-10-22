@@ -1,0 +1,20 @@
+{
+  "status": "SUCCESS",
+  "seconds": 86.48,
+  "resolution": [
+    480,
+    832
+  ],
+  "frames": 17,
+  "fps": 8,
+  "duration_seconds": 2.125,
+  "steps": 12,
+  "gpu_memory_used_peak_mib": 7022.0,
+  "gpu_utilization_peak_percent": 100.0,
+  "gpu_power_peak_w": 95.77,
+  "gpu_temperature_peak_c": 87.0,
+  "gpu_samples": 21,
+  "measurement_scope": "Whole GPU via nvidia-smi, not exclusive tensor allocation; total RAM peak and wall power not sampled",
+  "visual_inspection": "Frames 0, 1 and 2 sec inspected; no new objects/people/gore, very subtle movement, ink style retained",
+  "raw_record": "work\\pilot-thiaroye-1944\\wan\\clip.wan.json"
+}

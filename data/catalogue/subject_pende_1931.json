@@ -1,0 +1,15 @@
+{
+  "_meta": "Sujet historique decouvert via recherche web - ajoute au catalogue",
+  "slug": "pende-revolt-1931",
+  "title_en": "The Pende Revolt of 1931",
+  "title_fr": "La revolte Pende de 1931",
+  "category": "histoire-coloniale",
+  "event_date": "1931-05-01",
+  "summary_en": "In May 1931, the Pende people of the Belgian Congo revolted against colonial exploitation. Forced labor, head taxes, and abuse by concession companies had pushed them to the brink. The killing of territorial agent Maximilien Balot on June 8 triggered brutal reprisals. Machine guns were used. Hundreds were killed.",
+  "summary_fr": "En mai 1931, le peuple Pende du Congo belge se souleva contre l'exploitation coloniale. Le travail force, les impots de capitation et les abus des societes de concession les avaient pousses au bord du gouffre. Le meurtre de l'agent territorial Maximilien Balot le 8 juin declencha des represailles brutales. Des mitrailleuses furent utilisees. Des centaines de personnes furent tuees.",
+  "sources": [
+    {"name": "Wikipedia - Pende revolt", "url": "https://en.wikipedia.org/wiki/Pende_revolt"},
+    {"name": "Jules Marchal - Lord Leverhulme's Ghosts", "url": "https://www.versobooks.com/books/2394-lord-leverhulme-s-ghosts"}
+  ],
+  "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1930s Central Africa, Belgian Congo, no text, vertical composition"
+}

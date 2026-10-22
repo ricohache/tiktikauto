@@ -1,0 +1,17 @@
+{
+  "model": "kimi-k3",
+  "created_at": "2026-10-19T08:07:13.354114082Z",
+  "message": {
+    "role": "assistant",
+    "content": "connexion validée.",
+    "thinking": "The user is asking me to respond only with \"connexion validée\" (French for \"connection validated\"). This appears to be a simple test message, possibly checking if the connection to the AI is working.\n\nThis is a benign request - the user just wants me to confirm the connection works by responding with a specific phrase. There's nothing harmful about this. I should simply comply with the request.\n\nThe instruction says \"Réponds uniquement\" which means \"Respond only\" - so they want just that phrase and nothing else."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1681448155,
+  "prompt_eval_count": 152,
+  "prompt_eval_cached_count": 0,
+  "eval_count": 123,
+  "status": "SUCCESS",
+  "endpoint": "http://127.0.0.1:11434/api/chat"
+}

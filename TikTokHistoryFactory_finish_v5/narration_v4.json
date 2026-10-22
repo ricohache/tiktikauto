@@ -1,0 +1,49 @@
+{
+  "editorial_note": "Revised English documentary (~189 words), with native French equivalent. Claims require final source review. These texts supersede the V3 draft without altering it.",
+  "scenes": {
+    "SC01": {
+      "en": "On December first, nineteen forty-four, French troops opened fire on African soldiers at Thiaroye, a military camp near Dakar, Senegal.",
+      "fr": "Le 1er décembre 1944, des troupes françaises ont ouvert le feu sur des soldats africains à Thiaroye, dans un camp militaire près de Dakar, au Sénégal."
+    },
+    "SC02": {
+      "en": "These men were tirailleurs, West African soldiers who had fought for France during the Second World War.",
+      "fr": "Ces hommes étaient des tirailleurs, des soldats d'Afrique de l'Ouest qui avaient combattu pour la France pendant la Seconde Guerre mondiale."
+    },
+    "SC03": {
+      "en": "Many had survived years of captivity in German prisoner-of-war camps, far from home and their families.",
+      "fr": "Beaucoup avaient survécu à des années de captivité dans des camps de prisonniers allemands, loin de leurs proches."
+    },
+    "SC04": {
+      "en": "After returning to West Africa, they demanded unpaid wages and allowances linked to their military service and captivity.",
+      "fr": "De retour en Afrique de l'Ouest, ils réclamaient des soldes et des indemnités impayées liées à leur service et à leur captivité."
+    },
+    "SC05": {
+      "en": "Inside Thiaroye's transit camp, frustration grew. The soldiers wanted their claims settled before leaving for home.",
+      "fr": "Au camp de transit de Thiaroye, la frustration grandissait. Les soldats voulaient obtenir le règlement de leurs droits avant de rentrer chez eux."
+    },
+    "SC06": {
+      "en": "The dispute was about money, but also about respect and recognition for their service.",
+      "fr": "Le différend concernait l'argent, mais aussi le respect et la reconnaissance de leur engagement."
+    },
+    "SC07": {
+      "en": "They had served France, survived captivity, and now faced another struggle: obtaining what they believed they were owed.",
+      "fr": "Ils avaient servi la France et survécu à la captivité. Ils devaient maintenant lutter pour obtenir ce qu'ils estimaient leur être dû."
+    },
+    "SC08": {
+      "en": "On the morning of December first, French military forces intervened. The confrontation ended in deadly gunfire.",
+      "fr": "Le matin du 1er décembre, les forces militaires françaises sont intervenues. La confrontation s'est achevée par des tirs meurtriers."
+    },
+    "SC09": {
+      "en": "African veterans were killed. Their exact number remains disputed, with historians challenging the surviving official accounts.",
+      "fr": "Des anciens combattants africains ont été tués. Leur nombre exact reste débattu, les historiens contestant les chiffres officiels de l'époque."
+    },
+    "SC10": {
+      "en": "For decades, Thiaroye remained a painful chapter of colonial history, contested, remembered, and increasingly brought into public view.",
+      "fr": "Pendant des décennies, Thiaroye est resté une page douloureuse de l'histoire coloniale, disputée, commémorée et progressivement révélée au grand public."
+    },
+    "SC11": {
+      "en": "Today, it reminds us that the end of a war does not automatically bring justice to everyone who fought it.",
+      "fr": "Aujourd'hui, cette histoire rappelle que la fin d'une guerre n'apporte pas automatiquement la justice à tous ceux qui l'ont combattue."
+    }
+  }
+}

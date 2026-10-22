@@ -1,0 +1,125 @@
+{
+  "$defs": {
+    "BilingualScene": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Id",
+          "type": "integer"
+        },
+        "narration": {
+          "title": "Narration",
+          "type": "string"
+        },
+        "translation_fr": {
+          "title": "Translation Fr",
+          "type": "string"
+        },
+        "visual": {
+          "minLength": 1,
+          "title": "Visual",
+          "type": "string"
+        },
+        "claims": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Claims",
+          "type": "array"
+        },
+        "utterances": {
+          "items": {
+            "$ref": "#/$defs/Utterance"
+          },
+          "minItems": 1,
+          "title": "Utterances",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "narration",
+        "translation_fr",
+        "visual",
+        "claims",
+        "utterances"
+      ],
+      "title": "BilingualScene",
+      "type": "object"
+    },
+    "Utterance": {
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "minLength": 1,
+          "title": "En",
+          "type": "string"
+        },
+        "fr": {
+          "minLength": 1,
+          "title": "Fr",
+          "type": "string"
+        }
+      },
+      "required": [
+        "en",
+        "fr"
+      ],
+      "title": "Utterance",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": 2,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "audio_language": {
+      "const": "en",
+      "title": "Audio Language",
+      "type": "string"
+    },
+    "spoken_language": {
+      "enum": [
+        "en-US",
+        "en-GB"
+      ],
+      "title": "Spoken Language",
+      "type": "string"
+    },
+    "subtitle_language": {
+      "const": "fr-FR",
+      "title": "Subtitle Language",
+      "type": "string"
+    },
+    "translation_locale": {
+      "const": "fr-FR",
+      "title": "Translation Locale",
+      "type": "string"
+    },
+    "scenes": {
+      "items": {
+        "$ref": "#/$defs/BilingualScene"
+      },
+      "maxItems": 6,
+      "minItems": 3,
+      "title": "Scenes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "audio_language",
+    "spoken_language",
+    "subtitle_language",
+    "translation_locale",
+    "scenes"
+  ],
+  "title": "BilingualDossier",
+  "type": "object"
+}

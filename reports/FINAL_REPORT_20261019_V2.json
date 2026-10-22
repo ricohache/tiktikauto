@@ -1,0 +1,2974 @@
+{
+  "schema_version": "2.0",
+  "created_at": "2026-10-19T10:24:09.717415+00:00",
+  "verdict": "PARTIEL",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Résumé exécutif",
+      "text": "VERDICT GLOBAL = PARTIEL. Nouveau pilote réel livré, technique conforme au contrat EN/FR. Qualité artistique et diction non acceptées au nom du propriétaire. Aucun upload."
+    },
+    {
+      "number": 2,
+      "title": "Machine observée",
+      "text": "RTX4060 Laptop 8GB, pilote596.08; RAM34029125632 octets dans system_stats; Windows 10.0.26300; Python 3.11.9; ComfyUI0.41.0, torch2.14.0+cu130, Piper1.8.0, Pydantic2.13.5. Disque libre à la livraison: 124.2 GiB. CPU détaillé: inventaire V1 conservé, pas remesuré par CIM (accès refusé)."
+    },
+    {
+      "number": 3,
+      "title": "État initial et sauvegardes",
+      "text": "V1 préservé comme DRAFT_REJECTED. File ComfyUI vide et aucun .part trouvé avant travail. Inventaire processus via CIM refusé; contrôle de file et fichiers effectué. Sauvegardes V2: C:\\TikTokHistoryFactory\\backups\\v2-before-20261019-115710, C:\\TikTokHistoryFactory\\backups\\v2-before-art-correction, C:\\TikTokHistoryFactory\\backups\\v2-before-final-art-20261019, C:\\TikTokHistoryFactory\\backups\\v2-before-scene-corrections-20261019. Backups SQLite avant chaque exécution."
+    },
+    {
+      "number": 4,
+      "title": "Fichiers créés/modifiés/supprimés",
+      "text": "Inventaire et SHA dans le JSON changes. Principaux: settings, Piper, prompts, ComfyUI LoRA, compositeur, contrats Pydantic, bilingue, pilote, CLI, main.ps1, tests, docs. Dossier sujet V2 ajouté, ancien intact. Aucun fichier utilisateur supprimé. Les rapports V1 restent archivés."
+    },
+    {
+      "number": 5,
+      "title": "Arborescence finale",
+      "text": "Code réutilisé sous tiktok_history_factory; sources data/subjects; travail work/pilot-thiaroye-1944-v2; livrables C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-v2\\revision-3; import manuel C:\\TikTokHistoryFactory\\output\\ready\\5_v2_final.mp4; comparaisons work/v2-comparison*; rapports reports/*V2* et tests-v2.*."
+    },
+    {
+      "number": 6,
+      "title": "Modèles et licences",
+      "text": "SDXL Base officiel existant + LineAniRedmond V2 auteur ArtificialGuyBR, commit411d5335378c13e63bf0d5376b405a39e9a869cb, LoRA170540028 octets, OpenRAIL-M. SDXL OpenRAIL++ conservé. John/Kristin: fiches LibriVox domaine public, repo MIT, John depuis Kristin entraînée de zéro. Wan Apache2 existant. Toutes provenances/tailles/SHA dans assets/licenses et .provenance.json. Pas de garantie sur les droits de chaque donnée image d’entraînement non publiée."
+    },
+    {
+      "number": 7,
+      "title": "Fournisseurs et budget",
+      "text": "ComfyUI localhost8188 GPU; Piper CPU venv; Kimi cloud via Ollama localhost11434/api/chat, compte existant. Aucun paramètre global modifié. Deux voix et LoRA acquis gratuitement; Pydantic installé seulement dans venv. Commandes autorisées hors sandbox pour CDN et tests, sans changement du profil réseau."
+    },
+    {
+      "number": 8,
+      "title": "Pipeline réel",
+      "text": "Thiaroye1944: trois sources, quatre claims, narration EN en huit unités FR appariées, quatre PNG768x1344, voix22.533s, 123.05 mots/minute sans changement de tempo. Images finales versions3/2/3/2. Wan17images480x832, FFmpeg1080x1920/30fps/H264/AAC, SRT/ASS, QC et export. Personnage fictif composite; décor et tasse illustratifs."
+    },
+    {
+      "number": 9,
+      "title": "Tests et commandes",
+      "text": "51 tests réussis, dont mocks explicitement nommés et huit tests intégration médias réels; zéro skip final. Journal tests-v2.log. Suite lancée trop tôt pendant Wan: échec conservé tests-v2-inflight.*, puis corrigé par attente de fin, sans assouplir les tests. Permission temporaire os.replace vérifiée hors sandbox. AST PowerShell0erreur; compileall0; doctor0; reprise0; détails commandes dans JSON."
+    },
+    {
+      "number": 10,
+      "title": "Matrice exigences",
+      "text": "Matrice A–U conservée avec réserves générales et complétée par exigences V2, preuves et limites. DONE ne signifie pas acceptation esthétique. Publication et planification restent désactivées; automatisation de nouveaux sujets non certifiée."
+    },
+    {
+      "number": 11,
+      "title": "Benchmark",
+      "text": "{\"status\": \"SUCCESS\", \"seconds\": 78.31, \"width\": 480, \"height\": 832, \"frames\": 17, \"fps\": 8, \"samples\": 19, \"peak_observed_gpu_memory_mib\": 6958.0, \"max_observed_temperature_c\": 88.0, \"scope\": \"Whole-GPU samples every ~4 seconds; not a continuous allocation peak or electricity meter\", \"fallback\": \"C:\\\\TikTokHistoryFactory\\\\output\\\\review\\\\thiaroye-1944-v2\\\\revision-3\\\\pilot.mp4\", \"wan_alternative\": \"C:\\\\TikTokHistoryFactory\\\\output\\\\review\\\\thiaroye-1944-v2\\\\revision-3-wan-attempt\\\\pilot.mp4\", \"source\": \"C:\\\\TikTokHistoryFactory\\\\work\\\\pilot-thiaroye-1944-v2\\\\wan\\\\clip.wan.json\"}. Historique des temps par phase dans JSON pilot.phases. CPU/RAM peak non mesurés pour toute la mission; température et VRAM Wan sont des échantillons, pas des pics continus."
+    },
+    {
+      "number": 12,
+      "title": "Livrables",
+      "text": "C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-v2\\revision-3 : pilot.mp4, narration-en.wav, voice-manifest.json, subtitles.srt/.ass, scenario.txt, translation-fr.txt, storyboard.json, media/PNG et graphes, sources.md, caption.txt, CREDITS, manifest, qc, contact-sheet, review-frames et comparatif ancien/nouveau. Variante Wan: C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-v2\\revision-3-wan-attempt\\pilot.mp4"
+    },
+    {
+      "number": 13,
+      "title": "Coûts",
+      "text": "Achat externe nouveau: 0€. Abonnement Ollama existant utilisé, quota restant non lu. Électricité non mesurée au compteur; toute estimation doit utiliser tarif configuré et puissance machine entière, pas seulement GPU. Aucune nouvelle API payante."
+    },
+    {
+      "number": 14,
+      "title": "TikTok",
+      "text": "NON PUBLIÉ. Aucun compte connecté, upload/draft/scheduler lancé. SQLite tâche5 awaiting_review, IDs de publication vides. Import manuel possible techniquement après acceptation; vérification des règles de plateforme requise avant publication future."
+    },
+    {
+      "number": 15,
+      "title": "Auto-corrections",
+      "text": "Première comparaison trop photographique: priorité donnée au style dans le prompt. Deux scènes refusées à la revue: arbre photographique avec silhouettes et porche évoquant un décor japonais; seules ces scènes régénérées. Accélération FR supprimée; voix EN explicite et refus du fallback FR. Paragraphes remplacés par unités bilingues; filtre IA retiré; fondus noirs retirés; QC blackdetect/clipping; dépendances visuelles séparées de la traduction. Tests de régression ajoutés."
+    },
+    {
+      "number": 16,
+      "title": "Risques et restes",
+      "text": "IMPORTANT — Propriétaire: juger style et écoute; agent ne peut certifier une écoute humaine. Historien/relecteur: vêtements/décor génériques non certifiés comme reconstruction exacte. IMPORTANT — Développeur: découverte indépendante de sujets, tous contrats métier Pydantic et schéma DB/migrations générales restent partiels; seules les entrées bilingues sont strictement validées. Planificateur3/jour non finalisé et non activé. MINEUR — débit de lecture variable, nom Thiaroye approximé par lexique. Aucun blocage technique du pilote courant."
+    },
+    {
+      "number": 17,
+      "title": "Démonstration reproductible",
+      "text": "Set-Location C:\\TikTokHistoryFactory ; .\\scripts\\main.ps1 -Mode Doctor ; .\\scripts\\main.ps1 -Mode Resume -JobId 5 ; .\\scripts\\main.ps1 -Mode Export . Reprise à entrées identiques: sept phases réutilisées, aucune nouvelle génération. --try-wan explicite uniquement si souhaité; même clip repris par empreinte."
+    },
+    {
+      "number": 18,
+      "title": "Passage à trois vidéos/jour",
+      "text": "NON ACTIVÉ. Nécessite validation humaine du pilote, sujets/sources nouveaux indépendants, tests de charge60–90s, quotas Cloud, budget disque et disponibilité PC, horaires explicites, GPUconcurrence1. Un pilote22.53s ne certifie pas cette cadence; machine éteinte ne produit rien."
+    },
+    {
+      "number": 19,
+      "title": "Adéquation et ce qui reste non vérifié",
+      "text": "Historique illustrée en manga, pas histoire du manga. EN audio et FR traduit réels, budget externe0, exports locaux. Non vérifié: acceptation esthétique, écoute humaine de la diction, exactitude archivistique du décor/vêtement, autonomie tous sujets, charge quotidienne, API TikTok réelle, électricité mesurée. Le candidat ne doit pas être appelé production autonome complète."
+    },
+    {
+      "number": 20,
+      "title": "Prochaine action humaine unique",
+      "text": "Regarder et écouter le pilote V2 pour accepter ou préciser le style manga, la voix et la prononciation de Thiaroye."
+    }
+  ],
+  "components": [
+    {
+      "component": "Sources/Kimi",
+      "before": "Sources and native Kimi working",
+      "change": "Claims retained; source-locked English script with reviewed French translation",
+      "test": "Cached source SHA/excerpts + actual Kimi response",
+      "result": "OK / REAL",
+      "proof": "work/pilot-thiaroye-1944-v2/research; script/llm-response.json",
+      "risk": "Human editorial review; no automatic truth proof"
+    },
+    {
+      "component": "English voice",
+      "before": "French accelerated voice rejected",
+      "change": "Piper John, utterances, no acceleration",
+      "test": "Actual WAV 123.05 WPM; PCM verified",
+      "result": "OK technique / revue écoute requise",
+      "proof": "narration-en.wav; voice-manifest.json",
+      "risk": "Proper names and naturalness not certified by agent listening"
+    },
+    {
+      "component": "French captions",
+      "before": "Long whole-sentence blocks",
+      "change": "Eight translated units, <=2 lines, exact WAV boundaries",
+      "test": "Actual SRT/ASS and 8 extracted caption frames",
+      "result": "OK / REAL",
+      "proof": "subtitles.srt; subtitles.ass; subtitles-review.jpg",
+      "risk": "Reading rates vary; one unit ~18.9 chars/s, date intentionally slower"
+    },
+    {
+      "component": "Manga",
+      "before": "Sepia engraving rejected",
+      "change": "Verified manga LoRA, two comparisons, final corrections",
+      "test": "Real PNG/graph/SHA + visual inspection",
+      "result": "PARTIAL / CANDIDATE",
+      "proof": "contact-sheet.jpg; editorial-review.json",
+      "risk": "Owner acceptance and archive-level wardrobe/building fidelity pending"
+    },
+    {
+      "component": "Compositor",
+      "before": "Permanent AI drawtext banner",
+      "change": "Filter removed; disclosure in metadata/caption",
+      "test": "Real command log, decode and full blackdetect",
+      "result": "OK / REAL",
+      "proof": "render/ffmpeg-log.json; qc.json",
+      "risk": "Future platform rules must be checked before any publication"
+    },
+    {
+      "component": "Wan/fallback",
+      "before": "V1 real Wan installed",
+      "change": "One new I2V test, paired FFmpeg-only export",
+      "test": "Actual Wan 78.31s; full decode",
+      "result": "OK / REAL",
+      "proof": "reports/WAN_BENCHMARK_V2.json",
+      "risk": "Very subtle 2.125s clip; 8GB requires offload"
+    },
+    {
+      "component": "Resume/CLI",
+      "before": "Atomic checkpoints and SQLite",
+      "change": "Bilingual inputs, visual-only dependencies, new job5",
+      "test": "Seven RESUMED stages from C:\\, exit0",
+      "result": "OK / REAL",
+      "proof": "tests-v2.log; checkpoints.json",
+      "risk": "General subject discovery and full production scheduling still incomplete"
+    },
+    {
+      "component": "TikTok/scheduler",
+      "before": "Disabled",
+      "change": "Remain disabled",
+      "test": "Default configuration tests, SQLite no publication ID",
+      "result": "BLOQUÉ volontairement",
+      "proof": "tests-v2.log; DB job5",
+      "risk": "No account authorization or daily-production acceptance"
+    }
+  ],
+  "changes": [
+    {
+      "file": "tiktok_history_factory\\cli.py",
+      "action": "modified",
+      "sha256": "d7117061f71c6d4bb5ba69571d141ec0f7c846998efa3f2781425508546051c7",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\config\\settings.py",
+      "action": "modified",
+      "sha256": "c89e9ad9444e23ad7e798a39673f065ea402b0afbfe48b91f00f04932132e703",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\config\\validation.py",
+      "action": "modified",
+      "sha256": "683bd20c0cac565e6fc74b29d3b6ebbd1d8a66ae8a8f368aaa741ea303cc71d5",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\media\\bilingual_audio.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "1b4f5002aef13544b3c6fa14cfa274cfada92ae86150561e4c6de940ff00045b",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\media\\prompts.py",
+      "action": "modified",
+      "sha256": "14d2905ad26ce5c676b9ad094c109dfb2da285c52f40e17ac544a81947277677",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\monitoring\\health.py",
+      "action": "modified",
+      "sha256": "fd12b77ef02bf8454aa41055471a50b82664c5c95f7b5fe7811f26399246d3ee",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\pipeline\\contracts.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "51f3280e219f7e86f1991349ef4a61067fc6b0e1415dc1be56e68d4c34a54a35",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\pipeline\\pilot.py",
+      "action": "modified",
+      "sha256": "ed5511ba89ceb326af259d1f798f045843b9faeca979076d141435768c891701",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\providers\\comfyui_images.py",
+      "action": "modified",
+      "sha256": "0b38f065783929119407904d828185f41944f8800b128b4dc1c17e4f9abd5529",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\providers\\ffmpeg.py",
+      "action": "modified",
+      "sha256": "0879e5d6933a621df52cd7a74d8cda73fd49ad0f823eb12cd0077c5ce1fa7f74",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tiktok_history_factory\\providers\\piper_tts.py",
+      "action": "modified",
+      "sha256": "5e42f87d885d3e5213dbd124e755d06243208a2c69186c2a2eb53dc791c794e6",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\acquire_v2_assets.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "fc65ee811cf2ca47b17d0a5cd952b5e1cfc1b9748f4cd04ad056f0fea06cb0e1",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\compare_v2.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "876f51bc289e5278869c323a070d34223e2fd37123632a183b9fa1355e8d59e8",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\deliver_v2.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "36cbd618c1a32854b8c23991a603726fbd24d76f90c95ef1066d34246c9c5f4c",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\document_v2.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "86cbbac72f6e0afcdf5671917ccf6fd99eae1c2aa3df67724c0ee8ba3b3d3181",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\main.ps1",
+      "action": "modified",
+      "sha256": "ee5a770a2c19b518f844d806aca5d61309b3616dacd24e5c43a40322f9480de2",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\migrate_v2.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "8c556151ce5b20e6087b42fe320b6751641cee47d9de220f8c42389971425de9",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\patch_v2_pipeline.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "509b86f26253f6110bd4f839ef7288fa8fab33855a3230d6459a467b1b161cb3",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "scripts\\refine_v2_scenes.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "8e9322bc0bf7cfce587f64f821d91869438c673a4c33cb31b83a2be7384550a1",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tests\\test_real_pilot.py",
+      "action": "modified",
+      "sha256": "76c3001b9b7b4fa4ed5786900a35d469b919c6d263c730767e84a52f908f1532",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "tests\\test_v2.py",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "972771b6a3e95f423d9287d4b979b4f5752285d3b5d1cb2bec57172ae659fa62",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\ARCHITECTURE.md",
+      "action": "modified",
+      "sha256": "c1f9d6f6a516a6f87786d90861855012a3d9d363f0ecdbf862a862d539975090",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\AUDIT_LEGACY.md",
+      "action": "modified",
+      "sha256": "44ef13cacd11b86f465384a66b3eb26d4de1cac04e2c3d681a30bcd440a82bf2",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\COMFYUI.md",
+      "action": "modified",
+      "sha256": "d141935e7534f397029b70b866407683e1819b47fb97a341363eaff75cfbfd71",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\CONFIGURATION.md",
+      "action": "modified",
+      "sha256": "d35b38d44ca16622fbcce19de2eb72e4534aa7438acc7794b11f0d4b5630d597",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\FACT_CHECKING.md",
+      "action": "modified",
+      "sha256": "9fa404d6733dff2f728b70243f1ffc2e969a50f3f07a4a50ae6f3b726d70b32f",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\INSTALLATION.md",
+      "action": "modified",
+      "sha256": "3026b87c4466d9ec39c71be07444b27be5fd5e2a3e88389b1ea9c8c4c88dd334",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\LICENCES.md",
+      "action": "modified",
+      "sha256": "47b9b56a9579974c6fc42d95ed1e8eec0011084ec0226a25b7a62785bf4bd5eb",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\QUALITY.md",
+      "action": "modified",
+      "sha256": "cfb8127e4e0b287d08bae94f02fe177385e5ba106e920d2a50aa5156a3d1735e",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\RUNBOOK.md",
+      "action": "modified",
+      "sha256": "ce99cea52ded8c411e033c28a67c204f2013a12a7fdae67a5d9f124b77ad3ba6",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\SECURITY.md",
+      "action": "modified",
+      "sha256": "531510878000b684717fd539d5179e7e20778057b9b396ee5285e12aaa5a3c9d",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "docs\\TIKTOK.md",
+      "action": "modified",
+      "sha256": "fadf3f7ddee53813927c82c9c12734d45ef25c657863e0e80606d3355e8a2b7c",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "README.md",
+      "action": "modified",
+      "sha256": "5a9e6ec7efa31a1cef4191dc15c1c12b3f5be19d8c4af20dde23dd81582b632f",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": ".env.example",
+      "action": "modified",
+      "sha256": "700d70aecfb5cffc7c6c81dfdb83a10ed79c8590dce53347150e04817c0bdae7",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "pyproject.toml",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "afbe893c9ac581bc1aaba99d8d1c3bfb66b319c1e0116675cc9e9507ce74e4b9",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    },
+    {
+      "file": "requirements-lock.txt",
+      "action": "new_or_not_in_initial_backup",
+      "sha256": "56db128ac05c63e4b4886ed79a8e5bf9708060dcab7048ac06a49e8be634cff5",
+      "reason": "V2 languages, manga, QC, tests, delivery or documentation"
+    }
+  ],
+  "tests": {
+    "timestamp": "2026-10-19T12:23:33.4770512+02:00",
+    "command": "THF_INTEGRATION=1; .\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+    "log": "reports/tests-v2.log",
+    "exit_code": 0,
+    "count": 51,
+    "other_commands": [
+      {
+        "command": ".\\.venv\\Scripts\\python.exe scripts/acquire_v2_assets.py",
+        "exit_code": 0,
+        "scope": "REAL: pinned weights and publisher hashes"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe scripts/compare_v2.py",
+        "exit_code": 0,
+        "scope": "REAL: controlled GPU base/LoRA variants and two English voice samples"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe -m tiktok_history_factory pilot --resume --try-wan --dossier data/subjects/thiaroye-1944-v2.json",
+        "exit_code": 0,
+        "scope": "REAL: revision-3-wan-attempt"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe -m tiktok_history_factory pilot --dossier data/subjects/thiaroye-1944-v2.json",
+        "exit_code": 0,
+        "scope": "REAL: revision-3, matched FFmpeg-only alternative"
+      },
+      {
+        "command": "& C:\\TikTokHistoryFactory\\scripts\\main.ps1 -Mode Resume -JobId 5",
+        "cwd": "C:\\",
+        "exit_code": 0,
+        "scope": "REAL: seven stages resumed, no generation"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe -m tiktok_history_factory doctor",
+        "exit_code": 0,
+        "scope": "Seven health checks OK; real inference proved separately"
+      },
+      {
+        "command": ".\\.venv\\Scripts\\python.exe -m compileall -q tiktok_history_factory tests",
+        "exit_code": 0,
+        "scope": "STATIC"
+      }
+    ],
+    "powershell": {
+      "source": "all scripts/*.ps1",
+      "timestamp": "2026-10-19T12:20:04.7270250+02:00",
+      "powershell_parse_errors": 0
+    }
+  },
+  "pilot": {
+    "manifest": {
+      "subject": "Thiaroye, 1er décembre 1944",
+      "slug": "thiaroye-1944-v2",
+      "task_id": 5,
+      "publication": "DISABLED",
+      "stages": {
+        "research": {
+          "sources": [
+            {
+              "id": "AN259",
+              "title": "Assemblée nationale, question au gouvernement n°259 et réponse ministérielle, décembre 2024",
+              "url": "https://questions.assemblee-nationale.fr/q17/17-259QG.htm",
+              "role": "Source parlementaire primaire ; distinguer question politique et réponse gouvernementale",
+              "excerpt": "Dans ce camp militaire de la banlieue de Dakar, le 1er décembre 1944",
+              "http_code": 200,
+              "mime": "text/html",
+              "retrieved_at": "2026-10-19T08:56:12.271571+00:00",
+              "sha256": "1fdde155403d470acd39c3373210cf5c94a3198a5258d75596811d9bf79e03cc",
+              "bytes": 77883,
+              "path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\research\\AN259.source",
+              "supporting_excerpt": "Dans ce camp militaire de la banlieue de Dakar, le 1er décembre 1944"
+            },
+            {
+              "id": "PUR",
+              "title": "Martin Mourre, Thiaroye 1944, Presses universitaires de Rennes, notice de l'éditeur, 2017",
+              "url": "https://pur-editions.fr/product/8410/thiaroye-1944",
+              "role": "Notice universitaire et présentation de la recherche archivistique, pas le texte intégral du livre",
+              "excerpt": "Thiaroye, où des dizaines de tirailleurs sénagalais furent tués",
+              "http_code": 200,
+              "mime": "text/html",
+              "retrieved_at": "2026-10-19T08:56:12.695999+00:00",
+              "sha256": "1782fb04f21b535278b0faeb5c04d511683209baae9c6fd1e137dd2b54f5c7cc",
+              "bytes": 451778,
+              "path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\research\\PUR.source",
+              "supporting_excerpt": "Thiaroye, où des dizaines de tirailleurs sénagalais furent tués"
+            },
+            {
+              "id": "WIKI",
+              "title": "Wikipedia, Massacre de Thiaroye, introduction et références",
+              "url": "https://fr.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&format=json&titles=Massacre_de_Thiaroye",
+              "role": "Source secondaire de recoupement, non utilisée seule",
+              "excerpt": "anciens prisonniers de la Seconde Guerre mondiale récemment rapatriés",
+              "http_code": 200,
+              "mime": "application/json",
+              "retrieved_at": "2026-10-19T08:56:12.975742+00:00",
+              "sha256": "290f1aa5a5ef3730c829b7657e0896c3a7e3dbddd1ad58c0ed094227d086834c",
+              "bytes": 2799,
+              "path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944\\research\\WIKI.source",
+              "supporting_excerpt": "anciens prisonniers de la Seconde Guerre mondiale récemment rapatriés"
+            }
+          ],
+          "claims": [
+            {
+              "id": "C1",
+              "statement": "Le massacre a lieu le 1er décembre 1944 à Thiaroye, près de Dakar.",
+              "certainty": "ESTABLISHED",
+              "sources": [
+                "AN259",
+                "WIKI"
+              ]
+            },
+            {
+              "id": "C2",
+              "statement": "Des tirailleurs africains rapatriés après leur captivité réclament leurs soldes.",
+              "certainty": "ESTABLISHED",
+              "sources": [
+                "AN259",
+                "WIKI"
+              ],
+              "verification_note": "Recoupement parlementaire et introduction Wikipedia, dont les références sont identifiables."
+            },
+            {
+              "id": "C3",
+              "statement": "L'armée française ouvre le feu et tue des tirailleurs.",
+              "certainty": "ESTABLISHED",
+              "sources": [
+                "AN259",
+                "PUR"
+              ]
+            },
+            {
+              "id": "C4",
+              "statement": "Le bilan précis et des circonstances font l'objet de débats historiographiques.",
+              "certainty": "DEBATED_DETAILS",
+              "sources": [
+                "AN259",
+                "WIKI"
+              ],
+              "editorial_rule": "Ne donner aucun chiffre, aucune intention individuelle ou reconstitution tactique comme fait certain."
+            }
+          ],
+          "method": "Curated claims cross-checked against identified sources; no claim of automatic proof",
+          "editorial_status": "AWAITING_HUMAN_REVIEW",
+          "debates": "Death toll and detailed circumstances disputed; no number asserted"
+        },
+        "script": {
+          "narration": [
+            "December first, nineteen forty-four. Thiaroye, near Dakar, Senegal.",
+            "African soldiers had returned from captivity in Europe. They demanded their unpaid wages.",
+            "The French army opened fire. Soldiers were killed.",
+            "The death toll and the exact circumstances remain disputed. Their memory endures."
+          ],
+          "storyboard": [
+            {
+              "id": 1,
+              "claims": [
+                "C1",
+                "C3"
+              ],
+              "narration": "December first, nineteen forty-four. Thiaroye, near Dakar, Senegal.",
+              "visual": "One low whitewashed plaster barracks facade, corrugated iron roof, bare sandy ground, Senegal West Africa 1944. Empty courtyard. Hand drawn angular architecture, flat black shadow, no tree, no people, no porch, no Japanese buildings.",
+              "translation_fr": "Le 1er décembre 1944. À Thiaroye, près de Dakar, au Sénégal.",
+              "utterances": [
+                {
+                  "en": "December first, nineteen forty-four.",
+                  "fr": "Le 1er décembre 1944."
+                },
+                {
+                  "en": "Thiaroye, near Dakar, Senegal.",
+                  "fr": "À Thiaroye, près de Dakar, au Sénégal."
+                }
+              ],
+              "image_revision": 3,
+              "positive": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, One low whitewashed plaster barracks facade, corrugated iron roof, bare sandy ground, Senegal West Africa 1944. Empty courtyard. Hand drawn angular architecture, flat black shadow, no tree, no people, no porch, no Japanese buildings., vertical composition, historical reconstruction, no text",
+              "negative": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+              "seed": 19441201
+            },
+            {
+              "id": 2,
+              "claims": [
+                "C2"
+              ],
+              "narration": "African soldiers had returned from captivity in Europe. They demanded their unpaid wages.",
+              "visual": "Chest-up portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Serious determined expression, face in upper third, plain plaster wall behind him, cinematic side lighting, blank lower quarter for subtitles.",
+              "translation_fr": "Des soldats africains rentraient de captivité en Europe. Ils réclamaient leurs soldes impayées.",
+              "utterances": [
+                {
+                  "en": "African soldiers had returned from captivity in Europe.",
+                  "fr": "Des soldats africains rentraient de captivité en Europe."
+                },
+                {
+                  "en": "They demanded their unpaid wages.",
+                  "fr": "Ils réclamaient leurs soldes impayées."
+                }
+              ],
+              "positive": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, Chest-up portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Serious determined expression, face in upper third, plain plaster wall behind him, cinematic side lighting, blank lower quarter for subtitles., same anonymous adult West African French tirailleur soldier, dark skin, thirty years old, long angular face, short cropped black hair, plain khaki 1940s French military field jacket, no medals, no modern camouflage, vertical composition, historical reconstruction, no text",
+              "negative": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+              "seed": 19441204
+            },
+            {
+              "id": 3,
+              "claims": [
+                "C3",
+                "C4"
+              ],
+              "narration": "The French army opened fire. Soldiers were killed.",
+              "visual": "Close-up manga still life of ONE plain white enamel drinking cup on a rough wooden bench, isolated against blank white plaster background. A bold black diagonal shadow. Senegal 1944, symbolic absence, no buildings, no doors, no people, no weapons, no writing.",
+              "translation_fr": "L’armée française a ouvert le feu. Des soldats ont été tués.",
+              "utterances": [
+                {
+                  "en": "The French army opened fire.",
+                  "fr": "L’armée française a ouvert le feu."
+                },
+                {
+                  "en": "Soldiers were killed.",
+                  "fr": "Des soldats ont été tués."
+                }
+              ],
+              "image_revision": 3,
+              "positive": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, Close-up manga still life of ONE plain white enamel drinking cup on a rough wooden bench, isolated against blank white plaster background. A bold black diagonal shadow. Senegal 1944, symbolic absence, no buildings, no doors, no people, no weapons, no writing., vertical composition, historical reconstruction, no text",
+              "negative": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+              "seed": 19441203
+            },
+            {
+              "id": 4,
+              "claims": [
+                "C1",
+                "C3",
+                "C4"
+              ],
+              "narration": "The death toll and the exact circumstances remain disputed. Their memory endures.",
+              "visual": "Close portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Solemn eyes looking slightly away, face in upper third, neutral plaster wall, powerful black shadow shapes, blank lower quarter for subtitles.",
+              "translation_fr": "Le bilan et les circonstances exactes restent débattus. Leur mémoire demeure.",
+              "utterances": [
+                {
+                  "en": "The death toll and the exact circumstances remain disputed.",
+                  "fr": "Le bilan et les circonstances exactes restent débattus."
+                },
+                {
+                  "en": "Their memory endures.",
+                  "fr": "Leur mémoire demeure."
+                }
+              ],
+              "positive": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, Close portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Solemn eyes looking slightly away, face in upper third, neutral plaster wall, powerful black shadow shapes, blank lower quarter for subtitles., same anonymous adult West African French tirailleur soldier, dark skin, thirty years old, long angular face, short cropped black hair, plain khaki 1940s French military field jacket, no medals, no modern camouflage, vertical composition, historical reconstruction, no text",
+              "negative": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+              "seed": 19441204
+            }
+          ],
+          "llm_model": "kimi-k3",
+          "token_usage": {
+            "prompt_eval_count": 271,
+            "eval_count": 588
+          },
+          "method": "Source-locked English script with reviewed French translation formatted by LLM; new facts forbidden"
+        },
+        "voice": {
+          "paths": [
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-01.wav",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-02.wav",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-03.wav",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-04.wav"
+          ],
+          "durations": [
+            6.133333333333334,
+            6.366666666666666,
+            3.8,
+            6.233333333333333
+          ],
+          "duration": 22.533333333333335,
+          "sha256": {
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-01.wav": "1e8305cee0e948e85150a5ebf7bae55d1417cb62b5dd36f8acffe51f09205416",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-02.wav": "5751b2027caa551c98f506cf2ab44e16486ad0fe64368c009ca81d469f547a84",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-03.wav": "14c1afe114d4bd103b69f5322ac5db50e337f4a0a53553f7eca61adf2f3e4bcd",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\scene-04.wav": "2d184be0eec60af16fb573a547fec0237080f83b155ee8548457beedbb5e4433"
+          },
+          "subtitles": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\script\\subtitles.srt",
+          "engine": "Piper",
+          "language": "en_US",
+          "utterances": [
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-1.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "790ca9773af53c6115b0a8fe97536d2bba5baa93b740c18026502923385eb847",
+              "wav_sha256": "2b06adfbd6c9b70bdf5be5fe0d23be7fca50ee73b843a3b48aad477ff09b96c9",
+              "duration": 2.995374149659864,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 4196.19,
+              "scene_id": 1,
+              "utterance_id": 1,
+              "script_en": "December first, nineteen forty-four.",
+              "audio_text": "December first, nineteen forty-four.",
+              "translation_fr": "Le 1er décembre 1944.",
+              "start_seconds": 0,
+              "end_seconds": 2.995374149659864,
+              "subtitle_characters_per_second": 7.01
+            },
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-2.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "c0892b7beb524912621d69bc1883e5b7b628fd2bde0d543da2a9a0d47daa8232",
+              "wav_sha256": "9b2e9140340dca188c32140ee4d091ed1a473588bf0a34c9af700be490865487",
+              "duration": 2.6354648526077096,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 3335.82,
+              "scene_id": 1,
+              "utterance_id": 2,
+              "script_en": "Thiaroye, near Dakar, Senegal.",
+              "audio_text": "Tya-roy, near Dakar, Senegal.",
+              "translation_fr": "À Thiaroye, près de Dakar, au Sénégal.",
+              "start_seconds": 3.2453514739229026,
+              "end_seconds": 5.880816326530612,
+              "subtitle_characters_per_second": 14.42
+            },
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-1.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "5396d638eaeced1e93e1ee5b06ef3e124042ba191b61a6dfb52994ae8499b177",
+              "wav_sha256": "be8c0daac4dbea47ff59099187aac37be7b7a6b8130e6003a1895c0dbbc42efc",
+              "duration": 3.4597732426303853,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 3341.55,
+              "scene_id": 2,
+              "utterance_id": 1,
+              "script_en": "African soldiers had returned from captivity in Europe.",
+              "audio_text": "African soldiers had returned from captivity in Europe.",
+              "translation_fr": "Des soldats africains rentraient de captivité en Europe.",
+              "start_seconds": 6.133333333333334,
+              "end_seconds": 9.59310657596372,
+              "subtitle_characters_per_second": 16.19
+            },
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-2.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "302ef7aad7abc6d97e62f6784d47c8518915bc93c5f9c77cc26737c2a8698ab8",
+              "wav_sha256": "41773d9790e6c198f85b3275e8d8e9240dab38973bc912650a8f9a8b80b62da0",
+              "duration": 2.380045351473923,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 4881.32,
+              "scene_id": 2,
+              "utterance_id": 2,
+              "script_en": "They demanded their unpaid wages.",
+              "audio_text": "They demanded their unpaid wages.",
+              "translation_fr": "Ils réclamaient leurs soldes impayées.",
+              "start_seconds": 9.843083900226757,
+              "end_seconds": 12.22312925170068,
+              "subtitle_characters_per_second": 15.97
+            },
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-1.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "05f4f08bf9a9c4a6854e3d7ce1d5d4316a1e7cf7ba0cc34a571b0ff2a872c7dc",
+              "wav_sha256": "4a5bbf0053c39bbf54f5de74530439f77c291c83617e997e91ec33bc95182ad9",
+              "duration": 1.799546485260771,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 4438.94,
+              "scene_id": 3,
+              "utterance_id": 1,
+              "script_en": "The French army opened fire.",
+              "audio_text": "The French army opened fire.",
+              "translation_fr": "L’armée française a ouvert le feu.",
+              "start_seconds": 12.5,
+              "end_seconds": 14.299546485260771,
+              "subtitle_characters_per_second": 18.89
+            },
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-2.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "d925719df974746a46bc90cd994b4e1b39fee2b969008b0279605d46562d13e3",
+              "wav_sha256": "332918a07e0b5e55dfbca39616913d088fbd0e82f7312b97c11ac40b2b20715a",
+              "duration": 1.486077097505669,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 4228.98,
+              "scene_id": 3,
+              "utterance_id": 2,
+              "script_en": "Soldiers were killed.",
+              "audio_text": "Soldiers were killed.",
+              "translation_fr": "Des soldats ont été tués.",
+              "start_seconds": 14.549523809523809,
+              "end_seconds": 16.035600907029476,
+              "subtitle_characters_per_second": 16.82
+            },
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-1.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "882b53269895a89043e881c3985d1f555d0a3642ba9522c70351633c5a6cf950",
+              "wav_sha256": "93e6011e32f6dc202b88cdae78bdb759ba35410a0c71930a851f753a55eefdc2",
+              "duration": 3.9706122448979593,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 3789.57,
+              "scene_id": 4,
+              "utterance_id": 1,
+              "script_en": "The death toll and the exact circumstances remain disputed.",
+              "audio_text": "The death toll and the exact circumstances remain disputed.",
+              "translation_fr": "Le bilan et les circonstances exactes restent débattus.",
+              "start_seconds": 16.299999999999997,
+              "end_seconds": 20.270612244897958,
+              "subtitle_characters_per_second": 13.85
+            },
+            {
+              "status": "SUCCESS",
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-2.wav",
+              "returncode": 0,
+              "engine": "piper",
+              "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+              "parameters": {
+                "length_scale": 1.0,
+                "noise_scale": 0.667,
+                "noise_w_scale": 0.8
+              },
+              "text_sha256": "863946a0b94e4f4f863982f2d94d15572cb67290fab04368172236ba5d1a15df",
+              "wav_sha256": "2563f0c2ff7953de52cddd978a4f9bf0e34950d1e45efe4bfffc0a40bbb0c366",
+              "duration": 1.7531065759637188,
+              "sample_rate": 22050,
+              "channels": 1,
+              "rms": 3104.85,
+              "scene_id": 4,
+              "utterance_id": 2,
+              "script_en": "Their memory endures.",
+              "audio_text": "Their memory endures.",
+              "translation_fr": "Leur mémoire demeure.",
+              "start_seconds": 20.520589569160997,
+              "end_seconds": 22.273696145124717,
+              "subtitle_characters_per_second": 11.98
+            }
+          ],
+          "audio_language": "en",
+          "spoken_language": "en_US",
+          "subtitle_language": "fr-FR",
+          "pronunciation_lexicon": {
+            "Thiaroye": "Tya-roy"
+          },
+          "word_count": 42,
+          "speech_duration": 20.48,
+          "words_per_minute": 123.05,
+          "tempo_changed": false,
+          "parameters": {
+            "length_scale": 1.0
+          },
+          "alignment": "Measured utterance WAV boundaries, 250ms pauses; no estimated word timing",
+          "auditory_review": "Human listening required for intelligibility and proper names"
+        },
+        "images": {
+          "paths": [
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-01-v3.png",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-02-v2.png",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-03-v3.png",
+            "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-04-v2.png"
+          ],
+          "generations": [
+            {
+              "status": "SUCCESS",
+              "prompt_id": "9be562b1-f3c0-4e3e-9fed-726ea8f983e6",
+              "fingerprint": "819af993726dd9d4a112849614882956cf2341bfedd0cc8c6914195735332b9f",
+              "seed": 19441201,
+              "checkpoint": "sd_xl_base_1.0.safetensors",
+              "workflow": {
+                "1": {
+                  "class_type": "CheckpointLoaderSimple",
+                  "inputs": {
+                    "ckpt_name": "sd_xl_base_1.0.safetensors"
+                  }
+                },
+                "2": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, One low whitewashed plaster barracks facade, corrugated iron roof, bare sandy ground, Senegal West Africa 1944. Empty courtyard. Hand drawn angular architecture, flat black shadow, no tree, no people, no porch, no Japanese buildings., vertical composition, historical reconstruction, no text",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "3": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "4": {
+                  "class_type": "EmptyLatentImage",
+                  "inputs": {
+                    "width": 768,
+                    "height": 1344,
+                    "batch_size": 1
+                  }
+                },
+                "5": {
+                  "class_type": "KSampler",
+                  "inputs": {
+                    "model": [
+                      "8",
+                      0
+                    ],
+                    "positive": [
+                      "2",
+                      0
+                    ],
+                    "negative": [
+                      "3",
+                      0
+                    ],
+                    "latent_image": [
+                      "4",
+                      0
+                    ],
+                    "seed": 19441201,
+                    "steps": 28,
+                    "cfg": 7.0,
+                    "sampler_name": "dpmpp_2m",
+                    "scheduler": "karras",
+                    "denoise": 1.0
+                  }
+                },
+                "6": {
+                  "class_type": "VAEDecode",
+                  "inputs": {
+                    "samples": [
+                      "5",
+                      0
+                    ],
+                    "vae": [
+                      "1",
+                      2
+                    ]
+                  }
+                },
+                "7": {
+                  "class_type": "SaveImage",
+                  "inputs": {
+                    "images": [
+                      "6",
+                      0
+                    ],
+                    "filename_prefix": "history_factory/pilot"
+                  }
+                },
+                "8": {
+                  "class_type": "LoraLoader",
+                  "inputs": {
+                    "model": [
+                      "1",
+                      0
+                    ],
+                    "clip": [
+                      "1",
+                      1
+                    ],
+                    "lora_name": "LineAniRedmondV2-Lineart-LineAniAF.safetensors",
+                    "strength_model": 1.0,
+                    "strength_clip": 1.0
+                  }
+                }
+              },
+              "width": 768,
+              "height": 1344,
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-01-v3.png",
+              "sha256": "7b443c256cea009b3678c8e3afb9c41edf953914b673b661441506ee68a5587a",
+              "seconds": 20.12,
+              "device": [
+                {
+                  "name": "cuda:0 NVIDIA GeForce RTX 4060 Laptop GPU : cudaMallocAsync",
+                  "type": "cuda",
+                  "index": 0,
+                  "vram_total": 8585216000,
+                  "vram_free": 2718145274,
+                  "torch_vram_total": 33554432,
+                  "torch_vram_free": 23304954
+                }
+              ]
+            },
+            {
+              "status": "SUCCESS",
+              "prompt_id": "3aa12b4e-c7a2-4ecc-980a-3a62fbc2e448",
+              "fingerprint": "33e040657c5d5c2b5853d78acfbe8ef54f8be7256c5c7e48d7abf23eddd59152",
+              "seed": 19441204,
+              "checkpoint": "sd_xl_base_1.0.safetensors",
+              "workflow": {
+                "1": {
+                  "class_type": "CheckpointLoaderSimple",
+                  "inputs": {
+                    "ckpt_name": "sd_xl_base_1.0.safetensors"
+                  }
+                },
+                "2": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, Chest-up portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Serious determined expression, face in upper third, plain plaster wall behind him, cinematic side lighting, blank lower quarter for subtitles., same anonymous adult West African French tirailleur soldier, dark skin, thirty years old, long angular face, short cropped black hair, plain khaki 1940s French military field jacket, no medals, no modern camouflage, vertical composition, historical reconstruction, no text",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "3": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "4": {
+                  "class_type": "EmptyLatentImage",
+                  "inputs": {
+                    "width": 768,
+                    "height": 1344,
+                    "batch_size": 1
+                  }
+                },
+                "5": {
+                  "class_type": "KSampler",
+                  "inputs": {
+                    "model": [
+                      "8",
+                      0
+                    ],
+                    "positive": [
+                      "2",
+                      0
+                    ],
+                    "negative": [
+                      "3",
+                      0
+                    ],
+                    "latent_image": [
+                      "4",
+                      0
+                    ],
+                    "seed": 19441204,
+                    "steps": 28,
+                    "cfg": 7.0,
+                    "sampler_name": "dpmpp_2m",
+                    "scheduler": "karras",
+                    "denoise": 1.0
+                  }
+                },
+                "6": {
+                  "class_type": "VAEDecode",
+                  "inputs": {
+                    "samples": [
+                      "5",
+                      0
+                    ],
+                    "vae": [
+                      "1",
+                      2
+                    ]
+                  }
+                },
+                "7": {
+                  "class_type": "SaveImage",
+                  "inputs": {
+                    "images": [
+                      "6",
+                      0
+                    ],
+                    "filename_prefix": "history_factory/pilot"
+                  }
+                },
+                "8": {
+                  "class_type": "LoraLoader",
+                  "inputs": {
+                    "model": [
+                      "1",
+                      0
+                    ],
+                    "clip": [
+                      "1",
+                      1
+                    ],
+                    "lora_name": "LineAniRedmondV2-Lineart-LineAniAF.safetensors",
+                    "strength_model": 1.0,
+                    "strength_clip": 1.0
+                  }
+                }
+              },
+              "width": 768,
+              "height": 1344,
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-02-v2.png",
+              "sha256": "5d805188483314d6f105947e33a18baa75fea9811231e9cf5c486ed2b6a51b27",
+              "seconds": 22.16,
+              "device": [
+                {
+                  "name": "cuda:0 NVIDIA GeForce RTX 4060 Laptop GPU : cudaMallocAsync",
+                  "type": "cuda",
+                  "index": 0,
+                  "vram_total": 8585216000,
+                  "vram_free": 2718145274,
+                  "torch_vram_total": 33554432,
+                  "torch_vram_free": 23304954
+                }
+              ],
+              "resumed": true
+            },
+            {
+              "status": "SUCCESS",
+              "prompt_id": "e7a6a82e-eed2-47f8-b54e-cb8466fc7e62",
+              "fingerprint": "2a52fed429e4f1c057ce5b9daedbf78a2a0d9e02ecb12936598d7aab96d7808f",
+              "seed": 19441203,
+              "checkpoint": "sd_xl_base_1.0.safetensors",
+              "workflow": {
+                "1": {
+                  "class_type": "CheckpointLoaderSimple",
+                  "inputs": {
+                    "ckpt_name": "sd_xl_base_1.0.safetensors"
+                  }
+                },
+                "2": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, Close-up manga still life of ONE plain white enamel drinking cup on a rough wooden bench, isolated against blank white plaster background. A bold black diagonal shadow. Senegal 1944, symbolic absence, no buildings, no doors, no people, no weapons, no writing., vertical composition, historical reconstruction, no text",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "3": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "4": {
+                  "class_type": "EmptyLatentImage",
+                  "inputs": {
+                    "width": 768,
+                    "height": 1344,
+                    "batch_size": 1
+                  }
+                },
+                "5": {
+                  "class_type": "KSampler",
+                  "inputs": {
+                    "model": [
+                      "8",
+                      0
+                    ],
+                    "positive": [
+                      "2",
+                      0
+                    ],
+                    "negative": [
+                      "3",
+                      0
+                    ],
+                    "latent_image": [
+                      "4",
+                      0
+                    ],
+                    "seed": 19441203,
+                    "steps": 28,
+                    "cfg": 7.0,
+                    "sampler_name": "dpmpp_2m",
+                    "scheduler": "karras",
+                    "denoise": 1.0
+                  }
+                },
+                "6": {
+                  "class_type": "VAEDecode",
+                  "inputs": {
+                    "samples": [
+                      "5",
+                      0
+                    ],
+                    "vae": [
+                      "1",
+                      2
+                    ]
+                  }
+                },
+                "7": {
+                  "class_type": "SaveImage",
+                  "inputs": {
+                    "images": [
+                      "6",
+                      0
+                    ],
+                    "filename_prefix": "history_factory/pilot"
+                  }
+                },
+                "8": {
+                  "class_type": "LoraLoader",
+                  "inputs": {
+                    "model": [
+                      "1",
+                      0
+                    ],
+                    "clip": [
+                      "1",
+                      1
+                    ],
+                    "lora_name": "LineAniRedmondV2-Lineart-LineAniAF.safetensors",
+                    "strength_model": 1.0,
+                    "strength_clip": 1.0
+                  }
+                }
+              },
+              "width": 768,
+              "height": 1344,
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-03-v3.png",
+              "sha256": "c3433759004959be9ce74283021a7276337583a654c6d783a07e42783f148305",
+              "seconds": 20.12,
+              "device": [
+                {
+                  "name": "cuda:0 NVIDIA GeForce RTX 4060 Laptop GPU : cudaMallocAsync",
+                  "type": "cuda",
+                  "index": 0,
+                  "vram_total": 8585216000,
+                  "vram_free": 2718145274,
+                  "torch_vram_total": 33554432,
+                  "torch_vram_free": 23304954
+                }
+              ]
+            },
+            {
+              "status": "SUCCESS",
+              "prompt_id": "5de72709-37e1-43e0-8073-2890ca2a14f8",
+              "fingerprint": "8da440a9da7799e95e5abd92cc8e7ca3c263571c96c156bbc59078707c8fe326",
+              "seed": 19441204,
+              "checkpoint": "sd_xl_base_1.0.safetensors",
+              "workflow": {
+                "1": {
+                  "class_type": "CheckpointLoaderSimple",
+                  "inputs": {
+                    "ckpt_name": "sd_xl_base_1.0.safetensors"
+                  }
+                },
+                "2": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "LineAniAF, Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, Close portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Solemn eyes looking slightly away, face in upper third, neutral plaster wall, powerful black shadow shapes, blank lower quarter for subtitles., same anonymous adult West African French tirailleur soldier, dark skin, thirty years old, long angular face, short cropped black hair, plain khaki 1940s French military field jacket, no medals, no modern camouflage, vertical composition, historical reconstruction, no text",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "3": {
+                  "class_type": "CLIPTextEncode",
+                  "inputs": {
+                    "text": "etching, engraving, crosshatching, sepia, pencil sketch, charcoal, photograph, photorealistic, 3D render, chibi, cute, neon colors, low quality, blurry, deformed hands, extra fingers, modern clothing, modern weapons, watermark, text, letters, nudity, nsfw, gore, blood, graphic violence, Asian architecture, pagoda, kimono, robe, straw hat, conical hat, samurai, katana, bamboo village, tactical vest, astronaut, spacesuit, face mask, modern helmet, nazi, swastika, medals, epaulettes, officer uniform",
+                    "clip": [
+                      "8",
+                      1
+                    ]
+                  }
+                },
+                "4": {
+                  "class_type": "EmptyLatentImage",
+                  "inputs": {
+                    "width": 768,
+                    "height": 1344,
+                    "batch_size": 1
+                  }
+                },
+                "5": {
+                  "class_type": "KSampler",
+                  "inputs": {
+                    "model": [
+                      "8",
+                      0
+                    ],
+                    "positive": [
+                      "2",
+                      0
+                    ],
+                    "negative": [
+                      "3",
+                      0
+                    ],
+                    "latent_image": [
+                      "4",
+                      0
+                    ],
+                    "seed": 19441204,
+                    "steps": 28,
+                    "cfg": 7.0,
+                    "sampler_name": "dpmpp_2m",
+                    "scheduler": "karras",
+                    "denoise": 1.0
+                  }
+                },
+                "6": {
+                  "class_type": "VAEDecode",
+                  "inputs": {
+                    "samples": [
+                      "5",
+                      0
+                    ],
+                    "vae": [
+                      "1",
+                      2
+                    ]
+                  }
+                },
+                "7": {
+                  "class_type": "SaveImage",
+                  "inputs": {
+                    "images": [
+                      "6",
+                      0
+                    ],
+                    "filename_prefix": "history_factory/pilot"
+                  }
+                },
+                "8": {
+                  "class_type": "LoraLoader",
+                  "inputs": {
+                    "model": [
+                      "1",
+                      0
+                    ],
+                    "clip": [
+                      "1",
+                      1
+                    ],
+                    "lora_name": "LineAniRedmondV2-Lineart-LineAniAF.safetensors",
+                    "strength_model": 1.0,
+                    "strength_clip": 1.0
+                  }
+                }
+              },
+              "width": 768,
+              "height": 1344,
+              "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\media\\scene-04-v2.png",
+              "sha256": "8653284fd926834cb69bcf6d8dab901f01c0e56393a8bd226f5a3329361645f1",
+              "seconds": 22.14,
+              "device": [
+                {
+                  "name": "cuda:0 NVIDIA GeForce RTX 4060 Laptop GPU : cudaMallocAsync",
+                  "type": "cuda",
+                  "index": 0,
+                  "vram_total": 8585216000,
+                  "vram_free": 2718145274,
+                  "torch_vram_total": 33554432,
+                  "torch_vram_free": 23304954
+                }
+              ],
+              "resumed": true
+            }
+          ],
+          "visual_qc": "REQUIRES_HUMAN_REVIEW"
+        },
+        "animation": {
+          "status": "FALLBACK_FFMPEG",
+          "mode": "FFmpeg",
+          "reason": "Optional Wan attempt not enabled"
+        },
+        "render": {
+          "success": true,
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\pilot.mp4",
+          "durations": [
+            6.133333333333334,
+            6.366666666666666,
+            3.8,
+            6.233333333333333
+          ],
+          "duration": 22.533333333333335,
+          "audio_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\render\\narration.wav",
+          "subtitles_ass": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\render\\captions.ass",
+          "animation": "FFmpeg slow zoom, pan, fades; Wan not used"
+        },
+        "qc": {
+          "status": "TECHNICAL_PASS_AWAITING_EDITORIAL_REVIEW",
+          "duration": 22.533333,
+          "probe": {
+            "streams": [
+              {
+                "index": 0,
+                "codec_name": "h264",
+                "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+                "profile": "High",
+                "level": 40,
+                "codec_type": "video",
+                "codec_tag_string": "avc1",
+                "codec_tag": "0x31637661",
+                "mime_codec_string": "avc1.640028",
+                "width": 1080,
+                "height": 1920,
+                "coded_width": 1080,
+                "coded_height": 1920,
+                "has_b_frames": 2,
+                "sample_aspect_ratio": "1:1",
+                "display_aspect_ratio": "9:16",
+                "pix_fmt": "yuv420p",
+                "chroma_location": "left",
+                "field_order": "progressive",
+                "is_avc": "true",
+                "nal_length_size": "4",
+                "id": "0x1",
+                "r_frame_rate": "30/1",
+                "avg_frame_rate": "30/1",
+                "time_base": "1/15360",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "duration_ts": 346112,
+                "duration": "22.533333",
+                "bit_rate": "2522220",
+                "bits_per_raw_sample": "8",
+                "nb_frames": "676",
+                "extradata_size": 48,
+                "disposition": {
+                  "default": 1,
+                  "dub": 0,
+                  "original": 0,
+                  "comment": 0,
+                  "lyrics": 0,
+                  "karaoke": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "visual_impaired": 0,
+                  "clean_effects": 0,
+                  "attached_pic": 0,
+                  "timed_thumbnails": 0,
+                  "non_diegetic": 0,
+                  "captions": 0,
+                  "descriptions": 0,
+                  "metadata": 0,
+                  "dependent": 0,
+                  "still_image": 0,
+                  "multilayer": 0
+                },
+                "tags": {
+                  "language": "und",
+                  "handler_name": "VideoHandler",
+                  "encoder": "Lavc63.20.100 libx264"
+                }
+              },
+              {
+                "index": 1,
+                "codec_name": "aac",
+                "codec_long_name": "AAC (Advanced Audio Coding)",
+                "profile": "LC",
+                "codec_type": "audio",
+                "codec_tag_string": "mp4a",
+                "codec_tag": "0x6134706d",
+                "mime_codec_string": "mp4a.40.2",
+                "sample_fmt": "fltp",
+                "sample_rate": "48000",
+                "channels": 1,
+                "channel_layout": "mono",
+                "bits_per_sample": 0,
+                "initial_padding": 1024,
+                "id": "0x2",
+                "r_frame_rate": "0/0",
+                "avg_frame_rate": "0/0",
+                "time_base": "1/48000",
+                "start_pts": 0,
+                "start_time": "0.000000",
+                "duration_ts": 1081600,
+                "duration": "22.533333",
+                "bit_rate": "146313",
+                "nb_frames": "1058",
+                "extradata_size": 5,
+                "disposition": {
+                  "default": 1,
+                  "dub": 0,
+                  "original": 0,
+                  "comment": 0,
+                  "lyrics": 0,
+                  "karaoke": 0,
+                  "forced": 0,
+                  "hearing_impaired": 0,
+                  "visual_impaired": 0,
+                  "clean_effects": 0,
+                  "attached_pic": 0,
+                  "timed_thumbnails": 0,
+                  "non_diegetic": 0,
+                  "captions": 0,
+                  "descriptions": 0,
+                  "metadata": 0,
+                  "dependent": 0,
+                  "still_image": 0,
+                  "multilayer": 0
+                },
+                "tags": {
+                  "language": "und",
+                  "handler_name": "SoundHandler"
+                }
+              }
+            ],
+            "format": {
+              "filename": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\pilot.mp4",
+              "nb_streams": 2,
+              "nb_programs": 0,
+              "nb_stream_groups": 0,
+              "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+              "format_long_name": "QuickTime / MOV",
+              "start_time": "0.000000",
+              "duration": "22.533333",
+              "size": "7543419",
+              "bit_rate": "2678136",
+              "probe_score": 100,
+              "tags": {
+                "major_brand": "isom",
+                "minor_version": "512",
+                "compatible_brands": "isomiso2avc1mp41",
+                "encoder": "Lavf63.10.100",
+                "comment": "Reconstitution historique generee par IA; images non documentaires; narration EN; sous-titres FR"
+              }
+            }
+          },
+          "decode": {
+            "returncode": 0,
+            "stdout": "",
+            "stderr": "",
+            "success": true
+          },
+          "voice": {
+            "duration": 22.533333333333335,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 3729.2,
+            "peak": 32767,
+            "peak_dbfs": -0.0,
+            "clipped_samples": 8,
+            "clipping_fraction": 0.000016101115002213902
+          },
+          "blackdetect": {
+            "returncode": 0,
+            "stdout": "",
+            "stderr": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\pilot.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.10.100\n    comment         : Reconstitution historique generee par IA; images non documentaires; narration EN; sous-titres FR\n  Duration: 00:00:22.53, start: 0.000000, bitrate: 2678 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 2522 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      encoder         : Lavc63.20.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 146 kb/s (default)\n    Metadata:\n      handler_name    : SoundHandler\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    comment         : Reconstitution historique generee par IA; images non documentaires; narration EN; sous-titres FR\n    encoder         : Lavf63.10.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n    Metadata:\n      encoder         : Lavc63.20.100 wrapped_avframe\n      handler_name    : VideoHandler\n[out#0/null @ 000001f67e977b40] video:280KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  676 fps=0.0 q=-0.0 Lsize=N/A time=00:00:22.53 bitrate=N/A speed=53.1x elapsed=0:00:00.42    \n",
+            "success": true
+          },
+          "language_contract": {
+            "utterances": [
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-1.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "790ca9773af53c6115b0a8fe97536d2bba5baa93b740c18026502923385eb847",
+                "wav_sha256": "2b06adfbd6c9b70bdf5be5fe0d23be7fca50ee73b843a3b48aad477ff09b96c9",
+                "duration": 2.995374149659864,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 4196.19,
+                "scene_id": 1,
+                "utterance_id": 1,
+                "script_en": "December first, nineteen forty-four.",
+                "audio_text": "December first, nineteen forty-four.",
+                "translation_fr": "Le 1er décembre 1944.",
+                "start_seconds": 0,
+                "end_seconds": 2.995374149659864,
+                "subtitle_characters_per_second": 7.01
+              },
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-2.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "c0892b7beb524912621d69bc1883e5b7b628fd2bde0d543da2a9a0d47daa8232",
+                "wav_sha256": "9b2e9140340dca188c32140ee4d091ed1a473588bf0a34c9af700be490865487",
+                "duration": 2.6354648526077096,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 3335.82,
+                "scene_id": 1,
+                "utterance_id": 2,
+                "script_en": "Thiaroye, near Dakar, Senegal.",
+                "audio_text": "Tya-roy, near Dakar, Senegal.",
+                "translation_fr": "À Thiaroye, près de Dakar, au Sénégal.",
+                "start_seconds": 3.2453514739229026,
+                "end_seconds": 5.880816326530612,
+                "subtitle_characters_per_second": 14.42
+              },
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-1.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "5396d638eaeced1e93e1ee5b06ef3e124042ba191b61a6dfb52994ae8499b177",
+                "wav_sha256": "be8c0daac4dbea47ff59099187aac37be7b7a6b8130e6003a1895c0dbbc42efc",
+                "duration": 3.4597732426303853,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 3341.55,
+                "scene_id": 2,
+                "utterance_id": 1,
+                "script_en": "African soldiers had returned from captivity in Europe.",
+                "audio_text": "African soldiers had returned from captivity in Europe.",
+                "translation_fr": "Des soldats africains rentraient de captivité en Europe.",
+                "start_seconds": 6.133333333333334,
+                "end_seconds": 9.59310657596372,
+                "subtitle_characters_per_second": 16.19
+              },
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-2.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "302ef7aad7abc6d97e62f6784d47c8518915bc93c5f9c77cc26737c2a8698ab8",
+                "wav_sha256": "41773d9790e6c198f85b3275e8d8e9240dab38973bc912650a8f9a8b80b62da0",
+                "duration": 2.380045351473923,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 4881.32,
+                "scene_id": 2,
+                "utterance_id": 2,
+                "script_en": "They demanded their unpaid wages.",
+                "audio_text": "They demanded their unpaid wages.",
+                "translation_fr": "Ils réclamaient leurs soldes impayées.",
+                "start_seconds": 9.843083900226757,
+                "end_seconds": 12.22312925170068,
+                "subtitle_characters_per_second": 15.97
+              },
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-1.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "05f4f08bf9a9c4a6854e3d7ce1d5d4316a1e7cf7ba0cc34a571b0ff2a872c7dc",
+                "wav_sha256": "4a5bbf0053c39bbf54f5de74530439f77c291c83617e997e91ec33bc95182ad9",
+                "duration": 1.799546485260771,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 4438.94,
+                "scene_id": 3,
+                "utterance_id": 1,
+                "script_en": "The French army opened fire.",
+                "audio_text": "The French army opened fire.",
+                "translation_fr": "L’armée française a ouvert le feu.",
+                "start_seconds": 12.5,
+                "end_seconds": 14.299546485260771,
+                "subtitle_characters_per_second": 18.89
+              },
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-2.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "d925719df974746a46bc90cd994b4e1b39fee2b969008b0279605d46562d13e3",
+                "wav_sha256": "332918a07e0b5e55dfbca39616913d088fbd0e82f7312b97c11ac40b2b20715a",
+                "duration": 1.486077097505669,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 4228.98,
+                "scene_id": 3,
+                "utterance_id": 2,
+                "script_en": "Soldiers were killed.",
+                "audio_text": "Soldiers were killed.",
+                "translation_fr": "Des soldats ont été tués.",
+                "start_seconds": 14.549523809523809,
+                "end_seconds": 16.035600907029476,
+                "subtitle_characters_per_second": 16.82
+              },
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-1.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "882b53269895a89043e881c3985d1f555d0a3642ba9522c70351633c5a6cf950",
+                "wav_sha256": "93e6011e32f6dc202b88cdae78bdb759ba35410a0c71930a851f753a55eefdc2",
+                "duration": 3.9706122448979593,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 3789.57,
+                "scene_id": 4,
+                "utterance_id": 1,
+                "script_en": "The death toll and the exact circumstances remain disputed.",
+                "audio_text": "The death toll and the exact circumstances remain disputed.",
+                "translation_fr": "Le bilan et les circonstances exactes restent débattus.",
+                "start_seconds": 16.299999999999997,
+                "end_seconds": 20.270612244897958,
+                "subtitle_characters_per_second": 13.85
+              },
+              {
+                "status": "SUCCESS",
+                "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-2.wav",
+                "returncode": 0,
+                "engine": "piper",
+                "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+                "parameters": {
+                  "length_scale": 1.0,
+                  "noise_scale": 0.667,
+                  "noise_w_scale": 0.8
+                },
+                "text_sha256": "863946a0b94e4f4f863982f2d94d15572cb67290fab04368172236ba5d1a15df",
+                "wav_sha256": "2563f0c2ff7953de52cddd978a4f9bf0e34950d1e45efe4bfffc0a40bbb0c366",
+                "duration": 1.7531065759637188,
+                "sample_rate": 22050,
+                "channels": 1,
+                "rms": 3104.85,
+                "scene_id": 4,
+                "utterance_id": 2,
+                "script_en": "Their memory endures.",
+                "audio_text": "Their memory endures.",
+                "translation_fr": "Leur mémoire demeure.",
+                "start_seconds": 20.520589569160997,
+                "end_seconds": 22.273696145124717,
+                "subtitle_characters_per_second": 11.98
+              }
+            ],
+            "audio_language": "en",
+            "spoken_language": "en_US",
+            "subtitle_language": "fr-FR",
+            "pronunciation_lexicon": {
+              "Thiaroye": "Tya-roy"
+            },
+            "word_count": 42,
+            "speech_duration": 20.48,
+            "duration": 22.533333333333335,
+            "words_per_minute": 123.05,
+            "tempo_changed": false,
+            "parameters": {
+              "length_scale": 1.0
+            },
+            "alignment": "Measured utterance WAV boundaries, 250ms pauses; no estimated word timing",
+            "auditory_review": "Human listening required for intelligibility and proper names"
+          },
+          "historical_qc": "Curated references, debated claims labelled, no death toll asserted",
+          "limitations": [
+            "Visual review required; illustrations are not documentary evidence",
+            "No automatic proof of historical truth",
+            "No publication authorized"
+          ]
+        }
+      },
+      "schema_version": 2,
+      "audio_language": "en",
+      "subtitle_language": "fr-FR",
+      "disclosures": [
+        "Reconstitutions dessinées générées par IA ; images non documentaires.",
+        "Personnage composite fictif ; aucune identité attribuée.",
+        "Bilan et circonstances débattus ; aucun chiffre avancé.",
+        "English synthetic narration: Piper John; LibriVox public-domain recordings; no impersonation or new voice cloning."
+      ],
+      "status": "AWAITING_REVIEW",
+      "models": [
+        {
+          "repo": "rhasspy/piper-voices",
+          "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/c10ece1aade47bb51c153c893d14e5bf8e5b7117/en/en_US/john/medium/en_US-john-medium.onnx",
+          "path": "C:\\TikTokHistoryFactory\\tools\\piper\\voices\\en_US-john-medium.onnx",
+          "bytes": 63531379,
+          "sha256": "789c6c875726e627ddee93d51d8727859abe9c091c3d141591f4b83c2072e988"
+        },
+        {
+          "repo": "stabilityai/stable-diffusion-xl-base-1.0",
+          "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+          "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/462165984030d82259a11f4367a4eed129e94a7b/sd_xl_base_1.0.safetensors",
+          "path": "C:\\TikTokHistoryFactory\\ComfyUI\\ComfyUI\\models\\checkpoints\\sd_xl_base_1.0.safetensors",
+          "bytes": 6938078334,
+          "sha256": "31e35c80fc4829d14f90153f4c74cd59c90b779f6afe05a74cd6120b893f7e5b"
+        },
+        {
+          "repo": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+          "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+          "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/ee6f4a40737a995bf5818954cfce6d59443b0f04/split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors",
+          "path": "C:\\TikTokHistoryFactory\\ComfyUI\\ComfyUI\\models\\diffusion_models\\wan2.2_ti2v_5B_fp16.safetensors",
+          "bytes": 9999658848,
+          "sha256": "456f901338bd9eadbded3828b819109a9b68e8a525ca5cf8d0049a69fcfeca1e"
+        },
+        {
+          "repo": "artificialguybr/LineAniRedmond-LinearMangaSDXL-V2",
+          "revision": "411d5335378c13e63bf0d5376b405a39e9a869cb",
+          "url": "https://huggingface.co/artificialguybr/LineAniRedmond-LinearMangaSDXL-V2/resolve/411d5335378c13e63bf0d5376b405a39e9a869cb/LineAniRedmondV2-Lineart-LineAniAF.safetensors",
+          "path": "C:\\TikTokHistoryFactory\\ComfyUI\\ComfyUI\\models\\loras\\LineAniRedmondV2-Lineart-LineAniAF.safetensors",
+          "bytes": 170540028,
+          "sha256": "1692a2c7d285f6c94b7910bc8f8ec2758163ba2710214bd35bb20cc94d2488c8"
+        },
+        {
+          "repo": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+          "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+          "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/ee6f4a40737a995bf5818954cfce6d59443b0f04/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+          "path": "C:\\TikTokHistoryFactory\\ComfyUI\\ComfyUI\\models\\text_encoders\\umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+          "bytes": 6735906897,
+          "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68"
+        },
+        {
+          "repo": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+          "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+          "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/ee6f4a40737a995bf5818954cfce6d59443b0f04/split_files/vae/wan2.2_vae.safetensors",
+          "path": "C:\\TikTokHistoryFactory\\ComfyUI\\ComfyUI\\models\\vae\\wan2.2_vae.safetensors",
+          "bytes": 1409400960,
+          "sha256": "e40321bd36b9709991dae2530eb4ac303dd168276980d3e9bc4b6e2b75fed156"
+        }
+      ],
+      "runtime": {
+        "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+        "piper": "1.8.0",
+        "pillow": "12.0.0"
+      },
+      "dossier_sha256": "2672352885e94f981ced6c8b1f6c50fc6ae0be4449776d9cf8aee6b917b36519",
+      "options": {
+        "try_wan": false
+      },
+      "animation": {
+        "status": "FALLBACK_FFMPEG",
+        "mode": "FFmpeg",
+        "reason": "Optional Wan attempt not enabled"
+      },
+      "output_path": "C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-v2\\revision-3\\pilot.mp4",
+      "qc_status": "TECHNICAL_PASS_AWAITING_EDITORIAL_REVIEW"
+    },
+    "qc": {
+      "status": "TECHNICAL_PASS_AWAITING_EDITORIAL_REVIEW",
+      "duration": 22.533333,
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "level": 40,
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.640028",
+            "width": 1080,
+            "height": 1920,
+            "coded_width": 1080,
+            "coded_height": 1920,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "9:16",
+            "pix_fmt": "yuv420p",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 346112,
+            "duration": "22.533333",
+            "bit_rate": "2522220",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "676",
+            "extradata_size": 48,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "encoder": "Lavc63.20.100 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 1,
+            "channel_layout": "mono",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1081600,
+            "duration": "22.533333",
+            "bit_rate": "146313",
+            "nb_frames": "1058",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler"
+            }
+          }
+        ],
+        "format": {
+          "filename": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\pilot.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "22.533333",
+          "size": "7543419",
+          "bit_rate": "2678136",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.10.100",
+            "comment": "Reconstitution historique generee par IA; images non documentaires; narration EN; sous-titres FR"
+          }
+        }
+      },
+      "decode": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "success": true
+      },
+      "voice": {
+        "duration": 22.533333333333335,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 3729.2,
+        "peak": 32767,
+        "peak_dbfs": -0.0,
+        "clipped_samples": 8,
+        "clipping_fraction": 0.000016101115002213902
+      },
+      "blackdetect": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\pilot.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.10.100\n    comment         : Reconstitution historique generee par IA; images non documentaires; narration EN; sous-titres FR\n  Duration: 00:00:22.53, start: 0.000000, bitrate: 2678 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 2522 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      encoder         : Lavc63.20.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 146 kb/s (default)\n    Metadata:\n      handler_name    : SoundHandler\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    comment         : Reconstitution historique generee par IA; images non documentaires; narration EN; sous-titres FR\n    encoder         : Lavf63.10.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n    Metadata:\n      encoder         : Lavc63.20.100 wrapped_avframe\n      handler_name    : VideoHandler\n[out#0/null @ 000001f67e977b40] video:280KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  676 fps=0.0 q=-0.0 Lsize=N/A time=00:00:22.53 bitrate=N/A speed=53.1x elapsed=0:00:00.42    \n",
+        "success": true
+      },
+      "language_contract": {
+        "utterances": [
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-1.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "790ca9773af53c6115b0a8fe97536d2bba5baa93b740c18026502923385eb847",
+            "wav_sha256": "2b06adfbd6c9b70bdf5be5fe0d23be7fca50ee73b843a3b48aad477ff09b96c9",
+            "duration": 2.995374149659864,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 4196.19,
+            "scene_id": 1,
+            "utterance_id": 1,
+            "script_en": "December first, nineteen forty-four.",
+            "audio_text": "December first, nineteen forty-four.",
+            "translation_fr": "Le 1er décembre 1944.",
+            "start_seconds": 0,
+            "end_seconds": 2.995374149659864,
+            "subtitle_characters_per_second": 7.01
+          },
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-2.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "c0892b7beb524912621d69bc1883e5b7b628fd2bde0d543da2a9a0d47daa8232",
+            "wav_sha256": "9b2e9140340dca188c32140ee4d091ed1a473588bf0a34c9af700be490865487",
+            "duration": 2.6354648526077096,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 3335.82,
+            "scene_id": 1,
+            "utterance_id": 2,
+            "script_en": "Thiaroye, near Dakar, Senegal.",
+            "audio_text": "Tya-roy, near Dakar, Senegal.",
+            "translation_fr": "À Thiaroye, près de Dakar, au Sénégal.",
+            "start_seconds": 3.2453514739229026,
+            "end_seconds": 5.880816326530612,
+            "subtitle_characters_per_second": 14.42
+          },
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-1.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "5396d638eaeced1e93e1ee5b06ef3e124042ba191b61a6dfb52994ae8499b177",
+            "wav_sha256": "be8c0daac4dbea47ff59099187aac37be7b7a6b8130e6003a1895c0dbbc42efc",
+            "duration": 3.4597732426303853,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 3341.55,
+            "scene_id": 2,
+            "utterance_id": 1,
+            "script_en": "African soldiers had returned from captivity in Europe.",
+            "audio_text": "African soldiers had returned from captivity in Europe.",
+            "translation_fr": "Des soldats africains rentraient de captivité en Europe.",
+            "start_seconds": 6.133333333333334,
+            "end_seconds": 9.59310657596372,
+            "subtitle_characters_per_second": 16.19
+          },
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-2.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "302ef7aad7abc6d97e62f6784d47c8518915bc93c5f9c77cc26737c2a8698ab8",
+            "wav_sha256": "41773d9790e6c198f85b3275e8d8e9240dab38973bc912650a8f9a8b80b62da0",
+            "duration": 2.380045351473923,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 4881.32,
+            "scene_id": 2,
+            "utterance_id": 2,
+            "script_en": "They demanded their unpaid wages.",
+            "audio_text": "They demanded their unpaid wages.",
+            "translation_fr": "Ils réclamaient leurs soldes impayées.",
+            "start_seconds": 9.843083900226757,
+            "end_seconds": 12.22312925170068,
+            "subtitle_characters_per_second": 15.97
+          },
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-1.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "05f4f08bf9a9c4a6854e3d7ce1d5d4316a1e7cf7ba0cc34a571b0ff2a872c7dc",
+            "wav_sha256": "4a5bbf0053c39bbf54f5de74530439f77c291c83617e997e91ec33bc95182ad9",
+            "duration": 1.799546485260771,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 4438.94,
+            "scene_id": 3,
+            "utterance_id": 1,
+            "script_en": "The French army opened fire.",
+            "audio_text": "The French army opened fire.",
+            "translation_fr": "L’armée française a ouvert le feu.",
+            "start_seconds": 12.5,
+            "end_seconds": 14.299546485260771,
+            "subtitle_characters_per_second": 18.89
+          },
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-2.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "d925719df974746a46bc90cd994b4e1b39fee2b969008b0279605d46562d13e3",
+            "wav_sha256": "332918a07e0b5e55dfbca39616913d088fbd0e82f7312b97c11ac40b2b20715a",
+            "duration": 1.486077097505669,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 4228.98,
+            "scene_id": 3,
+            "utterance_id": 2,
+            "script_en": "Soldiers were killed.",
+            "audio_text": "Soldiers were killed.",
+            "translation_fr": "Des soldats ont été tués.",
+            "start_seconds": 14.549523809523809,
+            "end_seconds": 16.035600907029476,
+            "subtitle_characters_per_second": 16.82
+          },
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-1.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "882b53269895a89043e881c3985d1f555d0a3642ba9522c70351633c5a6cf950",
+            "wav_sha256": "93e6011e32f6dc202b88cdae78bdb759ba35410a0c71930a851f753a55eefdc2",
+            "duration": 3.9706122448979593,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 3789.57,
+            "scene_id": 4,
+            "utterance_id": 1,
+            "script_en": "The death toll and the exact circumstances remain disputed.",
+            "audio_text": "The death toll and the exact circumstances remain disputed.",
+            "translation_fr": "Le bilan et les circonstances exactes restent débattus.",
+            "start_seconds": 16.299999999999997,
+            "end_seconds": 20.270612244897958,
+            "subtitle_characters_per_second": 13.85
+          },
+          {
+            "status": "SUCCESS",
+            "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-2.wav",
+            "returncode": 0,
+            "engine": "piper",
+            "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+            "parameters": {
+              "length_scale": 1.0,
+              "noise_scale": 0.667,
+              "noise_w_scale": 0.8
+            },
+            "text_sha256": "863946a0b94e4f4f863982f2d94d15572cb67290fab04368172236ba5d1a15df",
+            "wav_sha256": "2563f0c2ff7953de52cddd978a4f9bf0e34950d1e45efe4bfffc0a40bbb0c366",
+            "duration": 1.7531065759637188,
+            "sample_rate": 22050,
+            "channels": 1,
+            "rms": 3104.85,
+            "scene_id": 4,
+            "utterance_id": 2,
+            "script_en": "Their memory endures.",
+            "audio_text": "Their memory endures.",
+            "translation_fr": "Leur mémoire demeure.",
+            "start_seconds": 20.520589569160997,
+            "end_seconds": 22.273696145124717,
+            "subtitle_characters_per_second": 11.98
+          }
+        ],
+        "audio_language": "en",
+        "spoken_language": "en_US",
+        "subtitle_language": "fr-FR",
+        "pronunciation_lexicon": {
+          "Thiaroye": "Tya-roy"
+        },
+        "word_count": 42,
+        "speech_duration": 20.48,
+        "duration": 22.533333333333335,
+        "words_per_minute": 123.05,
+        "tempo_changed": false,
+        "parameters": {
+          "length_scale": 1.0
+        },
+        "alignment": "Measured utterance WAV boundaries, 250ms pauses; no estimated word timing",
+        "auditory_review": "Human listening required for intelligibility and proper names"
+      },
+      "historical_qc": "Curated references, debated claims labelled, no death toll asserted",
+      "limitations": [
+        "Visual review required; illustrations are not documentary evidence",
+        "No automatic proof of historical truth",
+        "No publication authorized"
+      ]
+    },
+    "voice": {
+      "utterances": [
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-1.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "790ca9773af53c6115b0a8fe97536d2bba5baa93b740c18026502923385eb847",
+          "wav_sha256": "2b06adfbd6c9b70bdf5be5fe0d23be7fca50ee73b843a3b48aad477ff09b96c9",
+          "duration": 2.995374149659864,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 4196.19,
+          "scene_id": 1,
+          "utterance_id": 1,
+          "script_en": "December first, nineteen forty-four.",
+          "audio_text": "December first, nineteen forty-four.",
+          "translation_fr": "Le 1er décembre 1944.",
+          "start_seconds": 0,
+          "end_seconds": 2.995374149659864,
+          "subtitle_characters_per_second": 7.01
+        },
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-1-2.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "c0892b7beb524912621d69bc1883e5b7b628fd2bde0d543da2a9a0d47daa8232",
+          "wav_sha256": "9b2e9140340dca188c32140ee4d091ed1a473588bf0a34c9af700be490865487",
+          "duration": 2.6354648526077096,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 3335.82,
+          "scene_id": 1,
+          "utterance_id": 2,
+          "script_en": "Thiaroye, near Dakar, Senegal.",
+          "audio_text": "Tya-roy, near Dakar, Senegal.",
+          "translation_fr": "À Thiaroye, près de Dakar, au Sénégal.",
+          "start_seconds": 3.2453514739229026,
+          "end_seconds": 5.880816326530612,
+          "subtitle_characters_per_second": 14.42
+        },
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-1.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "5396d638eaeced1e93e1ee5b06ef3e124042ba191b61a6dfb52994ae8499b177",
+          "wav_sha256": "be8c0daac4dbea47ff59099187aac37be7b7a6b8130e6003a1895c0dbbc42efc",
+          "duration": 3.4597732426303853,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 3341.55,
+          "scene_id": 2,
+          "utterance_id": 1,
+          "script_en": "African soldiers had returned from captivity in Europe.",
+          "audio_text": "African soldiers had returned from captivity in Europe.",
+          "translation_fr": "Des soldats africains rentraient de captivité en Europe.",
+          "start_seconds": 6.133333333333334,
+          "end_seconds": 9.59310657596372,
+          "subtitle_characters_per_second": 16.19
+        },
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-2-2.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "302ef7aad7abc6d97e62f6784d47c8518915bc93c5f9c77cc26737c2a8698ab8",
+          "wav_sha256": "41773d9790e6c198f85b3275e8d8e9240dab38973bc912650a8f9a8b80b62da0",
+          "duration": 2.380045351473923,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 4881.32,
+          "scene_id": 2,
+          "utterance_id": 2,
+          "script_en": "They demanded their unpaid wages.",
+          "audio_text": "They demanded their unpaid wages.",
+          "translation_fr": "Ils réclamaient leurs soldes impayées.",
+          "start_seconds": 9.843083900226757,
+          "end_seconds": 12.22312925170068,
+          "subtitle_characters_per_second": 15.97
+        },
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-1.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "05f4f08bf9a9c4a6854e3d7ce1d5d4316a1e7cf7ba0cc34a571b0ff2a872c7dc",
+          "wav_sha256": "4a5bbf0053c39bbf54f5de74530439f77c291c83617e997e91ec33bc95182ad9",
+          "duration": 1.799546485260771,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 4438.94,
+          "scene_id": 3,
+          "utterance_id": 1,
+          "script_en": "The French army opened fire.",
+          "audio_text": "The French army opened fire.",
+          "translation_fr": "L’armée française a ouvert le feu.",
+          "start_seconds": 12.5,
+          "end_seconds": 14.299546485260771,
+          "subtitle_characters_per_second": 18.89
+        },
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-3-2.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "d925719df974746a46bc90cd994b4e1b39fee2b969008b0279605d46562d13e3",
+          "wav_sha256": "332918a07e0b5e55dfbca39616913d088fbd0e82f7312b97c11ac40b2b20715a",
+          "duration": 1.486077097505669,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 4228.98,
+          "scene_id": 3,
+          "utterance_id": 2,
+          "script_en": "Soldiers were killed.",
+          "audio_text": "Soldiers were killed.",
+          "translation_fr": "Des soldats ont été tués.",
+          "start_seconds": 14.549523809523809,
+          "end_seconds": 16.035600907029476,
+          "subtitle_characters_per_second": 16.82
+        },
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-1.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "882b53269895a89043e881c3985d1f555d0a3642ba9522c70351633c5a6cf950",
+          "wav_sha256": "93e6011e32f6dc202b88cdae78bdb759ba35410a0c71930a851f753a55eefdc2",
+          "duration": 3.9706122448979593,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 3789.57,
+          "scene_id": 4,
+          "utterance_id": 1,
+          "script_en": "The death toll and the exact circumstances remain disputed.",
+          "audio_text": "The death toll and the exact circumstances remain disputed.",
+          "translation_fr": "Le bilan et les circonstances exactes restent débattus.",
+          "start_seconds": 16.299999999999997,
+          "end_seconds": 20.270612244897958,
+          "subtitle_characters_per_second": 13.85
+        },
+        {
+          "status": "SUCCESS",
+          "output_path": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\audio\\utterance-4-2.wav",
+          "returncode": 0,
+          "engine": "piper",
+          "model": "C:/TikTokHistoryFactory/tools/piper/voices/en_US-john-medium.onnx",
+          "parameters": {
+            "length_scale": 1.0,
+            "noise_scale": 0.667,
+            "noise_w_scale": 0.8
+          },
+          "text_sha256": "863946a0b94e4f4f863982f2d94d15572cb67290fab04368172236ba5d1a15df",
+          "wav_sha256": "2563f0c2ff7953de52cddd978a4f9bf0e34950d1e45efe4bfffc0a40bbb0c366",
+          "duration": 1.7531065759637188,
+          "sample_rate": 22050,
+          "channels": 1,
+          "rms": 3104.85,
+          "scene_id": 4,
+          "utterance_id": 2,
+          "script_en": "Their memory endures.",
+          "audio_text": "Their memory endures.",
+          "translation_fr": "Leur mémoire demeure.",
+          "start_seconds": 20.520589569160997,
+          "end_seconds": 22.273696145124717,
+          "subtitle_characters_per_second": 11.98
+        }
+      ],
+      "audio_language": "en",
+      "spoken_language": "en_US",
+      "subtitle_language": "fr-FR",
+      "pronunciation_lexicon": {
+        "Thiaroye": "Tya-roy"
+      },
+      "word_count": 42,
+      "speech_duration": 20.48,
+      "duration": 22.533333333333335,
+      "words_per_minute": 123.05,
+      "tempo_changed": false,
+      "parameters": {
+        "length_scale": 1.0
+      },
+      "alignment": "Measured utterance WAV boundaries, 250ms pauses; no estimated word timing",
+      "auditory_review": "Human listening required for intelligibility and proper names"
+    },
+    "phases": [
+      {
+        "id": 67,
+        "run_at": "2026-10-19 10:09:28",
+        "task_id": 5,
+        "phase": "research",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 68,
+        "run_at": "2026-10-19 10:09:38",
+        "task_id": 5,
+        "phase": "script",
+        "duration_ms": 9281,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 69,
+        "run_at": "2026-10-19 10:10:03",
+        "task_id": 5,
+        "phase": "voice",
+        "duration_ms": 24797,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 70,
+        "run_at": "2026-10-19 10:11:27",
+        "task_id": 5,
+        "phase": "images",
+        "duration_ms": 84656,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 71,
+        "run_at": "2026-10-19 10:11:27",
+        "task_id": 5,
+        "phase": "animation",
+        "duration_ms": 16,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 72,
+        "run_at": "2026-10-19 10:11:36",
+        "task_id": 5,
+        "phase": "render",
+        "duration_ms": 9172,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 73,
+        "run_at": "2026-10-19 10:11:38",
+        "task_id": 5,
+        "phase": "qc",
+        "duration_ms": 1171,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 74,
+        "run_at": "2026-10-19 10:14:01",
+        "task_id": 5,
+        "phase": "research",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 75,
+        "run_at": "2026-10-19 10:14:01",
+        "task_id": 5,
+        "phase": "script",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 76,
+        "run_at": "2026-10-19 10:14:01",
+        "task_id": 5,
+        "phase": "voice",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 77,
+        "run_at": "2026-10-19 10:15:28",
+        "task_id": 5,
+        "phase": "images",
+        "duration_ms": 86734,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 78,
+        "run_at": "2026-10-19 10:15:28",
+        "task_id": 5,
+        "phase": "animation",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 79,
+        "run_at": "2026-10-19 10:15:37",
+        "task_id": 5,
+        "phase": "render",
+        "duration_ms": 9703,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 80,
+        "run_at": "2026-10-19 10:15:39",
+        "task_id": 5,
+        "phase": "qc",
+        "duration_ms": 1844,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 81,
+        "run_at": "2026-10-19 10:16:54",
+        "task_id": 5,
+        "phase": "research",
+        "duration_ms": 16,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 82,
+        "run_at": "2026-10-19 10:16:54",
+        "task_id": 5,
+        "phase": "script",
+        "duration_ms": 15,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 83,
+        "run_at": "2026-10-19 10:16:54",
+        "task_id": 5,
+        "phase": "voice",
+        "duration_ms": 15,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 84,
+        "run_at": "2026-10-19 10:17:35",
+        "task_id": 5,
+        "phase": "images",
+        "duration_ms": 40391,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 85,
+        "run_at": "2026-10-19 10:18:53",
+        "task_id": 5,
+        "phase": "animation",
+        "duration_ms": 78312,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 86,
+        "run_at": "2026-10-19 10:19:01",
+        "task_id": 5,
+        "phase": "render",
+        "duration_ms": 7828,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 87,
+        "run_at": "2026-10-19 10:19:02",
+        "task_id": 5,
+        "phase": "qc",
+        "duration_ms": 1563,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 88,
+        "run_at": "2026-10-19 10:19:19",
+        "task_id": 5,
+        "phase": "research",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 89,
+        "run_at": "2026-10-19 10:19:19",
+        "task_id": 5,
+        "phase": "script",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 90,
+        "run_at": "2026-10-19 10:19:19",
+        "task_id": 5,
+        "phase": "voice",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 91,
+        "run_at": "2026-10-19 10:19:19",
+        "task_id": 5,
+        "phase": "images",
+        "duration_ms": 16,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 92,
+        "run_at": "2026-10-19 10:19:19",
+        "task_id": 5,
+        "phase": "animation",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 93,
+        "run_at": "2026-10-19 10:19:27",
+        "task_id": 5,
+        "phase": "render",
+        "duration_ms": 8156,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 94,
+        "run_at": "2026-10-19 10:19:29",
+        "task_id": 5,
+        "phase": "qc",
+        "duration_ms": 1765,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 95,
+        "run_at": "2026-10-19 10:20:03",
+        "task_id": 5,
+        "phase": "research",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 96,
+        "run_at": "2026-10-19 10:20:03",
+        "task_id": 5,
+        "phase": "script",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 97,
+        "run_at": "2026-10-19 10:20:03",
+        "task_id": 5,
+        "phase": "voice",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 98,
+        "run_at": "2026-10-19 10:20:03",
+        "task_id": 5,
+        "phase": "images",
+        "duration_ms": 16,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 99,
+        "run_at": "2026-10-19 10:20:03",
+        "task_id": 5,
+        "phase": "animation",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 100,
+        "run_at": "2026-10-19 10:20:03",
+        "task_id": 5,
+        "phase": "render",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      },
+      {
+        "id": 101,
+        "run_at": "2026-10-19 10:20:03",
+        "task_id": 5,
+        "phase": "qc",
+        "duration_ms": 0,
+        "success": 1,
+        "error": "",
+        "vram_peak_mb": null,
+        "ram_peak_mb": null
+      }
+    ],
+    "task": {
+      "id": 5,
+      "status": "awaiting_review",
+      "tiktok_video_id": null,
+      "published_at": null
+    },
+    "editorial_review": {
+      "status": "CANDIDATE_NOT_OWNER_ACCEPTED",
+      "reviewed_at": "2026-10-19T10:24:09.717415+00:00",
+      "comparison": "work/v2-comparison-style-first/comparison.jpg",
+      "selection": "SDXL Base + LineAniRedmond V2, strength 1.0; seed 19441204 portrait comparison",
+      "rejected": [
+        "V1 sepia/engraving and French accelerated narration",
+        "V2 comparison 1 photographic portraits",
+        "V2 scene-01-v2: photographic tree and unrequested figures",
+        "V2 scene-03-v2: wooden porch too suggestive of Japanese scenery"
+      ],
+      "final_observations": [
+        "Black/white ink and solid shadows; no sepia",
+        "African composite character in scenes 2/4 has broadly matching face, hair and shirt; exact identity consistency not guaranteed",
+        "Cup is symbolic; no claim it is an archival object",
+        "Scene 1 is a generic drawn building, not a verified reconstruction of Thiaroye camp",
+        "No graphic violence, fake orders or casualty number",
+        "Source PNGs and generated Wan midpoint inspected visually"
+      ],
+      "remaining": [
+        "Owner must judge whether this style is sufficiently Japanese seinen",
+        "Garment and architectural details are approximations, not archive-verified",
+        "Voice samples and final WAV supplied; agent cannot certify listening quality or proper-name pronunciation by ear"
+      ],
+      "wan": "One V2 clip generated and decoded; reference composition retained at inspected midpoint; motion subtle"
+    },
+    "ready_path": "C:\\TikTokHistoryFactory\\output\\ready\\5_v2_final.mp4"
+  },
+  "wan": {
+    "status": "SUCCESS",
+    "seconds": 78.31,
+    "width": 480,
+    "height": 832,
+    "frames": 17,
+    "fps": 8,
+    "samples": 19,
+    "peak_observed_gpu_memory_mib": 6958.0,
+    "max_observed_temperature_c": 88.0,
+    "scope": "Whole-GPU samples every ~4 seconds; not a continuous allocation peak or electricity meter",
+    "fallback": "C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-v2\\revision-3\\pilot.mp4",
+    "wan_alternative": "C:\\TikTokHistoryFactory\\output\\review\\thiaroye-1944-v2\\revision-3-wan-attempt\\pilot.mp4",
+    "source": "C:\\TikTokHistoryFactory\\work\\pilot-thiaroye-1944-v2\\wan\\clip.wan.json"
+  },
+  "next_action": "Regarder et écouter le pilote V2 pour accepter ou préciser le style manga, la voix et la prononciation de Thiaroye."
+}
