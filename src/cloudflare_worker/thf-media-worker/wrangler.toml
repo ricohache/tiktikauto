@@ -1,0 +1,14 @@
+name = "thf-media-worker"
+main = "src/index.ts"
+compatibility_date = "2026-10-26"
+
+# R2 bucket binding — the bucket must already exist in your Cloudflare account.
+# Replace bucket_name with your actual R2 bucket name.
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "tiktokhistoryfactory-media"
+
+# Explicit allowlist of R2 object keys this worker is allowed to serve.
+# Update this list before each new publication.
+[vars]
+ALLOWED_KEYS = '["thf/angolan-civil-war-1975_b54b077af9055e23.mp4"]'

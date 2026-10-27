@@ -13,6 +13,25 @@ def split_into_sentences(text: str) -> list:
     return [s.strip() for s in sentences if s.strip()]
 
 
+
+
+def _split_into_chunks(text: str, max_chars: int = 55) -> list:
+    """Decoupe un texte long en segments de max_chars caracteres max."""
+    if len(text) <= max_chars:
+        return [text]
+    chunks = []
+    words = text.split()
+    current = ''
+    for word in words:
+        if len(current) + len(word) + 1 <= max_chars:
+            current = (current + ' ' + word).strip()
+        else:
+            if current:
+                chunks.append(current)
+            current = word
+    if current:
+        chunks.append(current)
+    return chunks
 def estimate_phonetic_weight(text: str) -> float:
     """Estime le poids phonétique d'un texte par le nombre de syllabes approximatif.
     Français: ~1 syllabe par voyelle groupée.
@@ -94,15 +113,37 @@ def build_subtitle_segments(scene_narration_en: str, scene_narration_fr: str,
     # Allouer les timestamps
     segments = allocate_sentence_timestamps(sentences_en, sentences_fr, voice_duration_sec)
     
+    # Decouper les segments longs (>55 chars) en morceaux plus courts
+    split_segments = []
+    for seg in segments:
+        text = seg['text']
+        if len(text) <= 55:
+            split_segments.append(seg)
+        else:
+            chunks = _split_into_chunks(text, 55)
+            total_weight = estimate_phonetic_weight(text)
+            current_time = seg['start_sec']
+            for chunk in chunks:
+                chunk_weight = estimate_phonetic_weight(chunk)
+                duration = seg['duration_sec'] * chunk_weight / total_weight if total_weight > 0 else seg['duration_sec'] / len(chunks)
+                end_time = current_time + duration
+                split_segments.append({
+                    'text': chunk,
+                    'start_sec': round(current_time, 3),
+                    'end_sec': round(end_time, 3),
+                    'duration_sec': round(duration, 3),
+                    'weight': chunk_weight
+                })
+                current_time = end_time
+    
     # Fusionner les segments trop courts
     merged = []
     i = 0
-    while i < len(segments):
-        seg = segments[i].copy()
-        # Fusionner avec le suivant si trop court
-        while seg['duration_sec'] < min_duration and i + 1 < len(segments):
+    while i < len(split_segments):
+        seg = split_segments[i].copy()
+        while seg['duration_sec'] < min_duration and i + 1 < len(split_segments):
             i += 1
-            next_seg = segments[i]
+            next_seg = split_segments[i]
             seg['text'] += ' ' + next_seg['text']
             seg['end_sec'] = next_seg['end_sec']
             seg['duration_sec'] = seg['end_sec'] - seg['start_sec']

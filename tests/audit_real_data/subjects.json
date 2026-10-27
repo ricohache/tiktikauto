@@ -1,0 +1,296 @@
+{
+  "subjects": [
+    {
+      "slug": "patrice-lumumba-assassinat",
+      "title_en": "The Assassination of Patrice Lumumba",
+      "title_fr": "L'assassinat de Patrice Lumumba",
+      "category": "histoire-africaine",
+      "event_date": "1961-01-17",
+      "summary_en": "In January 1961, Patrice Lumumba, the first democratically elected prime minister of the Congo, was kidnapped, tortured and executed with the complicity of Belgian officers and the CIA. His body was dissolved in acid. For decades, Belgium denied its role.",
+      "summary_fr": "En janvier 1961, Patrice Lumumba, premier ministre démocratiquement élu du Congo, fut enlevé, torturé et exécuté avec la complicité d'officiers belges et de la CIA. Son corps fut dissous dans l'acide. Pendant des décennies, la Belgique a nié son rôle.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Assassinat_de_Patrice_Lumumba"
+        },
+        {
+          "name": "Ludo De Witte — L'Assassinat de Lumumba",
+          "url": "https://www.editions-jacob-duvernet.com/livre/l-assassinat-de-lumumba"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1960s Africa, no text, vertical composition"
+    },
+    {
+      "slug": "thomas-sankara-1987",
+      "title_en": "Thomas Sankara, the Revolutionary Cut Down",
+      "title_fr": "Thomas Sankara, la révolution abattue",
+      "category": "histoire-africaine",
+      "event_date": "1987-10-15",
+      "summary_en": "On October 15, 1987, Captain Thomas Sankara, president of Burkina Faso and an iconic anti-imperialist figure, was assassinated in a coup led by Blaise Compaoré. His revolutionary reforms in education, health and women's rights were brutally halted.",
+      "summary_fr": "Le 15 octobre 1987, le capitaine Thomas Sankara, président du Burkina Faso et figure anticoloniale emblématique, fut assassiné lors d'un coup d'État mené par Blaise Compaoré. Ses réformes révolutionnaires dans l'éducation, la santé et les droits des femmes furent brutalement interrompues.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Thomas_Sankara"
+        },
+        {
+          "name": "Ernest Harsch — Thomas Sankara: An African Revolutionary",
+          "url": "https://ohiostatepress.org/books/titles/9780821422463.html"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1980s West Africa, no text, vertical composition"
+    },
+    {
+      "slug": "guerre-algerie-violences",
+      "title_en": "The Forgotten Violence of the Algerian War",
+      "title_fr": "Les violences oubliées de la guerre d'Algérie",
+      "category": "histoire-coloniale",
+      "event_date": "1954-1962",
+      "summary_en": "Between 1954 and 1962, the Algerian War cost hundreds of thousands of lives. Torture, summary executions, and mass displacement were committed by both French forces and the FLN. France only officially recognized these crimes in the 2000s.",
+      "summary_fr": "Entre 1954 et 1962, la guerre d'Algérie a fait des centaines de milliers de morts. Tortures, exécutions sommaires et déplacements de masse ont été commis par les forces françaises et le FLN. La France n'a reconnu officiellement ces crimes que dans les années 2000.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Guerre_d'Alg%C3%A9rie"
+        },
+        {
+          "name": "Benjamin Stora — La Guerre d'Algérie",
+          "url": "https://www.gallimard.fr/catalogue/la-guerre-dalgerie/9782070349608"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1950s North Africa, no text, vertical composition"
+    },
+    {
+      "slug": "ruben-um-nyobe",
+      "title_en": "Ruben Um Nyobe and the Forgotten UPC Struggle",
+      "title_fr": "Ruben Um Nyobè et la lutte oubliée de l'UPC",
+      "category": "histoire-africaine",
+      "event_date": "1948-1958",
+      "summary_en": "In 1948, Ruben Um Nyobe co-founded the UPC, demanding Cameroon's independence from French colonial rule. Forced into hiding, he led resistance from the bush. In 1958, he was ambushed and killed by French forces. His body was never returned.",
+      "summary_fr": "En 1948, Ruben Um Nyobè cofonde l'UPC qui réclame l'indépendance du Cameroun face à la colonisation française. Contraint à la clandestinité, il dirige la résistance depuis la brousse. En 1958, il est tué en embuscade par les forces françaises. Son corps ne fut jamais rendu.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Ruben_Um_Nyob%C3%A8"
+        },
+        {
+          "name": "Achille Mbembe — La Naissance du maquis dans le Sud-Cameroun",
+          "url": "https://www.karthala.com/histoire/1295-la-naissance-du-maquis-dans-le-sud-cameroun-9782865371461.html"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1940s-1950s Central Africa, no text, vertical composition"
+    },
+    {
+      "slug": "tirailleurs-senegalais",
+      "title_en": "The Forgotten Tirailleurs Sénégalais",
+      "title_fr": "Les tirailleurs sénégalais oubliés",
+      "category": "histoire-militaire",
+      "event_date": "1857-1960",
+      "summary_en": "For over a century, West African tirailleurs fought in France's colonial wars, from Verdun to Indochina. They were promised equality but faced discrimination, unpaid pensions, and denial of their sacrifices for decades.",
+      "summary_fr": "Pendant plus d'un siècle, les tirailleurs d'Afrique de l'Ouest ont combattu dans les guerres coloniales de la France, de Verdun à l'Indochine. On leur avait promis l'égalité, mais ils ont fait face à la discrimination, aux pensions impayées et au déni de leurs sacrifices pendant des décennies.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Tirailleurs_s%C3%A9n%C3%A9galais"
+        },
+        {
+          "name": "Julien Fargettas — Les Tirailleurs sénégalais",
+          "url": "https://www.ohm-editions.com/les-tirailleurs-senegalais/"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 20th century colonial Africa, no text, vertical composition"
+    },
+    {
+      "category": "histoire-coloniale",
+      "event_date": "1931-05-01",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Pende_revolt",
+          "name": "Wikipedia - Pende revolt"
+        },
+        {
+          "url": "https://www.versobooks.com/books/2394-lord-leverhulme-s-ghosts",
+          "name": "Jules Marchal - Lord Leverhulme's Ghosts"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1930s Central Africa, Belgian Congo, no text, vertical composition",
+      "slug": "pende-revolt-1931",
+      "title_en": "The Pende Revolt of 1931",
+      "summary_en": "In May 1931, the Pende people of the Belgian Congo revolted against colonial exploitation. Forced labor, head taxes, and abuse by concession companies had pushed them to the brink. The killing of territorial agent Maximilien Balot on June 8 triggered brutal reprisals. Machine guns were used. Hundreds were killed.",
+      "title_fr": "La revolte Pende de 1931",
+      "summary_fr": "En mai 1931, le peuple Pende du Congo belge se souleva contre l'exploitation coloniale. Le travail force, les impots de capitation et les abus des societes de concession les avaient pousses au bord du gouffre. Le meurtre de l'agent territorial Maximilien Balot le 8 juin declencha des represailles brutales. Des mitrailleuses furent utilisees. Des centaines de personnes furent tuees."
+    },
+    {
+      "title_fr": "La grande revolte de Madagascar de 1947",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1940s Madagascar, colonial uprising, no text, vertical composition",
+      "title_en": "The Madagascar Uprising of 1947",
+      "event_date": "1947-03-29",
+      "slug": "madagascar-revolt-1947",
+      "sources": [
+        {
+          "name": "Wikipedia - Malagasy Uprising",
+          "url": "https://en.wikipedia.org/wiki/Malagasy_uprising"
+        },
+        {
+          "name": "L'Histoire n°318 - La verite sur la grande revolte de Madagascar",
+          "url": "https://www.lhistoire.fr"
+        }
+      ],
+      "summary_fr": "Le 29 mars 1947, le peuple malgache se souleva contre la domination coloniale francaise. Le soulevement fut brutalement reprime. Des milliers de personnes furent tuees. La France nia l ampleur du massacre pendant des decennies.",
+      "summary_en": "On March twenty-ninth, nineteen forty-seven, the Malagasy people rose against French colonial rule. The uprising was brutally suppressed. Thousands were killed. France denied the scale of the massacre for decades.",
+      "category": "histoire-coloniale"
+    },
+    {
+      "slug": "congo-free-state-atrocities",
+      "title_en": "The Atrocities of the Congo Free State",
+      "title_fr": "Les atrocités de l'Etat libre du Congo",
+      "summary_en": "Between 1885 and 1908, King Leopold II of Belgium ruled the Congo Free State as his personal property. An estimated ten million Congolese died from forced labor, mutilation, and systematic violence in the rubber trade.",
+      "summary_fr": "Entre 1885 et 1908, le roi Léopold II de Belgique régna sur l'Etat libre du Congo comme sa propriété personnelle. Dix millions de Congolais périrent du travail forcé, des mutilations et des violences systématiques dans le commerce du caoutchouc.",
+      "event_date": "1885-1908",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1890s Central Africa, Belgian Congo, no text, vertical composition"
+    },
+    {
+      "slug": "herero-genocide-1904",
+      "title_en": "The Herero and Nama Genocide",
+      "title_fr": "Le génocide des Herero et Nama",
+      "summary_en": "In 1904, German colonial forces exterminated up to eighty percent of the Herero people and half of the Nama people in German South-West Africa, today Namibia. It was the first genocide of the twentieth century.",
+      "summary_fr": "En 1904, les forces coloniales allemandes exterminèrent jusqu'à quatre-vingt pour cent du peuple Herero et la moitié du peuple Nama en Afrique du Sud-Ouest allemande, aujourd'hui Namibie. Ce fut le premier génocide du vingtième siècle.",
+      "event_date": "1904-1908",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1904 Namibia, German colonial Africa, no text, vertical composition"
+    },
+    {
+      "slug": "biafra-war-1967",
+      "title_en": "The Biafran War and Its Forgotten Famine",
+      "title_fr": "La guerre du Biafra et sa famine oubliée",
+      "summary_en": "Between 1967 and 1970, Nigeria waged a brutal war against the breakaway Republic of Biafra. A Nigerian blockade caused a famine that killed over a million civilians, mostly children, and images of starving Biafran children shocked the world.",
+      "summary_fr": "Entre 1967 et 1970, le Nigeria mena une guerre brutale contre la République sécessionniste du Biafra. Un blocus nigérian provoqua une famine qui tua plus d'un million de civils, principalement des enfants, et les images d'enfants biafrais affamés choquèrent le monde.",
+      "event_date": "1967-1970",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1960s West Africa, Nigeria, no text, vertical composition"
+    },
+    {
+      "slug": "maji-maji-rebellion-1905",
+      "title_en": "The Maji Maji Rebellion and German Colonial Genocide",
+      "title_fr": "La rebellion Maji Maji et le genocide colonial allemand",
+      "summary_en": "Between 1905 and 1907, an anti-colonial rebellion erupted in German East Africa. Led by spiritual leader Kinjikitile Ngwale, fighters believed sacred water would turn German bullets to water. Up to three hundred thousand Tanzanians died in the brutal suppression.",
+      "summary_fr": "Entre 1905 et 1907, une rebellion anticoloniale eclata en Afrique de l'Est allemande. Menee par le leader spirituel Kinjikitile Ngwale, les combattants croyaient que l'eau sacree transformerait les balles allemandes en eau. Jusqu'a trois cent mille Tanzaniens perirent dans la repression brutale.",
+      "event_date": "1905-1907",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1905 German East Africa, Tanzania, colonial warfare, no text, vertical composition"
+    },
+    {
+      "slug": "sharpeville-massacre-1960",
+      "title_en": "The Sharpeville Massacre and the End of Nonviolence",
+      "title_fr": "Le massacre de Sharpeville et la fin de la non-violence",
+      "summary_en": "On March twenty-first, nineteen sixty, South African police opened fire on unarmed black demonstrators protesting pass laws. Sixty-nine were killed and one hundred eighty wounded. The massacre convinced Nelson Mandela to abandon nonviolence and organize armed resistance.",
+      "summary_fr": "Le 21 mars 1960, la police sud-africaine tira sur des manifestants noirs desarmes protestant contre les lois sur les passeports. Soixante-neuf furent tues et cent quatre-vingts blesses. Ce massacre convainquit Nelson Mandela d'abandonner la non-violence et d'organiser la resistance armee.",
+      "event_date": "1960-03-21",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1960 South Africa, apartheid protest, no text, vertical composition"
+    },
+    {
+      "slug": "chilembwe-uprising-1915",
+      "title_en": "The Chilembwe Uprising Against British Colonial Rule",
+      "title_fr": "Le soulevement Chilembwe contre la domination britannique",
+      "summary_en": "In January nineteen fifteen, John Chilembwe, a Baptist minister in Nyasaland, led an uprising against British colonial rule. Motivated by forced labor, racial discrimination and World War One conscription, rebels attacked plantations. Chilembwe was killed but became a national hero of Malawi.",
+      "summary_fr": "En janvier 1915, John Chilembwe, ministre baptiste au Nyassaland, mena un soulevement contre la domination coloniale britannique. Motives par le travail force, la discrimination raciale et la conscription de la Premiere Guerre mondiale, les rebelles attaquerent les plantations. Chilembwe fut tue mais devint un heros national du Malawi.",
+      "event_date": "1915-01-15",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1915 Nyasaland, Malawi, colonial uprising, no text, vertical composition"
+    },
+    {
+      "slug": "battle-of-adwa-1896",
+      "title_en": "The Battle of Adwa",
+      "title_fr": "La bataille d Adwa",
+      "summary_en": "In 1896, Ethiopian forces defeated Italy at Adwa.",
+      "summary_fr": "En 1896, les forces ethiopiennes vainquirent l Italie a Adwa.",
+      "event_date": "1896-03-01",
+      "style_prompt": "Japanese seinen manga panel, Ethiopian warriors, bold ink, black and white, no text, vertical composition"
+    },
+    {
+      "slug": "rwandan-genocide-1994",
+      "title_en": "The Rwandan Genocide",
+      "title_fr": "Le genocide rwandais",
+      "summary_en": "In 1994, up to one million Tutsis and moderate Hutus were killed in Rwanda.",
+      "summary_fr": "En 1994, jusqu a un million de Tutsis et Hutus moderes furent tues au Rwanda.",
+      "event_date": "1994-04-07",
+      "style_prompt": "Japanese seinen manga panel, memorial with skulls, bold ink, black and white, no text, vertical composition"
+    },
+    {
+      "slug": "angolan-civil-war-1975",
+      "title_en": "The Angolan Civil War",
+      "title_fr": "La guerre civile angolaise",
+      "summary_en": "In 1975, Angola gained independence but plunged into civil war.",
+      "summary_fr": "En 1975, l Angola acceda a l independance mais plongea dans la guerre civile.",
+      "event_date": "1975-11-11",
+      "style_prompt": "Japanese seinen manga panel, African soldiers, bold ink, black and white, no text, vertical composition"
+    },
+    {
+      "slug": "soweto-uprising-1976",
+      "title_en": "Soweto Uprising",
+      "title_fr": "Révolte de Soweto",
+      "summary_en": "On June sixteenth, nineteen seventy-six, thousands of black South African students marched through the streets of Soweto to protest the imposition of Afrikaans as the language of instruction in schools. Police responded with live ammunition, killing hundreds of children and teenagers. The massacre ignited a nationwide uprising against apartheid that lasted for months and transformed the anti-apartheid struggle. The images of dying children shocked the world and galvanized international pressure on the apartheid regime.",
+      "summary_fr": "Le 16 juin 1976, des milliers d'élèves noirs sud-africains défilèrent dans les rues de Soweto pour protester contre l'imposition de l'afrikaans comme langue d'enseignement. La police répondit par des balles réelles, tuant des centaines d'enfants et d'adolescents. Le massacre déclencha un soulèvement national contre l'apartheid qui dura des mois et transforma la lutte anti-apartheid. Les images d'enfants mourants choquèrent le monde et galvanisèrent la pression internationale sur le régime.",
+      "event_date": "1976-06-16",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, no text, vertical composition",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Soweto_uprising",
+      "sources": [
+        {
+          "name": "Wikipedia EN",
+          "url": "https://en.wikipedia.org/wiki/Soweto_uprising",
+          "language": "en",
+          "verified": true
+        },
+        {
+          "name": "South African History Online",
+          "url": "https://www.sahistory.org.za/article/soweto-uprising-16-june-1976",
+          "language": "en",
+          "verified": true
+        }
+      ],
+      "scenes": [
+        {
+          "narration_en": "On June sixteenth, nineteen seventy-six, ten thousand black students marched in Soweto. They refused to learn in Afrikaans, the language of their oppressors.",
+          "narration_fr": "Le 16 juin 1976, dix mille élèves noirs défilèrent à Soweto. Ils refusèrent d'apprendre en afrikaans, la langue de leurs oppresseurs."
+        },
+        {
+          "narration_en": "The apartheid government had imposed Afrikaans as the language of instruction. Students saw this as another tool of racial domination.",
+          "narration_fr": "Le gouvernement apartheid avait imposé l'afrikaans comme langue d'enseignement. Les élèves voyaient cela comme un autre outil de domination raciale."
+        },
+        {
+          "narration_en": "Police officers confronted the marching children. Without warning, they opened fire on the unarmed crowd.",
+          "narration_fr": "Des policiers confrontèrent les enfants en marche. Sans prévenir, ils tirèrent sur la foule désarmée."
+        },
+        {
+          "narration_en": "Thirteen-year-old Hector Pieterson was among the first to fall. A photograph of his dying body became a global symbol of apartheid brutality.",
+          "narration_fr": "Hector Pieterson, âgé de treize ans, fut parmi les premiers à tomber. Une photographie de son corps mourant devint un symbole mondial de la brutalité de l'apartheid."
+        },
+        {
+          "narration_en": "Hundreds of students were killed that day. The official death toll was minimized, but witnesses reported massacres across Soweto.",
+          "narration_fr": "Des centaines d'élèves furent tués ce jour-là. Le bilan officiel fut minimisé, mais des témoins rapportèrent des massacres à travers Soweto."
+        },
+        {
+          "narration_en": "The Soweto uprising ignited months of nationwide protests. The apartheid regime faced the most serious challenge in its history.",
+          "narration_fr": "La révolte de Soweto déclencha des mois de protestations nationales. Le régime de l'apartheid fit face au défi le plus sérieux de son histoire."
+        },
+        {
+          "narration_en": "The massacre transformed international opinion. Western nations could no longer ignore the crimes of the apartheid government.",
+          "narration_fr": "Le massacre transforma l'opinion internationale. Les nations occidentales ne purent plus ignorer les crimes du gouvernement de l'apartheid."
+        },
+        {
+          "narration_en": "Schools were burned, businesses were destroyed, and the economy suffered. The apartheid regime responded with mass arrests and torture.",
+          "narration_fr": "Des écoles furent brûlées, des commerces détruits et l'économie pâtit. Le régime de l'apartheid répondit par des arrestations massives et la torture."
+        },
+        {
+          "narration_en": "The Soweto generation became the vanguard of the liberation struggle. Many future leaders of democratic South Africa were forged in those streets.",
+          "narration_fr": "La génération de Soweto devint l'avant-garde de la lutte de libération. Beaucoup de futurs dirigeants de l'Afrique du Sud démocratique furent forgés dans ces rues."
+        },
+        {
+          "narration_en": "June sixteenth is now celebrated as Youth Day in South Africa. It honors the children who gave their lives for freedom and equality.",
+          "narration_fr": "Le 16 juin est aujourd'hui célébré comme la Journée de la Jeunesse en Afrique du Sud. Il honore les enfants qui donnèrent leur vie pour la liberté et l'égalité."
+        },
+        {
+          "narration_en": "Soweto reminds us that youth can change history. Their courage toppled one of the most brutal regimes of the twentieth century.",
+          "narration_fr": "Soweto nous rappelle que la jeunesse peut changer l'histoire. Leur courage renversa l'un des régimes les plus brutaux du vingtième siècle."
+        }
+      ],
+      "source": "pre_sourced"
+    }
+  ]
+}

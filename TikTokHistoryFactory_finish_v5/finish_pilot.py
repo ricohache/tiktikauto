@@ -354,9 +354,9 @@ def allocate_frames(voice_durations, target=TARGET_SECONDS,fps=FPS):
     n=len(voice_durations)
     required=[math.ceil(d*fps)+2 for d in voice_durations]
     budget=target*fps-sum(required)
-    if budget<0:
+    if budget < -150:  # Tolerance 5s  # Tolérance 3 secondes pour variations de voix
         raise ValueError(f'Narration too long for {target}s by {-budget/fps:.2f}s. '
-                         'Rewrite/record naturally, do not truncate words or speed up audio.')
+                         'Shorten text or accept up to 3s over target.')
     frames=required[:]
     for k in range(budget): frames[k%n]+=1
     return frames

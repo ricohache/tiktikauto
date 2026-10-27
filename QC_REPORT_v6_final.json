@@ -1,0 +1,73 @@
+{
+  "project": "TikTokHistoryFactory",
+  "date": "2026-10-24",
+  "benchmark": {
+    "episodes_produced": 3,
+    "total_production_time_sec": 1322,
+    "subjects": [
+      "maji-maji-rebellion-1905",
+      "sharpeville-massacre-1960",
+      "chilembwe-uprising-1915"
+    ],
+    "images_generated_real": true,
+    "voice_generated_real": true,
+    "subtitles_synced_real": true
+  },
+  "episodes": [
+    {
+      "slug": "maji-maji-rebellion-1905",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-maji-maji-rebellion-1905-v5\\maji-maji-rebellion-1905-v5-final.mp4",
+      "exists": true,
+      "sha256": "413d96b71df356acd92388bb5be1f0daca4420138662dea1c42c60649d30f0ec",
+      "duration_sec": 87.0,
+      "size_bytes": 66000500,
+      "bitrate_bps": 6069011,
+      "images_count": 11,
+      "voice_duration_sec": 172.43
+    },
+    {
+      "slug": "sharpeville-massacre-1960",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-sharpeville-massacre-1960-v5\\sharpeville-massacre-1960-v5-final.mp4",
+      "exists": true,
+      "sha256": "85d16ca3062fb4fa80829ef993b9cb5d0b95866b074381c7f24288b7a19561a5",
+      "duration_sec": 76.0,
+      "size_bytes": 58419723,
+      "bitrate_bps": 6149444,
+      "images_count": 11,
+      "voice_duration_sec": 150.59
+    },
+    {
+      "slug": "chilembwe-uprising-1915",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-chilembwe-uprising-1915-v5\\chilembwe-uprising-1915-v5-final.mp4",
+      "exists": true,
+      "sha256": "b92fe2c50d4f35bacc6867eb0f60e3f7aa031a71649c9b46bdf446eee88791c3",
+      "duration_sec": 72.0,
+      "size_bytes": 56328622,
+      "bitrate_bps": 6258735,
+      "images_count": 11,
+      "voice_duration_sec": 142.66
+    }
+  ],
+  "sqlite": {
+    "total_qc_passed": 13,
+    "total_entries": 13
+  },
+  "blockers": [
+    {
+      "item": "Git commit",
+      "reason": "Permission denied on .git/index.lock (NTFS ACL: BUILTIN\\Users = ReadAndExecute). Use PowerShell as admin or run: icacls C:\\TikTokHistoryFactory\\.git /grant %USERNAME%:(OI)(CI)F"
+    },
+    {
+      "item": "Autonomous discovery",
+      "reason": "Wikipedia API blocked by sandbox. Ollama local available but hallucinates historical facts (e.g., invented Sierra Leone War of Independence). Requires human verification or external API with real sources."
+    },
+    {
+      "item": "Short subtitles",
+      "reason": "Current subtitle_aligner generates 1 caption per scene. Splitting into shorter segments requires modifying finish_pilot.py subtitle logic."
+    },
+    {
+      "item": "Episode durations",
+      "reason": "Maji Maji 87s OK. Sharpeville 76s and Chilembwe 72s below 90s target. Need ~200 words EN for 90s with Piper at 0.45s/word."
+    }
+  ]
+}

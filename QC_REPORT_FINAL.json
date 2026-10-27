@@ -1,0 +1,93 @@
+{
+  "project": "TikTokHistoryFactory",
+  "date": "2026-10-24",
+  "benchmark": {
+    "episodes_produced": 3,
+    "total_production_time_sec": 1322,
+    "subjects": [
+      "maji-maji-rebellion-1905",
+      "sharpeville-massacre-1960",
+      "chilembwe-uprising-1915"
+    ],
+    "images_generated_real": true,
+    "voice_generated_real": true,
+    "subtitles_synced_real": true,
+    "no_silence_artificial": true,
+    "no_voice_cut": true
+  },
+  "episodes": [
+    {
+      "slug": "maji-maji-rebellion-1905",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-maji-maji-rebellion-1905-v5\\maji-maji-rebellion-1905-v5-final.mp4",
+      "exists": true,
+      "sha256": "413d96b71df356acd92388bb5be1f0daca4420138662dea1c42c60649d30f0ec",
+      "duration_sec": 87.0,
+      "size_bytes": 66000500,
+      "bitrate_bps": 6069011,
+      "voice_duration_sec": 85.43,
+      "images_count": 11,
+      "last_subtitle_end_sec": 85.43
+    },
+    {
+      "slug": "sharpeville-massacre-1960",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-sharpeville-massacre-1960-v5\\sharpeville-massacre-1960-v5-final.mp4",
+      "exists": true,
+      "sha256": "85d16ca3062fb4fa80829ef993b9cb5d0b95866b074381c7f24288b7a19561a5",
+      "duration_sec": 76.0,
+      "size_bytes": 58419723,
+      "bitrate_bps": 6149444,
+      "voice_duration_sec": 74.59,
+      "images_count": 11,
+      "last_subtitle_end_sec": 74.6
+    },
+    {
+      "slug": "chilembwe-uprising-1915",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-chilembwe-uprising-1915-v5\\chilembwe-uprising-1915-v5-final.mp4",
+      "exists": true,
+      "sha256": "b92fe2c50d4f35bacc6867eb0f60e3f7aa031a71649c9b46bdf446eee88791c3",
+      "duration_sec": 72.0,
+      "size_bytes": 56328622,
+      "bitrate_bps": 6258735,
+      "voice_duration_sec": 70.66,
+      "images_count": 11,
+      "last_subtitle_end_sec": 70.66
+    }
+  ],
+  "blockers": [
+    {
+      "item": "Git commit",
+      "status": "BLOCKED",
+      "reason": "Permission denied on .git/index.lock (NTFS ACL). Command to fix: icacls C:\\TikTokHistoryFactory\\.git /grant %USERNAME%:(OI)(CI)F",
+      "workaround": "Save code changes in tmp_templates.json and auto_engine.py; user can commit manually after fixing permissions"
+    },
+    {
+      "item": "Autonomous discovery",
+      "status": "BLOCKED",
+      "reason": "Wikipedia API blocked by sandbox. Ollama local hallucinates historical facts.",
+      "workaround": "Catalogue-based rotation with SQLite anti-duplicates. New subjects must be added manually after external verification."
+    },
+    {
+      "item": "Short subtitles",
+      "status": "PARTIAL",
+      "reason": "subtitle_aligner generates 1 caption per scene (~11-13 captions). Shorter segments require modifying finish_pilot.py ASS generation logic.",
+      "workaround": "Current subtitles are synchronized with voice durations and end naturally with narration. No stretching."
+    },
+    {
+      "item": "Episode durations",
+      "status": "PARTIAL",
+      "reason": "Maji Maji 87s OK. Sharpeville 76s and Chilembwe 72s below 90s target. Piper rate ~0.45s/word; need ~200 words EN for 90s.",
+      "workaround": "Templates can be extended. Current versions produce complete narrations without silence or cuts."
+    }
+  ],
+  "corrections_applied": [
+    "TARGET_SECONDS restored to 90",
+    "auto_engine.py reorganized: allocate_frames called AFTER goal adjustment based on real voice duration",
+    "goal = math.ceil(total_voice) + 1 (integer, no float error)",
+    "No artificial silence: MP4 duration equals voice + 1s margin",
+    "No voice cut: render_video -t matches adjusted goal"
+  ],
+  "sqlite": {
+    "total_qc_passed": 13,
+    "total_entries": 13
+  }
+}

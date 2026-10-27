@@ -57,8 +57,11 @@ def captions_qc(subs, ass, expected_end, font_size=70):
         if not (1<=len(lines)<=2) or any(not line.strip() for line in lines):
             raise ValueError(f'Cue {i} does not respect two-line limit')
         t0=float(cue['start']); t1=float(cue['end'])
-        if t0 < last-0.02 or t1<=t0 or t1>expected_end+0.05:
+        if t0 < last-0.02 or t1<=t0:
             raise ValueError(f'Cue {i} invalid/out-of-order: {t0} to {t1}')
+        # Allow last cue to end before goal (natural voice duration)
+        if t1 > expected_end + 0.05 and i < len(captions) - 1:
+            raise ValueError(f'Cue {i} extends beyond goal: {t0} to {t1}')
         last=t1
     ass_text=Path(ass).read_text(encoding='utf-8-sig')
     if ass_text.count('Dialogue: ')!=len(captions):

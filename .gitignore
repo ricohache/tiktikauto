@@ -96,3 +96,34 @@ tmp_*
 !/data/catalogue/subjects.json
 !/data/catalogue/subject_*.json
 
+
+# Buffer tokens
+*.tkn
+buff.tkn
+
+# GitHub backup safety exclusions
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.gguf
+*.log
+*.bak-*
+*.b64
+*.db
+*.db-wal
+*.db-shm
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Temporary scripts in project root
+/_*.py
+/_*.ps1
+/_write_test_*

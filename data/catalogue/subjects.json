@@ -139,6 +139,597 @@
       "summary_fr": "Le 29 mars 1947, le peuple malgache se souleva contre la domination coloniale francaise. Le soulevement fut brutalement reprime. Des milliers de personnes furent tuees. La France nia l ampleur du massacre pendant des decennies.",
       "summary_en": "On March twenty-ninth, nineteen forty-seven, the Malagasy people rose against French colonial rule. The uprising was brutally suppressed. Thousands were killed. France denied the scale of the massacre for decades.",
       "category": "histoire-coloniale"
+    },
+    {
+      "slug": "congo-free-state-atrocities",
+      "title_en": "The Atrocities of the Congo Free State",
+      "title_fr": "Les atrocités de l'Etat libre du Congo",
+      "summary_en": "Between 1885 and 1908, King Leopold II of Belgium ruled the Congo Free State as his personal property. An estimated ten million Congolese died from forced labor, mutilation, and systematic violence in the rubber trade.",
+      "summary_fr": "Entre 1885 et 1908, le roi Léopold II de Belgique régna sur l'Etat libre du Congo comme sa propriété personnelle. Dix millions de Congolais périrent du travail forcé, des mutilations et des violences systématiques dans le commerce du caoutchouc.",
+      "event_date": "1885-1908",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1890s Central Africa, Belgian Congo, no text, vertical composition"
+    },
+    {
+      "slug": "herero-genocide-1904",
+      "title_en": "The Herero and Nama Genocide",
+      "title_fr": "Le génocide des Herero et Nama",
+      "summary_en": "In 1904, German colonial forces exterminated up to eighty percent of the Herero people and half of the Nama people in German South-West Africa, today Namibia. It was the first genocide of the twentieth century.",
+      "summary_fr": "En 1904, les forces coloniales allemandes exterminèrent jusqu'à quatre-vingt pour cent du peuple Herero et la moitié du peuple Nama en Afrique du Sud-Ouest allemande, aujourd'hui Namibie. Ce fut le premier génocide du vingtième siècle.",
+      "event_date": "1904-1908",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1904 Namibia, German colonial Africa, no text, vertical composition"
+    },
+    {
+      "slug": "biafra-war-1967",
+      "title_en": "The Biafran War and Its Forgotten Famine",
+      "title_fr": "La guerre du Biafra et sa famine oubliée",
+      "summary_en": "Between 1967 and 1970, Nigeria waged a brutal war against the breakaway Republic of Biafra. A Nigerian blockade caused a famine that killed over a million civilians, mostly children, and images of starving Biafran children shocked the world.",
+      "summary_fr": "Entre 1967 et 1970, le Nigeria mena une guerre brutale contre la République sécessionniste du Biafra. Un blocus nigérian provoqua une famine qui tua plus d'un million de civils, principalement des enfants, et les images d'enfants biafrais affamés choquèrent le monde.",
+      "event_date": "1967-1970",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1960s West Africa, Nigeria, no text, vertical composition"
+    },
+    {
+      "slug": "maji-maji-rebellion-1905",
+      "title_en": "The Maji Maji Rebellion and German Colonial Genocide",
+      "title_fr": "La rebellion Maji Maji et le genocide colonial allemand",
+      "summary_en": "Between 1905 and 1907, an anti-colonial rebellion erupted in German East Africa. Led by spiritual leader Kinjikitile Ngwale, fighters believed sacred water would turn German bullets to water. Up to three hundred thousand Tanzanians died in the brutal suppression.",
+      "summary_fr": "Entre 1905 et 1907, une rebellion anticoloniale eclata en Afrique de l'Est allemande. Menee par le leader spirituel Kinjikitile Ngwale, les combattants croyaient que l'eau sacree transformerait les balles allemandes en eau. Jusqu'a trois cent mille Tanzaniens perirent dans la repression brutale.",
+      "event_date": "1905-1907",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1905 German East Africa, Tanzania, colonial warfare, no text, vertical composition"
+    },
+    {
+      "slug": "sharpeville-massacre-1960",
+      "title_en": "The Sharpeville Massacre and the End of Nonviolence",
+      "title_fr": "Le massacre de Sharpeville et la fin de la non-violence",
+      "summary_en": "On March twenty-first, nineteen sixty, South African police opened fire on unarmed black demonstrators protesting pass laws. Sixty-nine were killed and one hundred eighty wounded. The massacre convinced Nelson Mandela to abandon nonviolence and organize armed resistance.",
+      "summary_fr": "Le 21 mars 1960, la police sud-africaine tira sur des manifestants noirs desarmes protestant contre les lois sur les passeports. Soixante-neuf furent tues et cent quatre-vingts blesses. Ce massacre convainquit Nelson Mandela d'abandonner la non-violence et d'organiser la resistance armee.",
+      "event_date": "1960-03-21",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1960 South Africa, apartheid protest, no text, vertical composition"
+    },
+    {
+      "slug": "chilembwe-uprising-1915",
+      "title_en": "The Chilembwe Uprising Against British Colonial Rule",
+      "title_fr": "Le soulevement Chilembwe contre la domination britannique",
+      "summary_en": "In January nineteen fifteen, John Chilembwe, a Baptist minister in Nyasaland, led an uprising against British colonial rule. Motivated by forced labor, racial discrimination and World War One conscription, rebels attacked plantations. Chilembwe was killed but became a national hero of Malawi.",
+      "summary_fr": "En janvier 1915, John Chilembwe, ministre baptiste au Nyassaland, mena un soulevement contre la domination coloniale britannique. Motives par le travail force, la discrimination raciale et la conscription de la Premiere Guerre mondiale, les rebelles attaquerent les plantations. Chilembwe fut tue mais devint un heros national du Malawi.",
+      "event_date": "1915-01-15",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1915 Nyasaland, Malawi, colonial uprising, no text, vertical composition"
+    },
+    {
+      "slug": "battle-of-adwa-1896",
+      "title_en": "The Battle of Adwa",
+      "title_fr": "La bataille d Adwa",
+      "summary_en": "In 1896, Ethiopian forces defeated Italy at Adwa.",
+      "summary_fr": "En 1896, les forces ethiopiennes vainquirent l Italie a Adwa.",
+      "event_date": "1896-03-01",
+      "style_prompt": "Japanese seinen manga panel, Ethiopian warriors, bold ink, black and white, no text, vertical composition"
+    },
+    {
+      "slug": "rwandan-genocide-1994",
+      "title_en": "The Rwandan Genocide",
+      "title_fr": "Le genocide rwandais",
+      "summary_en": "In 1994, up to one million Tutsis and moderate Hutus were killed in Rwanda.",
+      "summary_fr": "En 1994, jusqu a un million de Tutsis et Hutus moderes furent tues au Rwanda.",
+      "event_date": "1994-04-07",
+      "style_prompt": "Japanese seinen manga panel, memorial with skulls, bold ink, black and white, no text, vertical composition"
+    },
+    {
+      "slug": "angolan-civil-war-1975",
+      "title_en": "The Angolan Civil War",
+      "title_fr": "La guerre civile angolaise",
+      "summary_en": "In 1975, Angola gained independence but plunged into civil war.",
+      "summary_fr": "En 1975, l Angola acceda a l independance mais plongea dans la guerre civile.",
+      "event_date": "1975-11-11",
+      "style_prompt": "Japanese seinen manga panel, African soldiers, bold ink, black and white, no text, vertical composition"
+    },
+    {
+      "slug": "soweto-uprising-1976",
+      "title_en": "Soweto Uprising",
+      "title_fr": "Révolte de Soweto",
+      "summary_en": "On June sixteenth, nineteen seventy-six, thousands of black South African students marched through the streets of Soweto to protest the imposition of Afrikaans as the language of instruction in schools. Police responded with live ammunition, killing hundreds of children and teenagers. The massacre ignited a nationwide uprising against apartheid that lasted for months and transformed the anti-apartheid struggle. The images of dying children shocked the world and galvanized international pressure on the apartheid regime.",
+      "summary_fr": "Le 16 juin 1976, des milliers d'élèves noirs sud-africains défilèrent dans les rues de Soweto pour protester contre l'imposition de l'afrikaans comme langue d'enseignement. La police répondit par des balles réelles, tuant des centaines d'enfants et d'adolescents. Le massacre déclencha un soulèvement national contre l'apartheid qui dura des mois et transforma la lutte anti-apartheid. Les images d'enfants mourants choquèrent le monde et galvanisèrent la pression internationale sur le régime.",
+      "event_date": "1976-06-16",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, no text, vertical composition",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Soweto_uprising",
+      "sources": [
+        {
+          "name": "Wikipedia EN",
+          "url": "https://en.wikipedia.org/wiki/Soweto_uprising",
+          "language": "en",
+          "verified": true
+        },
+        {
+          "name": "South African History Online",
+          "url": "https://www.sahistory.org.za/article/soweto-uprising-16-june-1976",
+          "language": "en",
+          "verified": true
+        }
+      ],
+      "scenes": [
+        {
+          "narration_en": "On June sixteenth, nineteen seventy-six, ten thousand black students marched in Soweto. They refused to learn in Afrikaans, the language of their oppressors.",
+          "narration_fr": "Le 16 juin 1976, dix mille élèves noirs défilèrent à Soweto. Ils refusèrent d'apprendre en afrikaans, la langue de leurs oppresseurs."
+        },
+        {
+          "narration_en": "The apartheid government had imposed Afrikaans as the language of instruction. Students saw this as another tool of racial domination.",
+          "narration_fr": "Le gouvernement apartheid avait imposé l'afrikaans comme langue d'enseignement. Les élèves voyaient cela comme un autre outil de domination raciale."
+        },
+        {
+          "narration_en": "Police officers confronted the marching children. Without warning, they opened fire on the unarmed crowd.",
+          "narration_fr": "Des policiers confrontèrent les enfants en marche. Sans prévenir, ils tirèrent sur la foule désarmée."
+        },
+        {
+          "narration_en": "Thirteen-year-old Hector Pieterson was among the first to fall. A photograph of his dying body became a global symbol of apartheid brutality.",
+          "narration_fr": "Hector Pieterson, âgé de treize ans, fut parmi les premiers à tomber. Une photographie de son corps mourant devint un symbole mondial de la brutalité de l'apartheid."
+        },
+        {
+          "narration_en": "Hundreds of students were killed that day. The official death toll was minimized, but witnesses reported massacres across Soweto.",
+          "narration_fr": "Des centaines d'élèves furent tués ce jour-là. Le bilan officiel fut minimisé, mais des témoins rapportèrent des massacres à travers Soweto."
+        },
+        {
+          "narration_en": "The Soweto uprising ignited months of nationwide protests. The apartheid regime faced the most serious challenge in its history.",
+          "narration_fr": "La révolte de Soweto déclencha des mois de protestations nationales. Le régime de l'apartheid fit face au défi le plus sérieux de son histoire."
+        },
+        {
+          "narration_en": "The massacre transformed international opinion. Western nations could no longer ignore the crimes of the apartheid government.",
+          "narration_fr": "Le massacre transforma l'opinion internationale. Les nations occidentales ne purent plus ignorer les crimes du gouvernement de l'apartheid."
+        },
+        {
+          "narration_en": "Schools were burned, businesses were destroyed, and the economy suffered. The apartheid regime responded with mass arrests and torture.",
+          "narration_fr": "Des écoles furent brûlées, des commerces détruits et l'économie pâtit. Le régime de l'apartheid répondit par des arrestations massives et la torture."
+        },
+        {
+          "narration_en": "The Soweto generation became the vanguard of the liberation struggle. Many future leaders of democratic South Africa were forged in those streets.",
+          "narration_fr": "La génération de Soweto devint l'avant-garde de la lutte de libération. Beaucoup de futurs dirigeants de l'Afrique du Sud démocratique furent forgés dans ces rues."
+        },
+        {
+          "narration_en": "June sixteenth is now celebrated as Youth Day in South Africa. It honors the children who gave their lives for freedom and equality.",
+          "narration_fr": "Le 16 juin est aujourd'hui célébré comme la Journée de la Jeunesse en Afrique du Sud. Il honore les enfants qui donnèrent leur vie pour la liberté et l'égalité."
+        },
+        {
+          "narration_en": "Soweto reminds us that youth can change history. Their courage toppled one of the most brutal regimes of the twentieth century.",
+          "narration_fr": "Soweto nous rappelle que la jeunesse peut changer l'histoire. Leur courage renversa l'un des régimes les plus brutaux du vingtième siècle."
+        }
+      ],
+      "source": "pre_sourced"
+    },
+    {
+      "slug": "jallianwala-bagh-1919",
+      "title_en": "The Jallianwala Bagh Massacre",
+      "title_fr": "Le massacre de Jallianwala Bagh",
+      "summary_en": "In nineteen nineteen, British colonial troops opened fire on unarmed civilians in Jallianwala Bagh, Amritsar. \nThousands had gathered to celebrate the Sikh festival of Baisakhi and to protest the repressive Rowlatt Acts. \nGeneral Reginald Dyer arrived with armed soldiers and blocked the only exit without warning the crowd to disperse. \nHe ordered his troops to fire directly into the dense gathering of men, women, and children. \nThey fired for ten minutes until their ammunition was exhausted, killing hundreds and wounding over a thousand. \nDyer later claimed his aim was to produce a moral effect throughout Punjab and prevent future rebellion. \nThe massacre shocked the Indian subcontinent and turned moderate leaders like Gandhi toward complete independence. \nRabindranath Tagore renounced his British knighthood in protest against the brutality of colonial rule. \nThe Hunter Commission condemned Dyer but he was never prosecuted for murder by British authorities. \nFor decades, Britain refused to formally apologize for the massacre. \nIn twenty nineteen, the British House of Commons finally expressed deep regret but stopped short of a full apology. \nThe Jallianwala Bagh memorial stands today as a sacred site of colonial violence and national resistance. \nIt reminds us that freedom demands the courage to resist even the most brutal imperial forces. \nThe massacre remains one of the darkest chapters of British colonial rule in India.",
+      "summary_fr": "En dix-neuf cent dix-neuf, les troupes coloniales britanniques ouvrirent le feu sur des civils desarmes a Jallianwala Bagh, Amritsar. \nDes milliers de personnes s etaient rassemblees pour celebrer la fete sikhe du Baisakhi et pour protester contre les lois repressives de Rowlatt. \nLe general Reginald Dyer arriva avec des soldats armes et bloqua la seule sortie sans avertir la foule de se disperser. \nIl ordonna a ses troupes de tirer directement sur la foule dense composee d hommes, de femmes et d enfants. \nIls tirerent pendant dix minutes jusqu a epuisement de leurs munitions, tuant des centaines et blessant plus d un millier. \nDyer declara plus tard que son objectif etait de produire un effet moral dans tout le Punjab et d empecher de futures rebellions. \nLe massacre choqua le sous-continent indien et poussa des leaders moderes comme Gandhi vers l independance totale. \nRabindranath Tagore renonca a son titre de chevalier britannique pour protester contre la brutalite de la domination coloniale. \nLa commission Hunter condamna Dyer mais il ne fut jamais poursuivi pour meurtre par les autorites britanniques. \nPendant des decennies, la Grande-Bretagne refusa de s excuser formellement pour le massacre. \nEn deux mille dix-neuf, la Chambre des communes britannique exprima enfin un profond regret mais s arreta la. \nLe memorial de Jallianwala Bagh se dresse aujourd hui comme un site sacre de la violence coloniale et de la resistance nationale. \nIl nous rappelle que la liberte exige le courage de resister meme aux forces imperiales les plus brutales. \nLe massacre reste l un des chapitres les plus sombres de la domination coloniale britannique en Inde.",
+      "event_date": "1919-04-13",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1919 India British colonial, no text, vertical composition",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jallianwala_Bagh_massacre",
+      "sources": [
+        {
+          "language": "en",
+          "url": "https://en.wikipedia.org/wiki/Jallianwala_Bagh_massacre",
+          "name": "Wikipedia EN"
+        },
+        {
+          "language": "en",
+          "url": "https://www.britannica.com/event/Jallianwala-Bagh-Massacre",
+          "name": "Britannica"
+        },
+        {
+          "language": "en",
+          "url": "https://archive.org/details/reportofcommitte00grea",
+          "name": "Hunter Commission Report"
+        }
+      ],
+      "scenes": [
+        {
+          "narration_en": "In nineteen nineteen, British colonial troops opened fire on unarmed civilians in Jallianwala Bagh, Amritsar.",
+          "narration_fr": "En dix-neuf cent dix-neuf, les troupes coloniales britanniques ouvrirent le feu sur des civils desarmes a Jallianwala Bagh, Amritsar.",
+          "image_prompt": "Japanese seinen manga panel, British soldiers with rifles firing into a dense crowd in a walled garden, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Thousands had gathered to celebrate the Sikh festival of Baisakhi and to protest the repressive Rowlatt Acts.",
+          "narration_fr": "Des milliers de personnes s etaient rassemblees pour celebrer la fete sikhe du Baisakhi et pour protester contre les lois repressives de Rowlatt.",
+          "image_prompt": "Japanese seinen manga panel, Indian families gathered in a sunny garden for a festival, colorful traditional clothing, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "General Reginald Dyer arrived with armed soldiers and blocked the only exit without warning the crowd to disperse.",
+          "narration_fr": "Le general Reginald Dyer arriva avec des soldats armes et bloqua la seule sortie sans avertir la foule de se disperser.",
+          "image_prompt": "Japanese seinen manga panel, British general on horseback pointing at soldiers blocking a narrow gate, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "He ordered his troops to fire directly into the dense gathering of men, women, and children.",
+          "narration_fr": "Il ordonna a ses troupes de tirer directement sur la foule dense composee d hommes, de femmes et d enfants.",
+          "image_prompt": "Japanese seinen manga panel, soldiers in formation aiming rifles at terrified civilians in a garden, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "They fired for ten minutes until their ammunition was exhausted, killing hundreds and wounding over a thousand.",
+          "narration_fr": "Ils tirerent pendant dix minutes jusqu a epuisement de leurs munitions, tuant des centaines et blessant plus d un millier.",
+          "image_prompt": "Japanese seinen manga panel, aftermath of a massacre with bodies on the ground and smoke in the air, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Dyer later claimed his aim was to produce a moral effect throughout Punjab and prevent future rebellion.",
+          "narration_fr": "Dyer declara plus tard que son objectif etait de produire un effet moral dans tout le Punjab et d empecher de futures rebellions.",
+          "image_prompt": "Japanese seinen manga panel, British general sitting at a desk writing a report with maps on the wall, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The massacre shocked the Indian subcontinent and turned moderate leaders like Gandhi toward complete independence.",
+          "narration_fr": "Le massacre choqua le sous-continent indien et poussa des leaders moderes comme Gandhi vers l independance totale.",
+          "image_prompt": "Japanese seinen manga panel, Indian leaders in traditional clothing in a serious meeting room, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Rabindranath Tagore renounced his British knighthood in protest against the brutality of colonial rule.",
+          "narration_fr": "Rabindranath Tagore renonca a son titre de chevalier britannique pour protester contre la brutalite de la domination coloniale.",
+          "image_prompt": "Japanese seinen manga panel, Indian poet in traditional robes holding a letter with British coat of arms, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The Hunter Commission condemned Dyer but he was never prosecuted for murder by British authorities.",
+          "narration_fr": "La commission Hunter condamna Dyer mais il ne fut jamais poursuivi pour meurtre par les autorites britanniques.",
+          "image_prompt": "Japanese seinen manga panel, British officials in a courtroom tribunal with documents and evidence, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "For decades, Britain refused to formally apologize for the massacre.",
+          "narration_fr": "Pendant des decennies, la Grande-Bretagne refusa de s excuser formellement pour le massacre.",
+          "image_prompt": "Japanese seinen manga panel, British parliament chamber with politicians debating, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "In twenty nineteen, the British House of Commons finally expressed deep regret but stopped short of a full apology.",
+          "narration_fr": "En deux mille dix-neuf, la Chambre des communes britannique exprima enfin un profond regret mais s arreta la.",
+          "image_prompt": "Japanese seinen manga panel, modern politicians speaking at a podium in a parliament hall, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The Jallianwala Bagh memorial stands today as a sacred site of colonial violence and national resistance.",
+          "narration_fr": "Le memorial de Jallianwala Bagh se dresse aujourd hui comme un site sacre de la violence coloniale et de la resistance nationale.",
+          "image_prompt": "Japanese seinen manga panel, modern memorial monument with eternal flame and visitors paying respects, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The massacre remains one of the darkest chapters of British colonial rule in India.",
+          "narration_fr": "Le massacre reste l un des chapitres les plus sombres de la domination coloniale britannique en Inde.",
+          "image_prompt": "Japanese seinen manga panel, panoramic view of Amritsar golden temple in the distance with memorial in foreground, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        }
+      ],
+      "source": "pre_sourced"
+    },
+    {
+      "slug": "nanjing-massacre-1937",
+      "title_en": "The Nanjing Massacre",
+      "title_fr": "Le massacre de Nankin",
+      "summary_en": "In December nineteen thirty-seven, Japanese forces captured the Chinese capital of Nanjing and carried out weeks of systematic atrocities against civilians and prisoners of war. Hundreds of thousands of Chinese were killed, and tens of thousands of women were raped in what became known as the Rape of Nanjing. Foreign missionaries and diplomats established a safety zone that saved thousands of lives. Japanese military commanders allowed and encouraged the violence. The International Military Tribunal for the Far East later convicted several commanders of war crimes. Japan has never fully acknowledged the scale of the massacre, and the event remains a source of tension in East Asian relations.",
+      "summary_fr": "En decembre mille neuf cent trente-sept, les forces japonaises capturerent la capitale chinoise de Nankin et commirent des semaines d atrocites systematiques contre les civils et les prisonniers de guerre. Des centaines de milliers de Chinois furent tues et des dizaines de milliers de femmes violees dans ce qui devint connu comme le Viol de Nankin. Des missionnaires et diplomates etrangeres etablirent une zone de securite qui sauva des milliers de vies. Les commandants militaires japonais permirent et encouragerent la violence. Le tribunal militaire international pour l Extreme-Orient condamna plus tard plusieurs commandants pour crimes de guerre. Le Japon n a jamais pleinement reconnu l ampleur du massacre, et l evenement demeure une source de tension dans les relations de l Asie de l Est.",
+      "event_date": "1937-12-13",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1937 China Japanese invasion, no text, vertical composition",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nanjing_Massacre",
+      "sources": [
+        {
+          "name": "Wikipedia EN",
+          "url": "https://en.wikipedia.org/wiki/Nanjing_Massacre",
+          "language": "en"
+        },
+        {
+          "name": "Iris Chang - The Rape of Nanking",
+          "url": "https://www.basicbooks.com",
+          "language": "en"
+        },
+        {
+          "name": "Nanjing Massacre Memorial Hall",
+          "url": "http://www.nj1937.org",
+          "language": "zh"
+        }
+      ],
+      "scenes": [
+        {
+          "narration_en": "In December nineteen thirty-seven, Japanese forces captured the Chinese capital of Nanjing.",
+          "narration_fr": "En decembre mille neuf cent trente-sept, les forces japonaises capturerent la capitale chinoise de Nankin.",
+          "image_prompt": "Japanese seinen manga panel, Japanese soldiers marching through city gates with flags and rifles, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "They carried out weeks of systematic atrocities against civilians and prisoners of war.",
+          "narration_fr": "Ils commirent des semaines d atrocites systematiques contre les civils et les prisonniers de guerre.",
+          "image_prompt": "Japanese seinen manga panel, soldiers lining up prisoners against a wall, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Hundreds of thousands of Chinese were killed in mass executions and random violence.",
+          "narration_fr": "Des centaines de milliers de Chinois furent tues dans des executions de masse et des violences aleatoires.",
+          "image_prompt": "Japanese seinen manga panel, devastated city with bodies in the streets and rubble, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Tens of thousands of women were raped in what became known as the Rape of Nanjing.",
+          "narration_fr": "Des dizaines de milliers de femmes furent violees dans ce qui devint connu comme le Viol de Nankin.",
+          "image_prompt": "Japanese seinen manga panel, women fleeing from soldiers in a ruined city, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Foreign missionaries established a safety zone that saved thousands of Chinese lives.",
+          "narration_fr": "Des missionnaires etrangers etablirent une zone de securite qui sauva des milliers de vies chinoises.",
+          "image_prompt": "Japanese seinen manga panel, foreign missionaries and Chinese civilians behind barricades in safety zone, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Japanese military commanders allowed and encouraged the violence against civilians.",
+          "narration_fr": "Les commandants militaires japonais permirent et encouragerent la violence contre les civils.",
+          "image_prompt": "Japanese seinen manga panel, Japanese officers giving orders while soldiers commit violence, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The International Military Tribunal convicted several Japanese commanders of war crimes.",
+          "narration_fr": "Le tribunal militaire international condamna plusieurs commandants japonais pour crimes de guerre.",
+          "image_prompt": "Japanese seinen manga panel, international tribunal courtroom with judges and defendants in military uniforms, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Japan has never fully acknowledged the scale of the Nanjing Massacre.",
+          "narration_fr": "Le Japon n a jamais pleinement reconnu l ampleur du massacre de Nankin.",
+          "image_prompt": "Japanese seinen manga panel, Japanese parliament with politicians debating historical records, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The Nanjing Massacre Memorial Hall preserves the memory of the victims.",
+          "narration_fr": "Le memorial du massacre de Nankin preserve la memoire des victimes.",
+          "image_prompt": "Japanese seinen manga panel, modern memorial hall with sculpture and visitors paying respects, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The massacre remains one of the darkest chapters of the Second World War in Asia.",
+          "narration_fr": "Le massacre reste l un des chapitres les plus sombres de la Seconde Guerre mondiale en Asie.",
+          "image_prompt": "Japanese seinen manga panel, eternal flame memorial with Chinese and international flags, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        }
+      ],
+      "source": "pre_sourced"
+    },
+    {
+      "slug": "tulsa-race-massacre-1921",
+      "title_en": "The Tulsa Race Massacre",
+      "title_fr": "Le massacre racial de Tulsa",
+      "summary_en": "In May nineteen twenty-one, a white mob attacked and destroyed the prosperous Black neighborhood of Greenwood in Tulsa, Oklahoma. Known as Black Wall Street, Greenwood was one of the wealthiest African American communities in the United States. The mob burned homes, businesses, and churches while killing hundreds of Black residents. The Oklahoma National Guard arrested Black survivors instead of the rioters. For decades, the massacre was suppressed from history books and official records. In two thousand one, a state commission finally acknowledged the massacre and recommended reparations. Today, the Greenwood Rising history center memorializes the victims and the resilience of the Black community.",
+      "summary_fr": "En mai mille neuf cent vingt et un, une foule blanche attaqua et detruisit le quartier noir prospere de Greenwood a Tulsa, Oklahoma. Connu sous le nom de Black Wall Street, Greenwood etait l un des quartiers afro-americains les plus riches des Etats-Unis. La foule brula des maisons, des entreprises et des eglises tout en tuant des centaines de residents noirs. La Garde nationale de l Oklahoma arreta les survivants noirs au lieu des emeutiers. Pendant des decennies, le massacre fut occulte des manuels scolaires et des archives officielles. En deux mille un, une commission de l Etat reconnut enfin le massacre et recommanda des reparations. Aujourd hui, le centre historique Greenwood Rising commemore les victimes et la resilience de la communaute noire.",
+      "event_date": "1921-05-31",
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1921 Tulsa Oklahoma, no text, vertical composition",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tulsa_race_massacre",
+      "sources": [
+        {
+          "name": "Wikipedia EN",
+          "url": "https://en.wikipedia.org/wiki/Tulsa_race_massacre",
+          "language": "en"
+        },
+        {
+          "name": "Tulsa Historical Society",
+          "url": "https://www.tulsahistory.org",
+          "language": "en"
+        }
+      ],
+      "scenes": [
+        {
+          "narration_en": "In May nineteen twenty-one, a white mob attacked the prosperous Black neighborhood of Greenwood in Tulsa, Oklahoma.",
+          "narration_fr": "En mai mille neuf cent vingt et un, une foule blanche attaqua le quartier noir prospere de Greenwood a Tulsa, Oklahoma.",
+          "image_prompt": "Japanese seinen manga panel, white mob attacking Black neighborhood with torches and guns, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Greenwood was known as Black Wall Street, one of the wealthiest African American communities in America.",
+          "narration_fr": "Greenwood etait connu sous le nom de Black Wall Street, l un des quartiers afro-americains les plus riches d Amerique.",
+          "image_prompt": "Japanese seinen manga panel, prosperous Black neighborhood with elegant buildings and businesses, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The mob burned homes, businesses, and churches while killing hundreds of Black residents.",
+          "narration_fr": "La foule brula des maisons, des entreprises et des eglises tout en tuant des centaines de residents noirs.",
+          "image_prompt": "Japanese seinen manga panel, burning buildings with families fleeing in terror, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The Oklahoma National Guard arrested Black survivors instead of the rioters.",
+          "narration_fr": "La Garde nationale de l Oklahoma arreta les survivants noirs au lieu des emeutiers.",
+          "image_prompt": "Japanese seinen manga panel, armed soldiers arresting Black civilians while white mob stands nearby, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Airplanes were reportedly used to drop incendiary bombs on the burning district.",
+          "narration_fr": "Des avions auraient ete utilises pour larguer des bombes incendiaires sur le quartier en feu.",
+          "image_prompt": "Japanese seinen manga panel, biplane dropping fire bombs over burning city district, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "For decades, the massacre was suppressed from history books and official records.",
+          "narration_fr": "Pendant des decennies, le massacre fut occulte des manuels scolaires et des archives officielles.",
+          "image_prompt": "Japanese seinen manga panel, history books being burned or hidden in official archives, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "In two thousand one, a state commission finally acknowledged the massacre and recommended reparations.",
+          "narration_fr": "En deux mille un, une commission de l Etat reconnut enfin le massacre et recommanda des reparations.",
+          "image_prompt": "Japanese seinen manga panel, government commission meeting with documents and evidence on table, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Survivors and descendants continue to demand justice and recognition for the destroyed community.",
+          "narration_fr": "Les survivants et descendants continuent de reclamer justice et reconnaissance pour la communaute detruite.",
+          "image_prompt": "Japanese seinen manga panel, elderly Black survivors speaking at a memorial ceremony, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The Greenwood Rising history center now memorializes the victims and their resilience.",
+          "narration_fr": "Le centre historique Greenwood Rising commemore aujourd hui les victimes et leur resilience.",
+          "image_prompt": "Japanese seinen manga panel, modern museum building with Black visitors learning history, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "Tulsa teaches that American prosperity for some was built on the destruction of Black wealth.",
+          "narration_fr": "Tulsa enseigne que la prosperite americaine pour certains fut construite sur la destruction de la richesse noire.",
+          "image_prompt": "Japanese seinen manga panel, symbolic scales of justice unbalanced with Black wealth on one side, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        },
+        {
+          "narration_en": "The massacre remains one of the worst episodes of racial violence in American history.",
+          "narration_fr": "Le massacre reste l un des pires episodes de violence raciale de l histoire americaine.",
+          "image_prompt": "Japanese seinen manga panel, memorial wall with names of victims and flowers placed below, bold ink lines, dramatic contrast, halftone dots, black and white, no text, vertical composition"
+        }
+      ],
+      "source": "pre_sourced"
+    },
+    {
+      "slug": "thiaroye-1944-90s",
+      "title": "Thiaroye, 1er décembre 1944",
+      "language": "en",
+      "visual_revision": 2,
+      "export_revision": 3,
+      "reviewed_at": "2026-10-19",
+      "editorial_status": "FACTS_REVIEWED_PILOT_REQUIRES_HUMAN_APPROVAL",
+      "sources": [
+        {
+          "name": "Wikipedia FR",
+          "language": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Massacre_de_Thiaroye"
+        },
+        {
+          "name": "Ousmane Sembene - Camp de Thiaroye",
+          "language": "fr",
+          "url": "https://www.imdb.com/title/tt0094842/"
+        }
+      ],
+      "claims": [
+        {
+          "id": "C1",
+          "statement": "Le massacre a lieu le 1er décembre 1944 à Thiaroye, près de Dakar.",
+          "certainty": "ESTABLISHED",
+          "sources": [
+            "AN259",
+            "WIKI"
+          ]
+        },
+        {
+          "id": "C2",
+          "statement": "Des tirailleurs africains rapatriés après leur captivité réclament leurs soldes.",
+          "certainty": "ESTABLISHED",
+          "sources": [
+            "AN259",
+            "WIKI"
+          ],
+          "verification_note": "Recoupement parlementaire et introduction Wikipedia, dont les références sont identifiables."
+        },
+        {
+          "id": "C3",
+          "statement": "L'armée française ouvre le feu et tue des tirailleurs.",
+          "certainty": "ESTABLISHED",
+          "sources": [
+            "AN259",
+            "PUR"
+          ]
+        },
+        {
+          "id": "C4",
+          "statement": "Le bilan précis et des circonstances font l'objet de débats historiographiques.",
+          "certainty": "DEBATED_DETAILS",
+          "sources": [
+            "AN259",
+            "WIKI"
+          ],
+          "editorial_rule": "Ne donner aucun chiffre, aucune intention individuelle ou reconstitution tactique comme fait certain."
+        }
+      ],
+      "character_sheet": {
+        "name": "Tirailleur anonyme — personnage composite",
+        "description": "Personnage fictif de reconstitution, pas le portrait d'une victime identifiée. Adulte ouest-africain d'environ trente ans, peau sombre, visage allongé, cheveux très courts, tenue kaki de tirailleur français des années 1940, sans décorations inventées.",
+        "visual_prompt": "same anonymous adult West African French tirailleur soldier, dark skin, thirty years old, long angular face, short cropped black hair, plain khaki 1940s French military field jacket, no medals, no modern camouflage"
+      },
+      "scenes": [
+        {
+          "id": 1,
+          "claims": [
+            "C1",
+            "C3"
+          ],
+          "narration": "December first, nineteen forty-four. Thiaroye, near Dakar, Senegal.",
+          "visual": "One low whitewashed plaster barracks facade, corrugated iron roof, bare sandy ground, Senegal West Africa 1944. Empty courtyard. Hand drawn angular architecture, flat black shadow, no tree, no people, no porch, no Japanese buildings.",
+          "translation_fr": "Le 1er décembre 1944. À Thiaroye, près de Dakar, au Sénégal.",
+          "utterances": [
+            {
+              "en": "December first, nineteen forty-four.",
+              "fr": "Le 1er décembre 1944."
+            },
+            {
+              "en": "Thiaroye, near Dakar, Senegal.",
+              "fr": "À Thiaroye, près de Dakar, au Sénégal."
+            }
+          ],
+          "image_revision": 3
+        },
+        {
+          "id": 2,
+          "claims": [
+            "C2"
+          ],
+          "narration": "African soldiers had returned from captivity in Europe. They demanded their unpaid wages.",
+          "visual": "Chest-up portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Serious determined expression, face in upper third, plain plaster wall behind him, cinematic side lighting, blank lower quarter for subtitles.",
+          "translation_fr": "Des soldats africains rentraient de captivité en Europe. Ils réclamaient leurs soldes impayées.",
+          "utterances": [
+            {
+              "en": "African soldiers had returned from captivity in Europe.",
+              "fr": "Des soldats africains rentraient de captivité en Europe."
+            },
+            {
+              "en": "They demanded their unpaid wages.",
+              "fr": "Ils réclamaient leurs soldes impayées."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "claims": [
+            "C3",
+            "C4"
+          ],
+          "narration": "The French army opened fire. Soldiers were killed.",
+          "visual": "Close-up manga still life of ONE plain white enamel drinking cup on a rough wooden bench, isolated against blank white plaster background. A bold black diagonal shadow. Senegal 1944, symbolic absence, no buildings, no doors, no people, no weapons, no writing.",
+          "translation_fr": "L’armée française a ouvert le feu. Des soldats ont été tués.",
+          "utterances": [
+            {
+              "en": "The French army opened fire.",
+              "fr": "L’armée française a ouvert le feu."
+            },
+            {
+              "en": "Soldiers were killed.",
+              "fr": "Des soldats ont été tués."
+            }
+          ],
+          "image_revision": 3
+        },
+        {
+          "id": 4,
+          "claims": [
+            "C1",
+            "C3",
+            "C4"
+          ],
+          "narration": "The death toll and the exact circumstances remain disputed. Their memory endures.",
+          "visual": "Close portrait of ONE dignified adult West African man, thirty years old, dark skin, long angular face, very short cropped black hair, plain unadorned 1940s khaki cotton shirt, no hat, no insignia. Senegal 1944. Solemn eyes looking slightly away, face in upper third, neutral plaster wall, powerful black shadow shapes, blank lower quarter for subtitles.",
+          "translation_fr": "Le bilan et les circonstances exactes restent débattus. Leur mémoire demeure.",
+          "utterances": [
+            {
+              "en": "The death toll and the exact circumstances remain disputed.",
+              "fr": "Le bilan et les circonstances exactes restent débattus."
+            },
+            {
+              "en": "Their memory endures.",
+              "fr": "Leur mémoire demeure."
+            }
+          ]
+        }
+      ],
+      "disclosures": [
+        "Reconstitutions dessinées générées par IA ; images non documentaires.",
+        "Personnage composite fictif ; aucune identité attribuée.",
+        "Bilan et circonstances débattus ; aucun chiffre avancé.",
+        "English synthetic narration: Piper John; LibriVox public-domain recordings; no impersonation or new voice cloning."
+      ],
+      "audio_language": "en",
+      "spoken_language": "en-US",
+      "subtitle_language": "fr-FR",
+      "translation_locale": "fr-FR",
+      "schema_version": 2,
+      "pronunciation_lexicon": {
+        "Thiaroye": "Tya-roy"
+      }
+    },
+    {
+      "slug": "ruben-um-nyobe-1960",
+      "title_en": "Ruben Um Nyobe and the Forgotten UPC Struggle",
+      "title_fr": "Ruben Um Nyobe - Pilote",
+      "category": "histoire-africaine",
+      "event_date": "1948-1958",
+      "summary_en": "In 1948, Ruben Um Nyobe co-founded the UPC, demanding Cameroon's independence from French colonial rule. Forced into hiding, he led resistance from the bush. In 1958, he was ambushed and killed by French forces. His body was never returned.",
+      "summary_fr": "En 1948, Ruben Um Nyobè cofonde l'UPC qui réclame l'indépendance du Cameroun face à la colonisation française. Contraint à la clandestinité, il dirige la résistance depuis la brousse. En 1958, il est tué en embuscade par les forces françaises. Son corps ne fut jamais rendu.",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://fr.wikipedia.org/wiki/Ruben_Um_Nyob%C3%A8"
+        },
+        {
+          "name": "Achille Mbembe — La Naissance du maquis dans le Sud-Cameroun",
+          "url": "https://www.karthala.com/histoire/1295-la-naissance-du-maquis-dans-le-sud-cameroun-9782865371461.html"
+        }
+      ],
+      "style_prompt": "Japanese 2D seinen manga panel, bold expressive ink, weighted clean contours, solid black shadow shapes, halftone screentone dots, dramatic cinematic contrast, mature realistic anatomy, black and white with neutral gray, professional manga drawing, historical scene, 1940s-1950s Central Africa, no text, vertical composition"
     }
   ]
 }

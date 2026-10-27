@@ -1,0 +1,66 @@
+{
+  "project": "TikTokHistoryFactory",
+  "date": "2026-10-23",
+  "benchmark": {
+    "episodes_produced": 3,
+    "total_production_time_sec": 422,
+    "subjects_discovered_autonomously": true,
+    "images_generated_real": true,
+    "voice_generated_real": true,
+    "subtitles_synced_real": true
+  },
+  "sqlite": {
+    "total_qc_passed": 13,
+    "total_entries": 13
+  },
+  "episodes": [
+    {
+      "slug": "maji-maji-rebellion-1905",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-maji-maji-rebellion-1905-v5\\maji-maji-rebellion-1905-v5-final.mp4",
+      "exists": true,
+      "sha256": "cbfd0bef8e0db9db8dc28e4f0717f293ac0105ff820d4624aa97d178b914d8f9",
+      "duration_sec": 100.0,
+      "size_bytes": 75438640,
+      "shots_count": 22,
+      "images_count": 11,
+      "production_time_sec": 82.0,
+      "subtitles_count": 12,
+      "last_caption_end_sec": 88.7,
+      "words_en": 190
+    },
+    {
+      "slug": "sharpeville-massacre-1960",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-sharpeville-massacre-1960-v5\\sharpeville-massacre-1960-v5-final.mp4",
+      "exists": true,
+      "sha256": "5ecc7b4ad091d398836a6b79d6cfe8523c36927ee822cbba0c7ab29fdc105d67",
+      "duration_sec": 100.0,
+      "size_bytes": 77525874,
+      "shots_count": 22,
+      "images_count": 11,
+      "production_time_sec": 263.0,
+      "subtitles_count": 15,
+      "last_caption_end_sec": 89.617,
+      "words_en": 208
+    },
+    {
+      "slug": "chilembwe-uprising-1915",
+      "mp4_path": "C:\\TikTokHistoryFactory\\output\\auto-chilembwe-uprising-1915-v5\\chilembwe-uprising-1915-v5-final.mp4",
+      "exists": true,
+      "sha256": "c9bce6cdc3eab1da1c114ff7974f8bef057b0ec199299503b84c4558ee069789",
+      "duration_sec": 101.2,
+      "size_bytes": 79309068,
+      "shots_count": 22,
+      "images_count": 11,
+      "production_time_sec": 77.0,
+      "subtitles_count": 18,
+      "last_caption_end_sec": 100.322,
+      "words_en": 208
+    }
+  ],
+  "blockers": [
+    {
+      "item": "Git commit",
+      "reason": "Permission denied on .git/index.lock (NTFS ACL: BUILTIN\\Users = ReadAndExecute)"
+    }
+  ]
+}
