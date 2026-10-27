@@ -80,7 +80,7 @@ class AutoProductionEngine:
             conn.commit()
             # Ensure run_id is set even if row already existed
             if run_id:
-                c.execute('UPDATE auto_productions SET run_id=? WHERE slug=? AND (run_id IS NULL OR run_id='')', (run_id, slug))
+                c.execute("UPDATE auto_productions SET run_id=? WHERE slug=? AND (run_id IS NULL OR run_id='')", (run_id, slug))
                 conn.commit()
         except Exception as e:
             print(f'[DB INSERT WARN] {e}')
